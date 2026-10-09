@@ -1,109 +1,554 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="אורית ישי, מתכנתת שבונה אתרים וכלים דיגיטליים, עושה SEO ומחברת בין קוד, AI ותוכן.">
-<meta name="theme-color" content="#f6f9ff">
-<title>אורית ישי | פיתוח אתרים, SEO וכלים דיגיטליים</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#17233d;font-family:Arial,sans-serif;line-height:1.65;background:radial-gradient(circle at 15% 5%,rgba(181,208,255,.65),transparent 34%),radial-gradient(circle at 90% 35%,rgba(219,228,255,.85),transparent 40%),radial-gradient(circle at 35% 90%,rgba(189,221,255,.55),transparent 38%),#f6f9ff}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(145deg,rgba(255,255,255,.5),rgba(221,232,255,.22))}main{position:relative;max-width:580px;margin:auto;padding:55px 22px 35px}.brand{text-align:center;font-size:11px;letter-spacing:4px;color:#7886a5;font-weight:600}.avatar{width:94px;height:94px;margin:28px auto 18px;border-radius:50%;overflow:hidden;border:5px solid rgba(255,255,255,.9);box-shadow:0 10px 30px rgba(80,110,170,.16),0 0 0 1px rgba(150,175,225,.18)}.avatar img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}.intro{text-align:center}h1{font-size:36px;margin:0 0 8px;line-height:1.2;letter-spacing:-.7px;color:#111b32}.intro p{color:#66738d;margin:0 auto;max-width:410px}.tag{display:inline-block;margin:20px 0 32px;padding:7px 16px;border-radius:100px;font-size:12px;color:#50658d;background:rgba(218,230,255,.7);border:1px solid rgba(158,184,231,.3)}.section-label{font-size:12px;color:#7a89a6;margin:0 9px 12px}details{margin-bottom:12px;overflow:hidden;background:linear-gradient(135deg,rgba(228,237,255,.92),rgba(211,226,255,.78));border:1px solid rgba(154,181,230,.28);border-radius:28px;box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 5px 18px rgba(82,115,174,.07);transition:transform .2s ease,box-shadow .2s ease,background .2s ease}details:hover{transform:translateY(-1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 8px 23px rgba(82,115,174,.11)}summary{list-style:none;cursor:pointer;min-height:78px;display:flex;align-items:center;gap:15px;padding:14px 20px}summary::-webkit-details-marker{display:none}.icon{width:40px;height:40px;flex-shrink:0;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.35);border:1px solid rgba(98,128,181,.13);color:#314b76;font-size:20px}.text{flex:1}.text strong{display:block;font-size:16px;font-weight:600;color:#253653}.text span{display:block;margin-top:2px;font-size:12.5px;color:#72819b}.arrow{width:28px;height:28px;display:grid;place-items:center;color:#7890b7;font-size:23px;transition:transform .2s ease}details[open] .arrow{transform:rotate(-90deg)}.detail{margin:0 18px 18px;padding:17px 18px;border-radius:20px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.7);color:#5f6e88;font-size:14px}.detail p{margin:0 0 14px}.button{display:inline-block;padding:10px 19px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#638bd2,#789be0);border-radius:100px;font-size:13px;font-weight:600;box-shadow:0 5px 14px rgba(80,115,180,.18);transition:transform .2s ease,box-shadow .2s ease}.button:hover{transform:translateY(-1px);box-shadow:0 7px 18px rgba(80,115,180,.25)}.extras{display:grid;gap:11px;margin-top:28px}.extra{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 21px;color:#30405e;text-decoration:none;background:linear-gradient(135deg,rgba(228,237,255,.9),rgba(214,228,255,.76));border:1px solid rgba(154,181,230,.28);border-radius:28px;font-size:14px;font-weight:500;box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 5px 16px rgba(82,115,174,.06);transition:transform .2s ease,box-shadow .2s ease}.extra::after{content:"‹";font-size:24px;line-height:1;color:#7991b9}.extra:hover{transform:translateY(-1px);background:linear-gradient(135deg,#e7efff,#d8e6ff);box-shadow:0 8px 22px rgba(82,115,174,.1)}.contact{margin-top:32px;padding:28px 24px;text-align:center;border-radius:30px;background:linear-gradient(145deg,rgba(214,228,255,.82),rgba(235,241,255,.88));border:1px solid rgba(154,181,230,.25);box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 7px 25px rgba(82,115,174,.07)}.contact h2{font-size:20px;margin:0 0 5px;color:#263752}.contact p{font-size:14px;color:#6e7e99;margin:0 0 16px}footer{margin-top:38px;text-align:center;font-size:11px;color:#8b98af}a:focus-visible,summary:focus-visible{outline:3px solid #8baae0;outline-offset:4px}@media(max-width:400px){main{padding:34px 16px 25px}h1{font-size:31px}summary{padding:13px 16px;gap:12px}.text strong{font-size:15px}.text span{font-size:12px}.detail{margin:0 12px 12px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}details,.button,.extra,.arrow{transition:none}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="אורית ישי, מתכנתת שבונה אתרים וכלים דיגיטליים לעסקים קטנים, עם SEO, סושיאל ואבטחת אינסטגרם.">
+  <meta name="theme-color" content="#f3f7ff">
+  <title>אורית ישי | אתרים, SEO וכלים דיגיטליים</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#152038;
+      --muted:#66748f;
+      --muted-2:#8d99ae;
+      --line:rgba(89,116,165,.16);
+      --blue:#6f91c9;
+      --blue-dark:#2e4e7c;
+      --paper:#f7faff;
+      --card:rgba(255,255,255,.68);
+      --shadow:0 18px 55px rgba(71,99,148,.10);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--ink);
+      font-family:"Heebo",Arial,sans-serif;
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+      background:
+        radial-gradient(circle at 10% 4%,rgba(186,211,255,.58),transparent 28rem),
+        radial-gradient(circle at 92% 30%,rgba(222,233,255,.86),transparent 24rem),
+        radial-gradient(circle at 30% 95%,rgba(202,222,255,.46),transparent 26rem),
+        #f7faff;
+    }
+
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(145deg,rgba(255,255,255,.34),rgba(226,236,255,.10));
+    }
+
+    a{color:inherit}
+
+    .page{
+      position:relative;
+      width:min(100%,620px);
+      margin:0 auto;
+      padding:28px 18px 34px;
+    }
+
+    .topline{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:26px;
+      color:#8492aa;
+      font-family:"Inter",sans-serif;
+      font-size:10px;
+      letter-spacing:.16em;
+      direction:ltr;
+    }
+
+    .topline a{
+      text-decoration:none;
+      color:#6f7f99;
+    }
+
+    .intro{
+      text-align:center;
+      padding:8px 8px 30px;
+    }
+
+    .avatar{
+      width:94px;
+      height:94px;
+      margin:0 auto 18px;
+      border-radius:50%;
+      overflow:hidden;
+      background:linear-gradient(145deg,#dce9ff,#edf4ff);
+      border:5px solid rgba(255,255,255,.86);
+      box-shadow:0 16px 45px rgba(74,102,153,.16),0 0 0 1px rgba(126,155,207,.13);
+    }
+
+    .avatar img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      object-position:center;
+    }
+
+    .handle{
+      margin:0 0 8px;
+      color:#77869e;
+      font-family:"Inter",sans-serif;
+      font-size:10px;
+      letter-spacing:.12em;
+      direction:ltr;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(29px,8vw,38px);
+      line-height:1.16;
+      letter-spacing:-.035em;
+      font-weight:600;
+    }
+
+    .intro-copy{
+      margin:14px auto 0;
+      max-width:500px;
+      color:#5f6d85;
+      font-size:15px;
+      font-weight:300;
+    }
+
+    .intro-copy strong{
+      color:#304463;
+      font-weight:500;
+    }
+
+    .expertise{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:7px;
+      margin-top:18px;
+    }
+
+    .expertise span{
+      padding:5px 10px;
+      border:1px solid rgba(112,143,197,.18);
+      border-radius:999px;
+      background:rgba(255,255,255,.48);
+      color:#637694;
+      font-family:"Inter",sans-serif;
+      font-size:9px;
+      letter-spacing:.05em;
+      direction:ltr;
+      backdrop-filter:blur(8px);
+    }
+
+    .section-label{
+      margin:0 4px 11px;
+      color:#8290a7;
+      font-size:11px;
+      font-weight:500;
+    }
+
+    .links{
+      display:grid;
+      gap:11px;
+    }
+
+    .service{
+      display:grid;
+      grid-template-columns:42px 1fr 24px;
+      align-items:center;
+      gap:14px;
+      min-height:82px;
+      padding:15px 17px;
+      text-decoration:none;
+      background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(246,249,255,.63));
+      border:1px solid var(--line);
+      border-radius:19px;
+      box-shadow:0 7px 24px rgba(77,101,146,.045),inset 0 1px 0 rgba(255,255,255,.88);
+      backdrop-filter:blur(14px);
+      transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+    }
+
+    .service:hover{
+      transform:translateY(-2px);
+      border-color:rgba(92,123,180,.26);
+      box-shadow:0 15px 35px rgba(73,98,145,.09),inset 0 1px 0 rgba(255,255,255,.95);
+    }
+
+    .icon{
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:13px;
+      color:#47678f;
+      background:linear-gradient(145deg,rgba(225,236,255,.92),rgba(240,246,255,.78));
+      border:1px solid rgba(117,147,199,.14);
+    }
+
+    .icon svg{
+      width:20px;
+      height:20px;
+      fill:none;
+      stroke:currentColor;
+      stroke-width:1.6;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    .service-copy{
+      min-width:0;
+    }
+
+    .service strong{
+      display:block;
+      color:#263853;
+      font-size:15.5px;
+      font-weight:600;
+      line-height:1.25;
+    }
+
+    .service small{
+      display:block;
+      margin-top:4px;
+      color:#748198;
+      font-size:12.5px;
+      font-weight:300;
+      line-height:1.4;
+    }
+
+    .arrow{
+      color:#8fa0bb;
+      font-family:"Inter",sans-serif;
+      font-size:17px;
+      direction:ltr;
+    }
+
+    .work{
+      margin-top:30px;
+    }
+
+    .project-card{
+      display:block;
+      text-decoration:none;
+      padding:19px;
+      border:1px solid rgba(90,114,160,.15);
+      border-radius:22px;
+      background:rgba(255,255,255,.62);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px);
+      transition:transform .18s ease,box-shadow .18s ease;
+    }
+
+    .project-card:hover{
+      transform:translateY(-2px);
+      box-shadow:0 22px 62px rgba(65,91,140,.13);
+    }
+
+    .project-preview{
+      position:relative;
+      min-height:162px;
+      padding:18px;
+      overflow:hidden;
+      border-radius:15px;
+      background:linear-gradient(145deg,#e9efe8,#f4f0e8);
+      border:1px solid rgba(79,98,83,.08);
+    }
+
+    .project-preview:before{
+      content:"";
+      position:absolute;
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      background:rgba(255,255,255,.52);
+      left:-35px;
+      top:-55px;
+    }
+
+    .browser{
+      position:relative;
+      width:90%;
+      margin:auto;
+      background:#fff;
+      border-radius:11px;
+      overflow:hidden;
+      border:1px solid rgba(81,94,83,.14);
+      box-shadow:0 16px 34px rgba(64,78,68,.13);
+      transform:rotate(-1deg);
+    }
+
+    .browser-bar{
+      height:24px;
+      display:flex;
+      align-items:center;
+      gap:4px;
+      padding:0 9px;
+      border-bottom:1px solid #edf0ed;
+      direction:ltr;
+    }
+
+    .dot{width:4px;height:4px;border-radius:50%;background:#ccd2cc}
+
+    .browser-body{padding:18px 20px 20px;background:linear-gradient(#fff,#fbfcfa)}
+    .fake-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+    .fake-logo{font-size:8px;font-weight:700;color:#304437}
+    .fake-menu{display:flex;gap:5px}
+    .fake-menu span{display:block;width:17px;height:3px;border-radius:3px;background:#dfe6df}
+    .fake-title{font-size:15px;line-height:1.15;color:#293b30;font-weight:600;max-width:180px}
+    .fake-lines{display:grid;gap:4px;margin-top:8px;width:70%}
+    .fake-lines span{height:3px;background:#e4e9e4;border-radius:3px}
+    .fake-lines span:last-child{width:72%}
+    .fake-cards{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:16px}
+    .fake-cards span{height:38px;border-radius:6px;background:#edf1e9;border:1px solid #e3e8e0}
+    .fake-cards span:last-child{background:#f0ede5;border-color:#e8e3d9}
+
+    .project-info{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:18px;
+      padding:16px 3px 2px;
+    }
+
+    .project-info strong{
+      display:block;
+      font-size:16px;
+      color:#263650;
+      font-weight:600;
+    }
+
+    .project-info span{
+      display:block;
+      margin-top:3px;
+      color:#7a879b;
+      font-size:12px;
+    }
+
+    .project-go{
+      flex-shrink:0;
+      color:#607a9f;
+      font-family:"Inter",sans-serif;
+      font-size:11px;
+      direction:ltr;
+    }
+
+    .contact{
+      margin-top:30px;
+      padding:24px 21px;
+      text-align:center;
+      border-radius:22px;
+      background:linear-gradient(145deg,rgba(214,229,255,.82),rgba(236,243,255,.82));
+      border:1px solid rgba(107,139,196,.16);
+      box-shadow:0 14px 40px rgba(72,100,150,.07);
+    }
+
+    .contact h2{
+      margin:0 0 6px;
+      font-size:20px;
+      font-weight:600;
+      letter-spacing:-.02em;
+    }
+
+    .contact p{
+      margin:0;
+      color:#66758d;
+      font-size:13.5px;
+    }
+
+    #contact-links{margin-top:16px}
+
+    #contact-links .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:0 18px;
+      text-decoration:none;
+      color:#fff;
+      background:#233a5d;
+      border-radius:12px;
+      font-size:13px;
+      font-weight:500;
+      box-shadow:0 10px 22px rgba(35,58,93,.16);
+    }
+
+    .extras{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:8px 18px;
+      margin-top:22px;
+    }
+
+    .extra{
+      text-decoration:none;
+      color:#61718c;
+      font-size:12.5px;
+    }
+
+    .extra:hover{color:#2f496f}
+
+    footer{
+      text-align:center;
+      margin-top:28px;
+      padding:20px 0 2px;
+      color:#98a3b4;
+      font-family:"Inter",sans-serif;
+      font-size:9px;
+      letter-spacing:.11em;
+      direction:ltr;
+    }
+
+    a:focus-visible{outline:3px solid #8faee0;outline-offset:4px}
+
+    @media(min-width:680px){
+      .page{padding-top:40px;padding-bottom:44px}
+      .intro{padding-top:16px;padding-bottom:36px}
+      .avatar{width:104px;height:104px}
+      .service{min-height:88px;padding:17px 19px}
+      .project-preview{min-height:190px;padding:22px}
+      .browser{width:86%}
+    }
+
+    @media(max-width:380px){
+      .page{padding-left:14px;padding-right:14px}
+      .intro{padding-left:2px;padding-right:2px}
+      h1{font-size:27px}
+      .intro-copy{font-size:14px}
+      .service{grid-template-columns:38px 1fr 20px;gap:11px;padding:13px 14px;min-height:78px}
+      .icon{width:38px;height:38px;border-radius:11px}
+      .service strong{font-size:14.5px}
+      .service small{font-size:12px}
+      .project-card{padding:15px}
+      .project-preview{min-height:146px;padding:14px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .service,.project-card{transition:none}
+    }
+  </style>
 </head>
 <body>
-<main>
-<div class="brand" dir="ltr">ORIT YISHAI</div>
-<header class="intro">
-  <div class="avatar"><img src="images/orit.jpg" alt="אורית ישי"></div>
-  <h1>היי, אני אורית 👋</h1>
-  <p>אני מתכנתת שבונה אתרים וכלים דיגיטליים, עושה SEO ומחברת בין קוד, AI ותוכן.<br>הופכת רעיונות למשהו שימושי, ברור וכזה שבאמת עובד.</p>
-  <div class="tag">קוד · אתרים · SEO · כלים דיגיטליים</div>
-</header>
-
-<section aria-label="השירותים והמוצרים שלי">
-  <p class="section-label">מה אפשר למצוא כאן?</p>
-
-  <details>
-    <summary>
-      <span class="icon" aria-hidden="true">⌁</span>
-      <div class="text">
-        <strong>מיני קורס לאבטחת האינסטגרם</strong>
-        <span>הצעדים שכדאי לעשות עכשיו כדי להגן על החשבון שלך</span>
-      </div>
-      <span class="arrow" aria-hidden="true">‹</span>
-    </summary>
-    <div class="detail">
-      <p>מיני קורס קצר ומעשי שעובר איתך על הגדרות האבטחה החשובות באינסטגרם, כדי לצמצם סיכוי לפריצה ולדעת שהחשבון שלך מוגן טוב יותר.</p>
-      <a class="button" href="https://www.coreviastyle.com/p/ig-mini-course-lp.html" target="_blank" rel="noopener noreferrer">לפרטי המיני קורס</a>
+  <main class="page">
+    <div class="topline">
+      <span>ORIT YISHAI</span>
+      <a href="https://www.instagram.com/orit.decode/" target="_blank" rel="noopener noreferrer">@ORIT.DECODE</a>
     </div>
-  </details>
 
-  <details>
-    <summary>
-      <span class="icon" aria-hidden="true">▧</span>
-      <div class="text">
-        <strong>מעיצוב לטמפלייט שאפשר לערוך</strong>
-        <span>עיצוב קיים שהופך לתבנית שימושית שוב ושוב</span>
+    <header class="intro">
+      <div class="avatar">
+        <img src="images/orit.jpg" alt="אורית ישי">
       </div>
-      <span class="arrow" aria-hidden="true">‹</span>
-    </summary>
-    <div class="detail">
-      <p>יש לך עיצוב שאת אוהבת אבל בכל שינוי צריך לפתוח תוכנת עיצוב או לפנות למעצבת? אני הופכת אותו לטמפלייט שבו אפשר להחליף טקסטים ותמונות ולייצר גרסה חדשה בקלות.</p>
-      <a class="button" href="https://www.alphagroup.co.il/template-info" target="_blank" rel="noopener noreferrer">לפרטי השירות</a>
-    </div>
-  </details>
-
-  <details>
-    <summary>
-      <span class="icon" aria-hidden="true">↗</span>
-      <div class="text">
-        <strong>אתר אישי ותיק עבודות לסושיאל</strong>
-        <span>מקום אחד שמציג אותך, את השירותים שלך ואת העבודות שלך</span>
+      <p class="handle">WEB · SEO · DIGITAL</p>
+      <h1>אתרים וכלים דיגיטליים לעסקים קטנים.</h1>
+      <p class="intro-copy">אני אורית, מתכנתת שבונה אתרים וכלים דיגיטליים לעסקים קטנים. משלבת <strong>קוד, SEO, ידע בסושיאל ואבטחת אינסטגרם</strong> כדי ליצור פתרונות שנראים טוב ועובדים טוב.</p>
+      <div class="expertise" aria-label="תחומי התמחות">
+        <span>WEB DEVELOPMENT</span>
+        <span>SEO</span>
+        <span>SOCIAL</span>
+        <span>SECURITY</span>
       </div>
-      <span class="arrow" aria-hidden="true">‹</span>
-    </summary>
-    <div class="detail">
-      <p>אתר מותאם אישית שמרכז תיק עבודות, שירותים, פרויקטים וקישורים חשובים בעמוד שנראה מקצועי ונוח לשלוח ללקוחות.</p>
-      <a class="button" href="portfolio-site.html" target="_blank" rel="noopener noreferrer">לפרטי השירות</a>
-    </div>
-  </details>
+    </header>
 
-  <details>
-    <summary>
-      <span class="icon" aria-hidden="true">&lt;/&gt;</span>
-      <div class="text">
-        <strong>פיתוח אתרים ו-SEO</strong>
-        <span>אתרים מותאמים אישית עם חשיבה על חיפוש, ביצועים וחוויית משתמש</span>
+    <section aria-labelledby="services-title">
+      <p class="section-label" id="services-title">מה אני מציעה</p>
+      <div class="links">
+        <a class="service" href="https://www.coreviastyle.com/p/ig-mini-course-lp.html" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 2.7 8.1 7 10 4.3-1.9 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <span class="service-copy">
+            <strong>מיני קורס לאבטחת אינסטגרם</strong>
+            <small>איך לחזק את אבטחת החשבון ולהגדיר נכון את ההגנות החשובות</small>
+          </span>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="service" href="https://www.alphagroup.co.il/template-info" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="4" y="4" width="12" height="12" rx="2"/><path d="M8 20h10a2 2 0 0 0 2-2V8"/><path d="M7.5 8h5"/><path d="M7.5 11h3"/></svg>
+          </span>
+          <span class="service-copy">
+            <strong>הפיכת עיצוב לטמפלייט</strong>
+            <small>תבנית אישית שאפשר להחליף בה טקסטים ותמונות ולהשתמש שוב</small>
+          </span>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="service" href="portfolio-site.html" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 9h17"/><path d="M7 7h.01"/></svg>
+          </span>
+          <span class="service-copy">
+            <strong>אתר אישי ותיק עבודות</strong>
+            <small>מקום מסודר להציג עבודות, שירותים וקישורים ולשלוח ללקוחות</small>
+          </span>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="service" href="web-development-seo.html" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m8 9-3 3 3 3"/><path d="m16 9 3 3-3 3"/><path d="m14 5-4 14"/></svg>
+          </span>
+          <span class="service-copy">
+            <strong>פיתוח אתרים ו-SEO</strong>
+            <small>אתרים מותאמים אישית עם חשיבה על מובייל, ביצועים וחיפוש</small>
+          </span>
+          <span class="arrow">↗</span>
+        </a>
       </div>
-      <span class="arrow" aria-hidden="true">‹</span>
-    </summary>
-    <div class="detail">
-      <p>אני בונה אתרים בקוד ועובדת על SEO מהבסיס: מבנה נכון, תוכן, מהירות, התאמה למובייל והכנה טובה יותר למנועי חיפוש.</p>
-      <a class="button" href="web-development-seo.html" target="_blank" rel="noopener noreferrer">לשירות ולפרויקטים שבניתי</a>
-    </div>
-  </details>
-</section>
+    </section>
 
-<nav class="extras" aria-label="קישורים נוספים" id="links"></nav>
 
-<section class="contact" id="contact">
-  <h2>יש לך רעיון שאפשר להפוך למשהו שימושי?</h2>
-  <p>אפשר לדבר ולבדוק יחד מה הדרך הכי נכונה לבנות אותו.</p>
-  <div id="contact-links"></div>
-</section>
+    <section class="contact" id="contact">
+      <h2>יש לך משהו שצריך לבנות?</h2>
+      <p>אפשר לספר לי מה את צריכה ולבדוק יחד מה הפתרון המתאים.</p>
+      <div id="contact-links"></div>
+    </section>
 
-<footer>נבנה עם קוד, מחשבה וקצת AI · Orit</footer>
-</main>
-<script src="config.js"></script>
-<script>
-const config = window.ORIT_CONFIG || { links: [] };
-function link(label,url,parent,className){if(!url)return;const a=document.createElement('a');a.textContent=label;a.href=url;a.className=className;if(!/^mailto:|^tel:/.test(url)){a.target='_blank';a.rel='noopener noreferrer'}parent.append(a)}
-for(const item of (config.links || []))link(item.label,item.url,document.getElementById('links'),'extra');
-const contact=document.getElementById('contact-links');
-if(config.whatsapp){const digits=config.whatsapp.replace(/\D/g,'');link('נדבר בוואטסאפ ↗','https://wa.me/'+digits,contact,'button')}
-else if(config.email){link('שלחי לי מייל ↗','mailto:'+config.email,contact,'button')}
-else{const p=document.createElement('p');p.textContent='פרטי יצירת קשר יתווספו בקרוב';contact.append(p)}
-</script>
+    <nav class="extras" aria-label="קישורים נוספים" id="links"></nav>
+
+    <footer>BUILT WITH CODE · ORIT YISHAI</footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script>
+    const config = window.ORIT_CONFIG || { links: [] };
+
+    function addLink(label,url,parent,className){
+      if(!url) return;
+      const a=document.createElement('a');
+      a.textContent=label;
+      a.href=url;
+      a.className=className;
+      if(!/^mailto:|^tel:/.test(url)){
+        a.target='_blank';
+        a.rel='noopener noreferrer';
+      }
+      parent.append(a);
+    }
+
+    for(const item of (config.links || [])){
+      addLink(item.label,item.url,document.getElementById('links'),'extra');
+    }
+
+    const contact=document.getElementById('contact-links');
+    if(config.whatsapp){
+      const digits=config.whatsapp.replace(/\D/g,'');
+      addLink('נדבר בוואטסאפ ↗','https://wa.me/'+digits,contact,'button');
+    } else if(config.email){
+      addLink('שלחי לי מייל ↗','mailto:'+config.email,contact,'button');
+    }
+  </script>
 </body>
 </html>
