@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="מיני קורס פרקטי לאבטחת אינסטגרם: איך לצמצם סיכונים, לזהות ניסיונות פריצה, להבין חסימות ולדעת מה לעשות בזמן אמת.">
+  <meta name="theme-color" content="#fff8f2">
+  <title>אורית ישי | מיני קורס לאבטחת אינסטגרם</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#3a2d28;
+      --muted:#7a6a62;
+      --muted-2:#9b8a82;
+
+      --orange:#d99568;
+      --orange-dark:#a95f34;
+      --orange-soft:#f8e7dc;
+      --orange-soft-2:#fff3eb;
+
+      --paper:#fff9f4;
+      --card:rgba(255,255,255,.74);
+      --line:rgba(180,112,73,.15);
+
+      --gold:#c9a86a;
+      --gold-dark:#a77f39;
+      --gold-line:rgba(201,168,106,.30);
+
+      --shadow:0 18px 55px rgba(123,79,55,.09);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--ink);
+      font-family:"Heebo",Arial,sans-serif;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      background:
+        radial-gradient(circle at 8% 3%,rgba(249,209,181,.66),transparent 27rem),
+        radial-gradient(circle at 94% 30%,rgba(255,230,213,.92),transparent 25rem),
+        radial-gradient(circle at 36% 98%,rgba(247,217,195,.54),transparent 28rem),
+        var(--paper);
+    }
+
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(145deg,rgba(255,255,255,.42),rgba(252,229,211,.10));
+    }
+
+    body:after{
+      content:"";
+      position:fixed;
+      z-index:20;
+      top:0;
+      left:0;
+      right:0;
+      height:2px;
+      pointer-events:none;
+      background:linear-gradient(
+        90deg,
+        transparent 5%,
+        rgba(201,168,106,.20) 28%,
+        rgba(201,168,106,.74) 50%,
+        rgba(201,168,106,.20) 72%,
+        transparent 95%
+      );
+    }
+
+    a{color:inherit}
+
+    .page{
+      position:relative;
+      width:min(100%,620px);
+      margin:0 auto;
+      padding:28px 18px 42px;
+    }
+
+    .topline{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      position:relative;
+      margin-bottom:30px;
+      padding-bottom:14px;
+      color:#98877f;
+      font-family:"Inter",sans-serif;
+      font-size:10px;
+      letter-spacing:.16em;
+      direction:ltr;
+    }
+
+    .topline:after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      height:1px;
+      background:linear-gradient(90deg,transparent,var(--gold-line),transparent);
+    }
+
+    .topline a{
+      text-decoration:none;
+      color:#89756b;
+      transition:color .18s ease;
+    }
+
+    .topline a:hover{color:var(--gold-dark)}
+
+    .hero{
+      text-align:center;
+      padding:6px 6px 30px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin:0 0 16px;
+      padding:7px 13px;
+      border:1px solid rgba(201,168,106,.24);
+      border-radius:999px;
+      color:#a15e38;
+      background:rgba(255,255,255,.46);
+      font-size:11px;
+      font-weight:500;
+      backdrop-filter:blur(8px);
+    }
+
+    .eyebrow:before{
+      content:"";
+      width:5px;
+      height:5px;
+      border-radius:50%;
+      background:var(--gold);
+      box-shadow:0 0 0 3px rgba(201,168,106,.10);
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(31px,8.6vw,41px);
+      line-height:1.13;
+      letter-spacing:-.035em;
+      font-weight:600;
+    }
+
+    h1:after{
+      content:"";
+      display:block;
+      width:40px;
+      height:1px;
+      margin:15px auto 0;
+      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+      opacity:.86;
+    }
+
+    .hero-copy{
+      max-width:510px;
+      margin:15px auto 0;
+      color:var(--muted);
+      font-size:15px;
+      font-weight:300;
+    }
+
+    .hero-copy strong{
+      color:#5a4136;
+      font-weight:600;
+    }
+
+    .cta-row{
+      display:flex;
+      justify-content:center;
+      margin-top:20px;
+    }
+
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:0 20px;
+      text-decoration:none;
+      color:#fff;
+      background:#5b4034;
+      border:1px solid rgba(223,201,157,.34);
+      border-radius:12px;
+      font-size:13px;
+      font-weight:500;
+      box-shadow:0 10px 24px rgba(80,54,41,.18);
+      transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+    }
+
+    .button:hover{
+      transform:translateY(-1px);
+      background:#68493b;
+      box-shadow:0 14px 30px rgba(80,54,41,.22);
+    }
+
+    .price-note{
+      margin-top:10px;
+      color:#8c786e;
+      font-size:12px;
+    }
+
+    .section{
+      margin-top:30px;
+    }
+
+    .section-label{
+      display:flex;
+      align-items:center;
+      gap:9px;
+      margin:0 4px 11px;
+      color:#9a867d;
+      font-size:11px;
+      font-weight:500;
+    }
+
+    .section-label:after{
+      content:"";
+      width:34px;
+      height:1px;
+      background:linear-gradient(90deg,var(--gold),transparent);
+      opacity:.72;
+    }
+
+    .card{
+      position:relative;
+      padding:21px 19px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(255,248,243,.68));
+      box-shadow:0 8px 26px rgba(123,79,55,.045),inset 0 1px 0 rgba(255,255,255,.90);
+      backdrop-filter:blur(14px);
+    }
+
+    .card + .card{margin-top:12px}
+
+    .card h2{
+      margin:0 0 11px;
+      color:#4b372f;
+      font-size:21px;
+      line-height:1.3;
+      font-weight:600;
+      letter-spacing:-.015em;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:300;
+      line-height:1.78;
+    }
+
+    .card strong{
+      color:#563d32;
+      font-weight:600;
+    }
+
+    .pain{
+      border-color:rgba(201,168,106,.23);
+      background:
+        radial-gradient(circle at 94% 8%,rgba(255,255,255,.70),transparent 12rem),
+        linear-gradient(145deg,rgba(249,230,216,.90),rgba(255,247,241,.86));
+    }
+
+    .pain:before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:18px;
+      right:18px;
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(201,168,106,.48),transparent);
+    }
+
+    .feature-list{
+      display:grid;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .feature{
+      display:grid;
+      grid-template-columns:34px 1fr;
+      align-items:start;
+      gap:11px;
+      padding:12px 13px;
+      border:1px solid rgba(177,111,73,.12);
+      border-radius:15px;
+      background:rgba(255,255,255,.48);
+    }
+
+    .feature-icon{
+      width:34px;
+      height:34px;
+      display:grid;
+      place-items:center;
+      border-radius:11px;
+      color:var(--orange-dark);
+      background:linear-gradient(145deg,rgba(248,226,211,.96),rgba(255,244,236,.88));
+      border:1px solid rgba(201,168,106,.22);
+      font-family:"Inter",sans-serif;
+      font-size:11px;
+      font-weight:600;
+      direction:ltr;
+    }
+
+    .feature strong{
+      display:block;
+      margin:1px 0 2px;
+      color:#513a30;
+      font-size:14.5px;
+      font-weight:600;
+    }
+
+    .feature span{
+      display:block;
+      color:#7c6a61;
+      font-size:13px;
+      font-weight:300;
+      line-height:1.55;
+    }
+
+    .course-meta{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .meta{
+      padding:13px;
+      border:1px solid rgba(177,111,73,.12);
+      border-radius:15px;
+      background:rgba(255,255,255,.50);
+    }
+
+    .meta strong{
+      display:block;
+      color:#543b31;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .meta span{
+      color:#8b776e;
+      font-size:12px;
+      font-weight:300;
+    }
+
+    .bonus{
+      border-color:rgba(201,168,106,.24);
+      background:
+        radial-gradient(circle at 90% 10%,rgba(255,255,255,.66),transparent 11rem),
+        linear-gradient(145deg,rgba(248,226,211,.92),rgba(255,244,236,.84));
+    }
+
+    .bonus-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin-bottom:9px;
+      color:#9f603d;
+      font-size:11px;
+      font-weight:600;
+    }
+
+    .bonus-badge:before{
+      content:"✦";
+      color:var(--gold-dark);
+    }
+
+    .steps{
+      display:grid;
+      gap:12px;
+    }
+
+    .step-head{
+      display:flex;
+      align-items:center;
+      gap:13px;
+      margin-bottom:11px;
+    }
+
+    .step-number{
+      flex:0 0 auto;
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:13px;
+      background:linear-gradient(145deg,rgba(248,226,211,.96),rgba(255,244,236,.88));
+      border:1px solid rgba(201,168,106,.24);
+      color:var(--orange-dark);
+      font-family:"Inter",sans-serif;
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:.04em;
+      direction:ltr;
+    }
+
+    .step-head h3{
+      margin:0;
+      color:#4b372f;
+      font-size:18px;
+      line-height:1.3;
+      font-weight:600;
+    }
+
+    .faq{
+      display:grid;
+      gap:9px;
+    }
+
+    details{
+      border:1px solid rgba(177,111,73,.13);
+      border-radius:16px;
+      background:rgba(255,255,255,.62);
+      overflow:hidden;
+    }
+
+    summary{
+      cursor:pointer;
+      list-style:none;
+      position:relative;
+      padding:15px 44px 15px 16px;
+      color:#513a30;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    summary::-webkit-details-marker{display:none}
+
+    summary:before{
+      content:"+";
+      position:absolute;
+      right:16px;
+      top:50%;
+      transform:translateY(-50%);
+      color:var(--gold-dark);
+      font-family:"Inter",sans-serif;
+      font-size:17px;
+      font-weight:500;
+    }
+
+    details[open] summary:before{content:"−"}
+
+    details p{
+      margin:0;
+      padding:0 16px 16px;
+      color:var(--muted);
+      font-size:13.5px;
+      font-weight:300;
+      line-height:1.72;
+    }
+
+    .about{
+      text-align:center;
+      border-color:rgba(201,168,106,.20);
+    }
+
+    .about h2:after{
+      content:"";
+      display:block;
+      width:36px;
+      height:1px;
+      margin:12px auto 0;
+      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    }
+
+    .final-cta{
+      position:relative;
+      margin-top:30px;
+      padding:29px 22px 24px;
+      text-align:center;
+      border:1px solid rgba(201,168,106,.24);
+      border-radius:22px;
+      background:linear-gradient(145deg,rgba(248,226,211,.92),rgba(255,247,242,.90));
+      box-shadow:0 14px 40px rgba(123,79,55,.065);
+    }
+
+    .final-cta:before{
+      content:"";
+      position:absolute;
+      top:14px;
+      left:50%;
+      width:42px;
+      height:1px;
+      transform:translateX(-50%);
+      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+      opacity:.80;
+    }
+
+    .final-cta h2{
+      margin:0 0 7px;
+      color:#49352d;
+      font-size:21px;
+      font-weight:600;
+      letter-spacing:-.02em;
+    }
+
+    .final-cta p{
+      max-width:470px;
+      margin:0 auto;
+      color:#76655d;
+      font-size:13.5px;
+      font-weight:300;
+      line-height:1.7;
+    }
+
+    .final-cta .cta-row{margin-top:16px}
+
+    footer{
+      position:relative;
+      margin-top:29px;
+      padding:28px 0 2px;
+      text-align:center;
+      color:#a29189;
+      font-family:"Inter",sans-serif;
+      font-size:9px;
+      letter-spacing:.11em;
+      direction:ltr;
+    }
+
+    footer:before{
+      content:"";
+      position:absolute;
+      top:10px;
+      left:50%;
+      width:54px;
+      height:1px;
+      transform:translateX(-50%);
+      background:linear-gradient(90deg,transparent,rgba(201,168,106,.58),transparent);
+    }
+
+    a:focus-visible,
+    summary:focus-visible{
+      outline:3px solid rgba(201,168,106,.65);
+      outline-offset:4px;
+    }
+
+    @media(min-width:680px){
+      .page{padding-top:40px;padding-bottom:48px}
+      .hero{padding-top:12px;padding-bottom:36px}
+      .card{padding:23px 22px}
+    }
+
+    @media(max-width:430px){
+      .course-meta{grid-template-columns:1fr}
+    }
+
+    @media(max-width:380px){
+      .page{padding-left:14px;padding-right:14px}
+      h1{font-size:29px}
+      .hero-copy{font-size:14px}
+      .card{padding:18px 16px}
+      .feature{grid-template-columns:31px 1fr;padding:11px}
+      .feature-icon{width:31px;height:31px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .button{transition:none}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="topline">
+      <span>ORIT YISHAI</span>
+      <a href="index.html">חזרה לכל השירותים</a>
+    </div>
+
+    <header class="hero">
+      <div class="eyebrow">מיני קורס פרקטי להגנה על החשבון</div>
+      <h1>אל תחכו לחסימה או לפריצה כדי להבין איך האינסטגרם שלכם מוגן</h1>
+      <p class="hero-copy">
+        קורס מסודר שמרכז את מה שחשוב לדעת כדי <strong>לצמצם סיכונים, לזהות בעיות בזמן ולהבין מה לעשות כשמשהו קורה</strong>,
+        בלי להתחיל לחפש תשובות רק ברגע של לחץ.
+      </p>
+      <div class="cta-row">
+        <a class="button" href="https://paypage.takbull.co.il/4I2o2" target="_blank" rel="noopener noreferrer">אני רוצה להצטרף ↗</a>
+      </div>
+      <div class="price-note">150 ₪ · גישה לקורס, לבונוס ולעדכונים עתידיים במסגרת הקורס</div>
+    </header>
+
+    <section class="section">
+      <p class="section-label">למי זה מתאים</p>
+      <div class="card pain">
+        <h2>כשהחשבון חשוב לכם, עדיף לדעת מה לעשות לפני שקורה משהו</h2>
+        <div class="feature-list">
+          <div class="feature">
+            <div class="feature-icon">01</div>
+            <div>
+              <strong>מפחדים לאבד את החשבון, התוכן או הקהילה שבניתם?</strong>
+              <span>הקורס עושה סדר במה שכדאי להגדיר ולבדוק מראש כדי לצמצם סיכונים.</span>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">02</div>
+            <div>
+              <strong>לא בטוחים אם זו חסימה או פריצה?</strong>
+              <span>תלמדו להבין את ההבדלים ולדעת איך נכון לפעול בכל מצב.</span>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">03</div>
+            <div>
+              <strong>רוצים הוראות ברורות במקום לחפש מידע בזמן לחץ?</strong>
+              <span>תקבלו צ'קליסטים, קישורים וכלים שאפשר לחזור אליהם כשצריך.</span>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">04</div>
+            <div>
+              <strong>קיבלתם מייל מאינסטגרם או פייסבוק ולא בטוחים אם הוא אמיתי?</strong>
+              <span>הבונוס המצורף מאפשר לבדוק כתובות מייל לפני שלוחצים.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">מה מקבלים</p>
+      <div class="card">
+        <h2>קורס קצר שאפשר לחזור אליו גם בזמן אמת</h2>
+        <p>
+          הקורס כתוב, עם ניווט נוח וחלוקה ברורה לנושאים. הוא בנוי כך שאפשר להבין גם את התמונה הגדולה וגם מה לעשות בפועל בכל שלב.
+        </p>
+
+        <div class="course-meta">
+          <div class="meta">
+            <strong>כ-2 שעות</strong>
+            <span>זמן למידה משוער</span>
+          </div>
+          <div class="meta">
+            <strong>קורס כתוב</strong>
+            <span>קל לעבור ולחזור לחלק הרלוונטי</span>
+          </div>
+          <div class="meta">
+            <strong>גישה מהירה</strong>
+            <span>פרטי הגישה נשלחים למייל לאחר הרכישה</span>
+          </div>
+          <div class="meta">
+            <strong>עדכונים עתידיים</strong>
+            <span>כל עדכון שיתווסף במסגרת הקורס כלול</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">מה תלמדו בקורס</p>
+      <div class="steps">
+        <section class="card">
+          <div class="step-head">
+            <div class="step-number">01</div>
+            <h3>מבוא והבנת המונחים</h3>
+          </div>
+          <p>מה ההבדל בין חסימה לפריצה, איך לנווט בתוך הקורס ואיך לגשת לנושא בלי לחץ ובלי בלבול.</p>
+        </section>
+
+        <section class="card">
+          <div class="step-head">
+            <div class="step-number">02</div>
+            <h3>חסימות</h3>
+          </div>
+          <p>מניעה, סוגי חסימות נפוצות ואיך לפעול כשזה כבר קורה כדי לצמצם נזק ולשמור על החשבון.</p>
+        </section>
+
+        <section class="card">
+          <div class="step-head">
+            <div class="step-number">03</div>
+            <h3>פריצות ואבטחה</h3>
+          </div>
+          <p>סוגי פריצות, מניעה, הגדרות אבטחה חשובות, זיהוי מיילים חשודים והבנה איך להגיב נכון.</p>
+        </section>
+
+        <section class="card">
+          <div class="step-head">
+            <div class="step-number">04</div>
+            <h3>כלים, צ'קליסטים ונספחים</h3>
+          </div>
+          <p>צ'קליסט מהיר למצבי חירום, דוגמאות, קישורים חשובים וחומר שאפשר לחזור אליו כשצריך.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card bonus">
+        <div class="bonus-badge">בונוס מיוחד</div>
+        <h2>כלי לבדיקת כתובות מייל של אינסטגרם או פייסבוק</h2>
+        <p>
+          אחד המקומות שהכי קל ליפול בהם הוא הודעות ומיילים שנראים אמינים.
+          כל מי שרוכש את הקורס מקבל גם כלי פשוט שמאפשר לבדוק אם כתובת מייל שקיבלתם אכן שייכת לאינסטגרם או לפייסבוק, או שיש סיבה להיזהר.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">איך זה עובד</p>
+      <div class="steps">
+        <section class="card">
+          <div class="step-head">
+            <div class="step-number">01</div>
+            <h3>עוברים לדף התשלום</h3>
+          </div>
+          <p>לוחצים על כפתור הרכישה ומשלימים את הרכישה בצורה מאובטחת בדף התשלום.</p>
+        </section>
+
+        <section class="card">
+          <div class="step-head">
+            <div class="step-number">02</div>
+            <h3>מקבלים את הקורס למייל</h3>
+          </div>
+          <p>פרטי הגישה לקורס, כולל הבונוס, נשלחים למייל שהוזן בדף התשלום בתוך מספר דקות.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">שאלות נפוצות</p>
+      <div class="faq">
+        <details>
+          <summary>מתי אקבל את הקורס אחרי הרכישה?</summary>
+          <p>תוך מספר דקות, הקורס יישלח למייל שהוזן בדף התשלום.</p>
+        </details>
+
+        <details>
+          <summary>הקורס כבר סופי?</summary>
+          <p>הקורס ממשיך להתעדכן ולתת מענה למצבים חדשים של חסימה ופריצה. הרכישה כוללת גישה מלאה לכל עדכון עתידי שיתווסף במסגרת הקורס.</p>
+        </details>
+
+        <details>
+          <summary>הקורס מצולם או כתוב?</summary>
+          <p>הקורס כתוב, עם ניווט נוח, חלוקה ברורה לנושאים ומבנה שקל לעבור עליו ולחזור לחלק הרלוונטי בעת הצורך.</p>
+        </details>
+
+        <details>
+          <summary>יש מה לעשות לפני שהחשבון נחסם או נפרץ?</summary>
+          <p>כן. בקורס תלמדו איך לשפר את ההגנה על החשבון, לזהות סימני אזהרה ולהבין מאילו פעולות, הודעות וקישורים חשוב להימנע כדי לצמצם סיכונים.</p>
+        </details>
+
+        <details>
+          <summary>ומה אם החשבון כבר נחסם או נפרץ?</summary>
+          <p>הקורס כולל דרכי התמודדות פשוטות, קישורים חשובים ומידע מסודר שיעזור להבין מה לעשות ובאיזה סדר. המטרה היא לחסוך זמן, לחץ ולעיתים גם הוצאות על פעולות שאפשר לבצע לבד.</p>
+        </details>
+
+        <details>
+          <summary>הבונוס כלול במחיר?</summary>
+          <p>כן. כלי בדיקת המיילים כלול במחיר הקורס ונשלח יחד עם פרטי הגישה.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card about">
+        <h2>קצת עליי</h2>
+        <p>
+          אני אורית, מתכנתת עם למעלה מ-8 שנות ניסיון, כולל ניסיון באבטחת מידע.
+          לאורך השנים יצא לי לעזור לחברות ולאנשים שפנו אליי אחרי שהחשבון שלהם כבר נפרץ, וגם להתייעץ איתי לפני לחיצה על קישור או תגובה למייל שנראה חשוד.
+          <br><br>
+          שוב ושוב ראיתי כמה לחץ, עוגמת נפש והוצאות אפשר לחסוך כשיש מידע ברור ויודעים מה לעשות, ולכן ריכזתי בקורס את הדברים שחשוב לסדר מראש ואת סדר הפעולות שיכול לעזור בזמן אמת.
+        </p>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <h2>אם כבר השקעתם באינסטגרם שלכם, שווה גם להגן עליו</h2>
+      <p>במקום לחכות לרגע מלחיץ ואז להתחיל לחפש תשובות, אפשר להיערך מראש ולקבל את המידע, הכלים והבונוס במקום אחד.</p>
+      <div class="cta-row">
+        <a class="button" href="https://paypage.takbull.co.il/4I2o2" target="_blank" rel="noopener noreferrer">לרכישת הקורס ב-150 ₪ ↗</a>
+      </div>
+    </section>
+
+    <footer>BUILT WITH CODE · ORIT YISHAI</footer>
+  </main>
+</body>
+</html>
