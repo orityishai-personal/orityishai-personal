@@ -1,882 +1,1295 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="מיני קורס פרקטי לאבטחת אינסטגרם: איך לצמצם סיכונים, לזהות ניסיונות פריצה, להבין חסימות ולדעת מה לעשות בזמן אמת.">
-  <meta name="theme-color" content="#fff8f2">
-  <title>מיני קורס לאבטחת אינסטגרם | אורית ישי</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="מיני קורס פרקטי לאבטחת אינסטגרם: איך לצמצם סיכונים, לזהות ניסיונות פריצה, להבין חסימות ולדעת מה לעשות בזמן אמת.">
+    <meta name="theme-color" content="#fff8f2">
+    <title>מיני קורס לאבטחת אינסטגרם | אורית ישי</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
 
-  
-  <link rel="canonical" href="https://orityishai.vercel.app/instagram-security-course.html">
-  <meta name="robots" content="index,follow,max-image-preview:large">
 
-  <meta property="og:locale" content="he_IL">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Orit Yishai">
-  <meta property="og:title" content="מיני קורס לאבטחת אינסטגרם | אורית ישי">
-  <meta property="og:description" content="מיני קורס פרקטי לאבטחת אינסטגרם: איך לצמצם סיכונים, לזהות ניסיונות פריצה, להבין חסימות ולדעת מה לעשות בזמן אמת.">
-  <meta property="og:url" content="https://orityishai.vercel.app/instagram-security-course.html">
-  <meta property="og:image" content="https://orityishai.vercel.app/og/instagram-security.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="מיני קורס לאבטחת אינסטגרם">
+    <!-- SEO: replace https://orityishai.vercel.app with the final domain before launch -->
+    <link rel="canonical" href="https://orityishai.vercel.app/instagram-security-course.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="מיני קורס לאבטחת אינסטגרם | אורית ישי">
-  <meta name="twitter:description" content="מיני קורס פרקטי לאבטחת אינסטגרם: איך לצמצם סיכונים, לזהות ניסיונות פריצה, להבין חסימות ולדעת מה לעשות בזמן אמת.">
-  <meta name="twitter:image" content="https://orityishai.vercel.app/og/instagram-security.png">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Orit Yishai">
+    <meta property="og:title" content="מיני קורס לאבטחת אינסטגרם | אורית ישי">
+    <meta property="og:description" content="מיני קורס פרקטי לאבטחת אינסטגרם: איך לצמצם סיכונים, לזהות ניסיונות פריצה, להבין חסימות ולדעת מה לעשות בזמן אמת.">
+    <meta property="og:url" content="https://orityishai.vercel.app/instagram-security-course.html">
+    <meta property="og:image" content="https://orityishai.vercel.app/og/instagram-security.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="מיני קורס לאבטחת אינסטגרם">
 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://orityishai.vercel.app/#person",
-      "name": "אורית ישי",
-      "alternateName": "Orit Yishai",
-      "url": "https://orityishai.vercel.app/",
-      "jobTitle": "מתכנתת ומפתחת אתרים",
-      "sameAs": [
-        "https://www.instagram.com/orit.decode/",
-        "https://github.com/orityishai-personal"
-      ],
-      "knowsAbout": [
-        "פיתוח אתרים",
-        "SEO",
-        "GEO",
-        "AI",
-        "אבטחת אינסטגרם"
-      ]
-    },
-    {
-      "@type": "Course",
-      "@id": "https://orityishai.vercel.app/instagram-security-course.html#course",
-      "name": "מיני קורס לאבטחת אינסטגרם",
-      "description": "מיני קורס פרקטי לאבטחת אינסטגרם: איך לצמצם סיכונים, לזהות ניסיונות פריצה, להבין חסימות ולדעת מה לעשות בזמן אמת.",
-      "url": "https://orityishai.vercel.app/instagram-security-course.html",
-      "inLanguage": "he-IL",
-      "provider": {
-        "@id": "https://orityishai.vercel.app/#person"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "150",
-        "priceCurrency": "ILS",
-        "availability": "https://schema.org/InStock",
-        "url": "https://paypage.takbull.co.il/4I2o2"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://orityishai.vercel.app/instagram-security-course.html#breadcrumb",
-      "itemListElement": [
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="מיני קורס לאבטחת אינסטגרם | אורית ישי">
+    <meta name="twitter:description" content="מיני קורס פרקטי לאבטחת אינסטגרם: איך לצמצם סיכונים, לזהות ניסיונות פריצה, להבין חסימות ולדעת מה לעשות בזמן אמת.">
+    <meta name="twitter:image" content="https://orityishai.vercel.app/og/instagram-security.png">
+
+    <script type="application/ld+json">
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "ראשי",
-          "item": "https://orityishai.vercel.app/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "מיני קורס לאבטחת אינסטגרם",
-          "item": "https://orityishai.vercel.app/instagram-security-course.html"
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Person",
+                    "@id": "https://orityishai.vercel.app/#person",
+                    "name": "אורית ישי",
+                    "alternateName": "Orit Yishai",
+                    "url": "https://orityishai.vercel.app/",
+                    "jobTitle": "מתכנתת ומפתחת אתרים",
+                    "sameAs": [
+                        "https://www.instagram.com/orit.decode/",
+                        "https://github.com/orityishai-personal"
+                    ],
+                    "knowsAbout": [
+                        "פיתוח אתרים",
+                        "SEO",
+                        "GEO",
+                        "AI",
+                        "אבטחת אינסטגרם"
+                    ]
+                },
+                {
+                    "@type": "Course",
+                    "@id": "https://orityishai.vercel.app/instagram-security-course.html#course",
+                    "name": "מיני קורס לאבטחת אינסטגרם",
+                    "description": "מיני קורס פרקטי לאבטחת אינסטגרם: איך לצמצם סיכונים, לזהות ניסיונות פריצה, להבין חסימות ולדעת מה לעשות בזמן אמת.",
+                    "url": "https://orityishai.vercel.app/instagram-security-course.html",
+                    "inLanguage": "he-IL",
+                    "provider": {
+                        "@id": "https://orityishai.vercel.app/#person"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "150",
+                        "priceCurrency": "ILS",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://paypage.takbull.co.il/4I2o2"
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://orityishai.vercel.app/instagram-security-course.html#breadcrumb",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "ראשי",
+                            "item": "https://orityishai.vercel.app/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "מיני קורס לאבטחת אינסטגרם",
+                            "item": "https://orityishai.vercel.app/instagram-security-course.html"
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
-}
-  </script>
-
-  <style>
-    :root{
-      --ink:#3a2d28;
-      --muted:#7a6a62;
-      --muted-2:#9b8a82;
-
-      --orange:#d99568;
-      --orange-dark:#a95f34;
-      --orange-soft:#f8e7dc;
-      --orange-soft-2:#fff3eb;
-
-      --paper:#fff9f4;
-      --card:rgba(255,255,255,.74);
-      --line:rgba(180,112,73,.15);
-
-      --gold:#c9a86a;
-      --gold-dark:#a77f39;
-      --gold-line:rgba(201,168,106,.30);
-
-      --shadow:0 18px 55px rgba(123,79,55,.09);
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-
-    body{
-      margin:0;
-      min-height:100vh;
-      color:var(--ink);
-      font-family:"Heebo",Arial,sans-serif;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      background:
-        radial-gradient(circle at 8% 3%,rgba(249,209,181,.66),transparent 27rem),
-        radial-gradient(circle at 94% 30%,rgba(255,230,213,.92),transparent 25rem),
-        radial-gradient(circle at 36% 98%,rgba(247,217,195,.54),transparent 28rem),
-        var(--paper);
-    }
-
-    body:before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      background:linear-gradient(145deg,rgba(255,255,255,.42),rgba(252,229,211,.10));
-    }
-
-    body:after{
-      content:"";
-      position:fixed;
-      z-index:20;
-      top:0;
-      left:0;
-      right:0;
-      height:2px;
-      pointer-events:none;
-      background:linear-gradient(
-        90deg,
-        transparent 5%,
-        rgba(201,168,106,.20) 28%,
-        rgba(201,168,106,.74) 50%,
-        rgba(201,168,106,.20) 72%,
-        transparent 95%
-      );
-    }
-
-    a{color:inherit}
-
-    .page{
-      position:relative;
-      width:min(100%,620px);
-      margin:0 auto;
-      padding:28px 18px 42px;
-    }
-
-    .topline{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      position:relative;
-      margin-bottom:30px;
-      padding-bottom:14px;
-      color:#98877f;
-      font-family:"Inter",sans-serif;
-      font-size:10px;
-      letter-spacing:.16em;
-      direction:ltr;
-    }
-
-    .topline:after{
-      content:"";
-      position:absolute;
-      left:0;
-      right:0;
-      bottom:0;
-      height:1px;
-      background:linear-gradient(90deg,transparent,var(--gold-line),transparent);
-    }
-
-    .topline a{
-      text-decoration:none;
-      color:#89756b;
-      transition:color .18s ease;
-    }
-
-    .topline a:hover{color:var(--gold-dark)}
-
-    .hero{
-      text-align:center;
-      padding:6px 6px 30px;
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin:0 0 16px;
-      padding:7px 13px;
-      border:1px solid rgba(201,168,106,.24);
-      border-radius:999px;
-      color:#a15e38;
-      background:rgba(255,255,255,.46);
-      font-size:11px;
-      font-weight:500;
-      backdrop-filter:blur(8px);
-    }
-
-    .eyebrow:before{
-      content:"";
-      width:5px;
-      height:5px;
-      border-radius:50%;
-      background:var(--gold);
-      box-shadow:0 0 0 3px rgba(201,168,106,.10);
-    }
-
-    h1{
-      margin:0;
-      font-size:clamp(31px,8.6vw,41px);
-      line-height:1.13;
-      letter-spacing:-.035em;
-      font-weight:600;
-    }
-
-    h1:after{
-      content:"";
-      display:block;
-      width:40px;
-      height:1px;
-      margin:15px auto 0;
-      background:linear-gradient(90deg,transparent,var(--gold),transparent);
-      opacity:.86;
-    }
-
-    .hero-copy{
-      max-width:510px;
-      margin:15px auto 0;
-      color:var(--muted);
-      font-size:15px;
-      font-weight:300;
-    }
-
-    .hero-copy strong{
-      color:#5a4136;
-      font-weight:600;
-    }
-
-    .cta-row{
-      display:flex;
-      justify-content:center;
-      margin-top:20px;
-    }
-
-    .button{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:46px;
-      padding:0 20px;
-      text-decoration:none;
-      color:#fff;
-      background:#5b4034;
-      border:1px solid rgba(223,201,157,.34);
-      border-radius:12px;
-      font-size:13px;
-      font-weight:500;
-      box-shadow:0 10px 24px rgba(80,54,41,.18);
-      transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
-    }
-
-    .button:hover{
-      transform:translateY(-1px);
-      background:#68493b;
-      box-shadow:0 14px 30px rgba(80,54,41,.22);
-    }
-
-    .price-note{
-      margin-top:10px;
-      color:#8c786e;
-      font-size:12px;
-    }
-
-    .section{
-      margin-top:30px;
-    }
-
-    .section-label{
-      display:flex;
-      align-items:center;
-      gap:9px;
-      margin:0 4px 11px;
-      color:#9a867d;
-      font-size:11px;
-      font-weight:500;
-    }
-
-    .section-label:after{
-      content:"";
-      width:34px;
-      height:1px;
-      background:linear-gradient(90deg,var(--gold),transparent);
-      opacity:.72;
-    }
-
-    .card{
-      position:relative;
-      padding:21px 19px;
-      overflow:hidden;
-      border:1px solid var(--line);
-      border-radius:20px;
-      background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(255,248,243,.68));
-      box-shadow:0 8px 26px rgba(123,79,55,.045),inset 0 1px 0 rgba(255,255,255,.90);
-      backdrop-filter:blur(14px);
-    }
-
-    .card + .card{margin-top:12px}
-
-    .card h2{
-      margin:0 0 11px;
-      color:#4b372f;
-      font-size:21px;
-      line-height:1.3;
-      font-weight:600;
-      letter-spacing:-.015em;
-    }
-
-    .card p{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-      font-weight:300;
-      line-height:1.78;
-    }
-
-    .card strong{
-      color:#563d32;
-      font-weight:600;
-    }
-
-    .pain{
-      border-color:rgba(201,168,106,.23);
-      background:
-        radial-gradient(circle at 94% 8%,rgba(255,255,255,.70),transparent 12rem),
-        linear-gradient(145deg,rgba(249,230,216,.90),rgba(255,247,241,.86));
-    }
-
-    .pain:before{
-      content:"";
-      position:absolute;
-      top:0;
-      left:18px;
-      right:18px;
-      height:1px;
-      background:linear-gradient(90deg,transparent,rgba(201,168,106,.48),transparent);
-    }
-
-    .feature-list{
-      display:grid;
-      gap:10px;
-      margin-top:14px;
-    }
-
-    .feature{
-      display:grid;
-      grid-template-columns:34px 1fr;
-      align-items:start;
-      gap:11px;
-      padding:12px 13px;
-      border:1px solid rgba(177,111,73,.12);
-      border-radius:15px;
-      background:rgba(255,255,255,.48);
-    }
-
-    .feature-icon{
-      width:34px;
-      height:34px;
-      display:grid;
-      place-items:center;
-      border-radius:11px;
-      color:var(--orange-dark);
-      background:linear-gradient(145deg,rgba(248,226,211,.96),rgba(255,244,236,.88));
-      border:1px solid rgba(201,168,106,.22);
-      font-family:"Inter",sans-serif;
-      font-size:11px;
-      font-weight:600;
-      direction:ltr;
-    }
-
-    .feature strong{
-      display:block;
-      margin:1px 0 2px;
-      color:#513a30;
-      font-size:14.5px;
-      font-weight:600;
-    }
-
-    .feature span{
-      display:block;
-      color:#7c6a61;
-      font-size:13px;
-      font-weight:300;
-      line-height:1.55;
-    }
-
-    .course-meta{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-      margin-top:14px;
-    }
-
-    .meta{
-      padding:13px;
-      border:1px solid rgba(177,111,73,.12);
-      border-radius:15px;
-      background:rgba(255,255,255,.50);
-    }
-
-    .meta strong{
-      display:block;
-      color:#543b31;
-      font-size:14px;
-      font-weight:600;
-    }
-
-    .meta span{
-      color:#8b776e;
-      font-size:12px;
-      font-weight:300;
-    }
-
-    .bonus{
-      border-color:rgba(201,168,106,.24);
-      background:
-        radial-gradient(circle at 90% 10%,rgba(255,255,255,.66),transparent 11rem),
-        linear-gradient(145deg,rgba(248,226,211,.92),rgba(255,244,236,.84));
-    }
-
-    .bonus-badge{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      margin-bottom:9px;
-      color:#9f603d;
-      font-size:11px;
-      font-weight:600;
-    }
-
-    .bonus-badge:before{
-      content:"✦";
-      color:var(--gold-dark);
-    }
-
-    .steps{
-      display:grid;
-      gap:12px;
-    }
-
-    .step-head{
-      display:flex;
-      align-items:center;
-      gap:13px;
-      margin-bottom:11px;
-    }
-
-    .step-number{
-      flex:0 0 auto;
-      width:42px;
-      height:42px;
-      display:grid;
-      place-items:center;
-      border-radius:13px;
-      background:linear-gradient(145deg,rgba(248,226,211,.96),rgba(255,244,236,.88));
-      border:1px solid rgba(201,168,106,.24);
-      color:var(--orange-dark);
-      font-family:"Inter",sans-serif;
-      font-size:11px;
-      font-weight:600;
-      letter-spacing:.04em;
-      direction:ltr;
-    }
-
-    .step-head h3{
-      margin:0;
-      color:#4b372f;
-      font-size:18px;
-      line-height:1.3;
-      font-weight:600;
-    }
-
-    .faq{
-      display:grid;
-      gap:9px;
-    }
-
-    details{
-      border:1px solid rgba(177,111,73,.13);
-      border-radius:16px;
-      background:rgba(255,255,255,.62);
-      overflow:hidden;
-    }
-
-    summary{
-      cursor:pointer;
-      list-style:none;
-      position:relative;
-      padding:15px 44px 15px 16px;
-      color:#513a30;
-      font-size:14px;
-      font-weight:600;
-    }
-
-    summary::-webkit-details-marker{display:none}
-
-    summary:before{
-      content:"+";
-      position:absolute;
-      right:16px;
-      top:50%;
-      transform:translateY(-50%);
-      color:var(--gold-dark);
-      font-family:"Inter",sans-serif;
-      font-size:17px;
-      font-weight:500;
-    }
-
-    details[open] summary:before{content:"−"}
-
-    details p{
-      margin:0;
-      padding:0 16px 16px;
-      color:var(--muted);
-      font-size:13.5px;
-      font-weight:300;
-      line-height:1.72;
-    }
-
-    .about{
-      text-align:center;
-      border-color:rgba(201,168,106,.20);
-    }
-
-    .about h2:after{
-      content:"";
-      display:block;
-      width:36px;
-      height:1px;
-      margin:12px auto 0;
-      background:linear-gradient(90deg,transparent,var(--gold),transparent);
-    }
-
-    .final-cta{
-      position:relative;
-      margin-top:30px;
-      padding:29px 22px 24px;
-      text-align:center;
-      border:1px solid rgba(201,168,106,.24);
-      border-radius:22px;
-      background:linear-gradient(145deg,rgba(248,226,211,.92),rgba(255,247,242,.90));
-      box-shadow:0 14px 40px rgba(123,79,55,.065);
-    }
-
-    .final-cta:before{
-      content:"";
-      position:absolute;
-      top:14px;
-      left:50%;
-      width:42px;
-      height:1px;
-      transform:translateX(-50%);
-      background:linear-gradient(90deg,transparent,var(--gold),transparent);
-      opacity:.80;
-    }
-
-    .final-cta h2{
-      margin:0 0 7px;
-      color:#49352d;
-      font-size:21px;
-      font-weight:600;
-      letter-spacing:-.02em;
-    }
-
-    .final-cta p{
-      max-width:470px;
-      margin:0 auto;
-      color:#76655d;
-      font-size:13.5px;
-      font-weight:300;
-      line-height:1.7;
-    }
-
-    .final-cta .cta-row{margin-top:16px}
-
-    footer{
-      position:relative;
-      margin-top:29px;
-      padding:28px 0 2px;
-      text-align:center;
-      color:#a29189;
-      font-family:"Inter",sans-serif;
-      font-size:9px;
-      letter-spacing:.11em;
-      direction:ltr;
-    }
-
-    footer:before{
-      content:"";
-      position:absolute;
-      top:10px;
-      left:50%;
-      width:54px;
-      height:1px;
-      transform:translateX(-50%);
-      background:linear-gradient(90deg,transparent,rgba(201,168,106,.58),transparent);
-    }
-
-    a:focus-visible,
-    summary:focus-visible{
-      outline:3px solid rgba(201,168,106,.65);
-      outline-offset:4px;
-    }
-
-    @media(min-width:680px){
-      .page{padding-top:40px;padding-bottom:48px}
-      .hero{padding-top:12px;padding-bottom:36px}
-      .card{padding:23px 22px}
-    }
-
-    @media(max-width:430px){
-      .course-meta{grid-template-columns:1fr}
-    }
-
-    @media(max-width:380px){
-      .page{padding-left:14px;padding-right:14px}
-      h1{font-size:29px}
-      .hero-copy{font-size:14px}
-      .card{padding:18px 16px}
-      .feature{grid-template-columns:31px 1fr;padding:11px}
-      .feature-icon{width:31px;height:31px}
-    }
-
-    @media(prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      .button{transition:none}
-    }
-  </style>
+    </script>
+
+    <style>
+
+        :root{
+            --ink:#3b2d29;
+            --ink-soft:#57423b;
+            --muted:#7b6962;
+            --muted-2:#9c8b84;
+
+            --orange:#eaa97f;
+            --orange-deep:#b96f45;
+            --orange-soft:#f9e5d7;
+            --orange-soft-2:#fff4ec;
+            --peach:#f4c4a4;
+
+            --paper:#fffaf6;
+            --line:rgba(168,104,66,.14);
+
+            --gold:#c9a86a;
+            --gold-dark:#a77f39;
+            --gold-line:rgba(201,168,106,.30);
+
+            --deep:#352a27;
+            --shadow:0 24px 70px rgba(108,72,54,.11);
+        }
+
+        *{box-sizing:border-box}
+        html{scroll-behavior:smooth}
+
+        body{
+            margin:0;
+            min-height:100vh;
+            color:var(--ink);
+            font-family:"Heebo",Arial,sans-serif;
+            line-height:1.68;
+            -webkit-font-smoothing:antialiased;
+            overflow-x:hidden;
+            background:
+                    radial-gradient(circle at 8% 3%,rgba(247,208,183,.72),transparent 30rem),
+                    radial-gradient(circle at 94% 29%,rgba(255,237,225,.96),transparent 26rem),
+                    radial-gradient(circle at 38% 98%,rgba(249,220,201,.60),transparent 28rem),
+                    var(--paper);
+        }
+
+        body:before{
+            content:"";
+            position:fixed;
+            inset:0;
+            z-index:-2;
+            pointer-events:none;
+            background:linear-gradient(145deg,rgba(255,255,255,.52),rgba(252,226,209,.10));
+        }
+
+        body:after{
+            content:"";
+            position:fixed;
+            z-index:50;
+            top:0;
+            left:0;
+            right:0;
+            height:2px;
+            pointer-events:none;
+            background:linear-gradient(
+                    90deg,
+                    transparent 4%,
+                    rgba(201,168,106,.18) 28%,
+                    rgba(201,168,106,.78) 50%,
+                    rgba(201,168,106,.18) 72%,
+                    transparent 96%
+            );
+        }
+
+        a{color:inherit}
+
+        .page{
+            position:relative;
+            width:min(100%,1120px);
+            margin:0 auto;
+            padding:14px 20px 46px;
+        }
+
+        .topline{
+            position:sticky;
+            top:14px;
+            z-index:40;
+            min-height:62px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:16px;
+            margin-bottom:22px;
+            padding:0 16px;
+            color:#8c7469;
+            font-family:"Inter",sans-serif;
+            font-size:10px;
+            letter-spacing:.16em;
+            direction:ltr;
+            border:1px solid rgba(255,255,255,.82);
+            border-radius:18px;
+            background:rgba(255,250,246,.80);
+            box-shadow:0 12px 34px rgba(94,62,47,.08);
+            backdrop-filter:blur(20px) saturate(120%);
+            -webkit-backdrop-filter:blur(20px) saturate(120%);
+        }
+
+        .topline:before{
+            content:"";
+            width:24px;
+            height:24px;
+            border:1px solid rgba(201,168,106,.54);
+            border-radius:50%;
+            box-shadow:inset 0 0 0 7px rgba(255,255,255,.24);
+        }
+
+        .topline span{
+            margin-right:auto;
+            color:#5d463d;
+            font-weight:600;
+        }
+
+        .topline a{
+            text-decoration:none;
+            color:#8a7369;
+            transition:color .2s ease,transform .2s ease;
+        }
+
+        .topline a:hover{
+            color:var(--gold-dark);
+            transform:translateY(-1px);
+        }
+
+        .hero{
+            min-height:640px;
+            display:grid;
+            grid-template-columns:1.08fr .92fr;
+            grid-template-rows:auto auto auto auto auto;
+            align-items:center;
+            column-gap:68px;
+            padding:72px 34px 80px;
+            position:relative;
+        }
+
+        .hero:before{
+            content:"";
+            position:absolute;
+            width:320px;
+            height:320px;
+            right:-170px;
+            top:38px;
+            border-radius:50%;
+            border:1px solid rgba(201,168,106,.18);
+            box-shadow:0 0 0 36px rgba(255,255,255,.08);
+            pointer-events:none;
+        }
+
+        .eyebrow,
+        .hero h1,
+        .hero-copy,
+        .cta-row,
+        .price-note{
+            grid-column:1;
+        }
+
+        .eyebrow{
+            align-self:end;
+            justify-self:start;
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            margin:0 0 18px;
+            padding:7px 13px;
+            color:#9a6343;
+            background:rgba(255,255,255,.52);
+            border:1px solid rgba(201,168,106,.24);
+            border-radius:999px;
+            font-size:11px;
+            font-weight:500;
+            backdrop-filter:blur(8px);
+        }
+
+        .eyebrow:before{
+            content:"";
+            width:5px;
+            height:5px;
+            border-radius:50%;
+            background:var(--gold);
+            box-shadow:0 0 0 3px rgba(201,168,106,.10);
+        }
+
+        .hero h1{
+            margin:0;
+            color:#3c2d28;
+            font-size:clamp(42px,5.8vw,66px);
+            line-height:1.04;
+            letter-spacing:-.05em;
+            font-weight:600;
+            max-width:720px;
+        }
+
+        .hero h1:after{
+            content:"";
+            display:block;
+            width:48px;
+            height:1px;
+            margin:20px 0 0 auto;
+            background:linear-gradient(90deg,transparent,var(--gold));
+        }
+
+        .hero-copy{
+            max-width:620px;
+            margin:20px 0 0;
+            color:#7d6a61;
+            font-size:17px;
+            font-weight:300;
+            line-height:1.78;
+        }
+
+        .hero-copy strong{
+            color:#564037;
+            font-weight:600;
+        }
+
+        .cta-row{
+            display:flex;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:12px;
+            margin-top:27px;
+        }
+
+        .button{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            min-height:47px;
+            padding:0 19px;
+            text-decoration:none;
+            color:#fff;
+            background:#774c39;
+            border:1px solid rgba(223,201,157,.38);
+            border-radius:12px;
+            font-size:13px;
+            font-weight:600;
+            box-shadow:0 11px 26px rgba(104,67,49,.18);
+            transition:transform .22s ease,box-shadow .22s ease,background .22s ease;
+        }
+
+        .button:hover{
+            transform:translateY(-2px);
+            background:#855744;
+            box-shadow:0 16px 34px rgba(104,67,49,.23);
+        }
+
+        .price-note{
+            margin-top:12px;
+            color:#8c766b;
+            font-size:12px;
+        }
+
+        /* Security visual, decorative only */
+        .hero-visual{
+            grid-column:2;
+            grid-row:1/6;
+            min-height:430px;
+            position:relative;
+            display:grid;
+            place-items:center;
+        }
+
+        .security-window{
+            width:min(88%,370px);
+            aspect-ratio:4/5;
+            position:relative;
+            overflow:hidden;
+            border-radius:30px;
+            background:linear-gradient(145deg,#fff7f1,#fffdfb);
+            border:1px solid rgba(255,255,255,.90);
+            box-shadow:0 34px 80px rgba(108,72,54,.18),0 0 0 1px rgba(201,168,106,.22);
+            transform:rotate(1.2deg);
+            transition:transform .5s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .security-window:hover{
+            transform:rotate(.2deg) translateY(-4px);
+        }
+
+        .window-bar{
+            height:43px;
+            display:flex;
+            align-items:center;
+            gap:5px;
+            padding:0 14px;
+            border-bottom:1px solid rgba(168,104,66,.09);
+            direction:ltr;
+        }
+
+        .window-bar i{
+            width:5px;
+            height:5px;
+            border-radius:50%;
+            background:#dfc9bd;
+        }
+
+        .shield-wrap{
+            position:absolute;
+            left:50%;
+            top:50%;
+            width:210px;
+            height:230px;
+            transform:translate(-50%,-47%);
+            display:grid;
+            place-items:center;
+        }
+
+        .shield{
+            width:150px;
+            height:176px;
+            position:relative;
+            display:grid;
+            place-items:center;
+            background:linear-gradient(145deg,#efb38d,#f8d6c0);
+            clip-path:polygon(50% 0,88% 16%,86% 58%,73% 79%,50% 100%,27% 79%,14% 58%,12% 16%);
+            box-shadow:0 22px 55px rgba(151,85,49,.18);
+        }
+
+        .shield:before{
+            content:"";
+            width:116px;
+            height:138px;
+            position:absolute;
+            background:linear-gradient(145deg,#fff9f5,#fff);
+            clip-path:polygon(50% 0,88% 16%,86% 58%,73% 79%,50% 100%,27% 79%,14% 58%,12% 16%);
+        }
+
+        .lock{
+            position:relative;
+            z-index:2;
+            width:49px;
+            height:42px;
+            margin-top:20px;
+            border-radius:9px;
+            background:#705041;
+            box-shadow:0 8px 18px rgba(74,49,39,.16);
+        }
+
+        .lock:before{
+            content:"";
+            position:absolute;
+            left:11px;
+            top:-29px;
+            width:27px;
+            height:32px;
+            border:6px solid #705041;
+            border-bottom:0;
+            border-radius:18px 18px 0 0;
+        }
+
+        .lock:after{
+            content:"";
+            position:absolute;
+            left:22px;
+            top:13px;
+            width:6px;
+            height:13px;
+            border-radius:999px;
+            background:#f6dfcf;
+        }
+
+        .orbit{
+            position:absolute;
+            border-radius:50%;
+            border:1px solid rgba(201,168,106,.24);
+        }
+
+        .orbit.one{
+            width:250px;
+            height:250px;
+            animation:spin 18s linear infinite;
+        }
+
+        .orbit.two{
+            width:190px;
+            height:190px;
+            border-style:dashed;
+            opacity:.65;
+            animation:spinReverse 15s linear infinite;
+        }
+
+        .orbit.one:before,
+        .orbit.two:before{
+            content:"";
+            position:absolute;
+            width:8px;
+            height:8px;
+            border-radius:50%;
+            background:var(--gold);
+            top:14px;
+            left:50%;
+            box-shadow:0 0 0 4px rgba(201,168,106,.10);
+        }
+
+        @keyframes spin{to{transform:rotate(360deg)}}
+        @keyframes spinReverse{to{transform:rotate(-360deg)}}
+
+        .float-dot{
+            position:absolute;
+            width:42px;
+            height:42px;
+            border-radius:13px;
+            border:1px solid rgba(255,255,255,.84);
+            background:rgba(255,255,255,.82);
+            box-shadow:0 14px 34px rgba(94,62,47,.12);
+            backdrop-filter:blur(14px);
+            animation:floaty 5.8s ease-in-out infinite;
+        }
+
+        .float-dot:before,
+        .float-dot:after{
+            content:"";
+            position:absolute;
+            border-radius:50%;
+        }
+
+        .float-dot:before{
+            width:9px;
+            height:9px;
+            background:var(--gold);
+            left:16px;
+            top:11px;
+        }
+
+        .float-dot:after{
+            width:16px;
+            height:5px;
+            background:#e7c6b4;
+            left:12px;
+            bottom:9px;
+            border-radius:999px;
+        }
+
+        .float-dot.a{left:0;top:70px}
+        .float-dot.b{right:0;top:172px;animation-delay:-2.2s}
+        .float-dot.c{left:24px;bottom:62px;animation-delay:-3.6s}
+
+        @keyframes floaty{
+            0%,100%{transform:translateY(0)}
+            50%{transform:translateY(-8px)}
+        }
+
+        .section{
+            width:min(100%,980px);
+            margin:22px auto 0;
+        }
+
+        .section-label{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            margin:0 4px 12px;
+            color:#90766a;
+            font-size:11px;
+            font-weight:500;
+        }
+
+        .section-label:after{
+            content:"";
+            width:38px;
+            height:1px;
+            background:linear-gradient(90deg,var(--gold),transparent);
+            opacity:.76;
+        }
+
+        .card{
+            position:relative;
+            padding:28px;
+            overflow:hidden;
+            border:1px solid var(--line);
+            border-radius:22px;
+            background:linear-gradient(145deg,rgba(255,255,255,.84),rgba(255,249,245,.70));
+            box-shadow:0 10px 34px rgba(108,72,54,.055),inset 0 1px 0 rgba(255,255,255,.94);
+            backdrop-filter:blur(14px);
+            transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease;
+        }
+
+        .card:hover{
+            transform:translateY(-3px);
+            border-color:rgba(201,168,106,.28);
+            box-shadow:0 20px 46px rgba(108,72,54,.09);
+        }
+
+        .card h2{
+            margin:0 0 10px;
+            color:#4b3730;
+            font-size:23px;
+            line-height:1.28;
+            font-weight:600;
+            letter-spacing:-.02em;
+        }
+
+        .card>p{
+            margin:0;
+            color:#7b6962;
+            font-size:14px;
+            font-weight:300;
+            line-height:1.8;
+        }
+
+        .pain{
+            padding:30px;
+            background:
+                    radial-gradient(circle at 94% 6%,rgba(249,224,209,.82),transparent 19rem),
+                    linear-gradient(145deg,rgba(255,255,255,.84),rgba(255,248,244,.72));
+        }
+
+        .feature-list{
+            display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr));
+            gap:12px;
+            margin-top:20px;
+        }
+
+        .feature{
+            display:flex;
+            gap:12px;
+            align-items:flex-start;
+            padding:17px;
+            border:1px solid rgba(168,104,66,.10);
+            border-radius:17px;
+            background:rgba(255,255,255,.56);
+            transition:transform .22s ease,border-color .22s ease;
+        }
+
+        .feature:hover{
+            transform:translateY(-3px);
+            border-color:rgba(201,168,106,.28);
+        }
+
+        .feature-icon{
+            width:36px;
+            height:36px;
+            flex:0 0 36px;
+            display:grid;
+            place-items:center;
+            border-radius:12px;
+            color:#9b6242;
+            background:#f8e1d2;
+            border:1px solid rgba(201,168,106,.22);
+            font-family:"Inter",sans-serif;
+            font-size:9px;
+            font-weight:600;
+        }
+
+        .feature strong{
+            display:block;
+            color:#553d34;
+            font-size:14px;
+        }
+
+        .feature span{
+            display:block;
+            margin-top:3px;
+            color:#846f65;
+            font-size:13px;
+            font-weight:300;
+        }
+
+        .course-meta{
+            display:grid;
+            grid-template-columns:repeat(4,minmax(0,1fr));
+            gap:10px;
+            margin-top:22px;
+        }
+
+        .meta{
+            min-height:112px;
+            padding:17px 14px;
+            border-radius:17px;
+            background:rgba(255,255,255,.58);
+            border:1px solid rgba(168,104,66,.10);
+            text-align:center;
+            transition:transform .22s ease,border-color .22s ease;
+        }
+
+        .meta:hover{
+            transform:translateY(-3px);
+            border-color:rgba(201,168,106,.28);
+        }
+
+        .meta strong{
+            display:block;
+            color:#704d3e;
+            font-size:15px;
+        }
+
+        .meta span{
+            display:block;
+            margin-top:5px;
+            color:#8c786e;
+            font-size:12px;
+            line-height:1.45;
+        }
+
+        .steps{
+            display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr));
+            gap:12px;
+        }
+
+        .steps .card{
+            min-height:190px;
+        }
+
+        .step-head{
+            display:flex;
+            align-items:center;
+            gap:13px;
+            margin-bottom:13px;
+        }
+
+        .step-number{
+            width:42px;
+            height:42px;
+            flex:0 0 42px;
+            display:grid;
+            place-items:center;
+            border-radius:13px;
+            background:linear-gradient(145deg,#f7dfcf,#fff3eb);
+            border:1px solid rgba(201,168,106,.24);
+            color:#a26644;
+            font-family:"Inter",sans-serif;
+            font-size:10px;
+            font-weight:600;
+        }
+
+        .steps h3{
+            margin:0;
+            color:#543a31;
+            font-size:16px;
+            font-weight:600;
+        }
+
+        .steps p{
+            margin:0;
+            color:#816e65;
+            font-size:13.5px;
+            font-weight:300;
+            line-height:1.72;
+        }
+
+        .bonus{
+            padding:33px 30px;
+            border-color:rgba(201,168,106,.22);
+            background:
+                    radial-gradient(circle at 90% 8%,rgba(255,255,255,.78),transparent 15rem),
+                    linear-gradient(145deg,rgba(248,220,201,.92),rgba(255,242,233,.90));
+        }
+
+        .bonus:after{
+            content:"";
+            position:absolute;
+            left:-70px;
+            bottom:-90px;
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            border:1px solid rgba(201,168,106,.15);
+        }
+
+        .bonus-badge{
+            display:inline-flex;
+            align-items:center;
+            gap:7px;
+            margin-bottom:12px;
+            padding:6px 10px;
+            color:#8c5a3e;
+            border:1px solid rgba(201,168,106,.28);
+            border-radius:999px;
+            background:rgba(255,255,255,.54);
+            font-size:11px;
+            font-weight:600;
+        }
+
+        .bonus-badge:before{
+            content:"";
+            width:5px;
+            height:5px;
+            border-radius:50%;
+            background:var(--gold);
+        }
+
+        .faq{
+            display:grid;
+            gap:9px;
+        }
+
+        details{
+            border:1px solid rgba(168,104,66,.11);
+            border-radius:16px;
+            background:rgba(255,255,255,.60);
+            overflow:hidden;
+            transition:border-color .2s ease,box-shadow .2s ease;
+        }
+
+        details[open]{
+            border-color:rgba(201,168,106,.30);
+            box-shadow:0 12px 30px rgba(108,72,54,.06);
+        }
+
+        summary{
+            position:relative;
+            padding:16px 46px 16px 17px;
+            cursor:pointer;
+            list-style:none;
+            color:#533c34;
+            font-size:14px;
+            font-weight:600;
+        }
+
+        summary::-webkit-details-marker{display:none}
+
+        summary:before{
+            content:"+";
+            position:absolute;
+            right:17px;
+            top:50%;
+            transform:translateY(-50%);
+            color:var(--gold-dark);
+            font-family:"Inter",sans-serif;
+            font-size:17px;
+            font-weight:400;
+            transition:transform .2s ease;
+        }
+
+        details[open] summary:before{
+            transform:translateY(-50%) rotate(45deg);
+        }
+
+        details p{
+            margin:0;
+            padding:0 17px 17px;
+            color:#816f66;
+            font-size:13.5px;
+            font-weight:300;
+            line-height:1.75;
+        }
+
+        .about{
+            background:
+                    radial-gradient(circle at 92% 8%,rgba(248,224,209,.72),transparent 18rem),
+                    rgba(255,255,255,.70);
+        }
+
+        .final-cta{
+            width:min(100%,980px);
+            margin:32px auto 0;
+            padding:56px 28px 50px;
+            position:relative;
+            overflow:hidden;
+            text-align:center;
+            color:#fff;
+            border:1px solid rgba(201,168,106,.22);
+            border-radius:26px;
+            background:
+                    radial-gradient(circle at 82% 16%,rgba(138,87,59,.34),transparent 34%),
+                    radial-gradient(circle at 12% 100%,rgba(201,168,106,.12),transparent 33%),
+                    var(--deep);
+            box-shadow:0 28px 74px rgba(53,42,39,.20);
+        }
+
+        .final-cta:before{
+            content:"";
+            position:absolute;
+            width:300px;
+            height:300px;
+            top:-160px;
+            right:-150px;
+            border:1px solid rgba(201,168,106,.12);
+            border-radius:50%;
+            box-shadow:0 0 0 40px rgba(255,255,255,.014);
+        }
+
+        .final-cta h2{
+            position:relative;
+            margin:0 0 8px;
+            color:#fff;
+            font-size:30px;
+            font-weight:600;
+            letter-spacing:-.03em;
+        }
+
+        .final-cta p{
+            position:relative;
+            max-width:620px;
+            margin:0 auto;
+            color:#dccfc8;
+            font-size:14px;
+            font-weight:300;
+            line-height:1.76;
+        }
+
+        .final-cta .cta-row{
+            position:relative;
+            justify-content:center;
+            margin-top:22px;
+        }
+
+        .final-cta .button{
+            color:#352a27;
+            background:#f7f1e5;
+            border-color:rgba(201,168,106,.55);
+            box-shadow:0 12px 26px rgba(0,0,0,.12);
+        }
+
+        .final-cta .button:hover{
+            background:#fff8ec;
+        }
+
+        footer{
+            width:min(100%,980px);
+            position:relative;
+            margin:28px auto 0;
+            padding:28px 0 2px;
+            text-align:center;
+            color:#9d8c84;
+            font-family:"Inter",sans-serif;
+            font-size:9px;
+            letter-spacing:.11em;
+            direction:ltr;
+        }
+
+        footer:before{
+            content:"";
+            position:absolute;
+            top:10px;
+            left:50%;
+            width:54px;
+            height:1px;
+            transform:translateX(-50%);
+            background:linear-gradient(90deg,transparent,rgba(201,168,106,.58),transparent);
+        }
+
+        .reveal{
+            opacity:0;
+            transform:translateY(18px);
+            transition:opacity .72s ease,transform .72s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .reveal.visible{
+            opacity:1;
+            transform:none;
+        }
+
+        .delay-1{transition-delay:.07s}
+        .delay-2{transition-delay:.14s}
+
+        a:focus-visible,
+        summary:focus-visible{
+            outline:3px solid rgba(201,168,106,.65);
+            outline-offset:4px;
+        }
+
+        @media(max-width:900px){
+            .hero{
+                min-height:auto;
+                grid-template-columns:1fr;
+                gap:38px;
+                padding:62px 10px 68px;
+                text-align:center;
+            }
+
+            .eyebrow,
+            .hero h1,
+            .hero-copy,
+            .cta-row,
+            .price-note{
+                grid-column:1;
+            }
+
+            .eyebrow{justify-self:center}
+            .hero h1:after{
+                margin-left:auto;
+                margin-right:auto;
+                background:linear-gradient(90deg,transparent,var(--gold),transparent);
+            }
+            .hero-copy{margin-left:auto;margin-right:auto}
+            .cta-row{justify-content:center}
+
+            .hero-visual{
+                grid-column:1;
+                grid-row:auto;
+                min-height:380px;
+            }
+
+            .security-window{width:min(76%,340px)}
+        }
+
+        @media(max-width:700px){
+            .feature-list,
+            .steps{
+                grid-template-columns:1fr;
+            }
+
+            .course-meta{
+                grid-template-columns:repeat(2,1fr);
+            }
+        }
+
+        @media(max-width:560px){
+            .page{padding:8px 12px 36px}
+            .topline{top:8px;min-height:56px;border-radius:16px;padding:0 12px}
+            .topline:before{width:22px;height:22px}
+
+            .hero{padding:54px 4px 54px}
+            .hero h1{font-size:clamp(36px,11vw,48px)}
+            .hero-copy{font-size:15px}
+            .hero-visual{min-height:340px}
+            .security-window{width:min(84%,300px);border-radius:24px}
+            .float-dot{width:37px;height:37px;border-radius:11px}
+            .float-dot:before{left:14px;top:9px}
+            .float-dot:after{left:10px;bottom:8px}
+            .float-dot.a{top:45px;left:0}
+            .float-dot.b{right:0;top:146px}
+            .float-dot.c{left:4px;bottom:44px}
+
+            .card{padding:21px 17px;border-radius:19px}
+            .pain{padding:22px 17px}
+            .course-meta{grid-template-columns:1fr 1fr}
+            .meta{min-height:105px;padding:15px 11px}
+
+            .final-cta{padding:44px 18px;border-radius:22px}
+            .final-cta h2{font-size:29px}
+        }
+
+        @media(prefers-reduced-motion:reduce){
+            html{scroll-behavior:auto}
+            *,*:before,*:after{
+                animation-duration:.01ms!important;
+                animation-iteration-count:1!important;
+                transition-duration:.01ms!important;
+                scroll-behavior:auto!important;
+            }
+            .reveal{opacity:1;transform:none}
+        }
+
+    </style>
 </head>
 
 <body>
-  <main class="page">
+<main class="page">
     <div class="topline">
-      <span>ORIT YISHAI</span>
-      <a href="index.html">חזרה לכל השירותים</a>
+        <span>ORIT YISHAI</span>
+        <a href="index.html">חזרה לכל השירותים</a>
     </div>
 
     <header class="hero">
-      <div class="eyebrow">מיני קורס פרקטי להגנה על החשבון</div>
-      <h1>אל תחכו לחסימה או לפריצה כדי להבין איך האינסטגרם שלכם מוגן</h1>
-      <p class="hero-copy">
-        קורס מסודר שמרכז את מה שחשוב לדעת כדי <strong>לצמצם סיכונים, לזהות בעיות בזמן ולהבין מה לעשות כשמשהו קורה</strong>,
-        בלי להתחיל לחפש תשובות רק ברגע של לחץ.
-      </p>
-      <div class="cta-row">
-        <a class="button" href="https://paypage.takbull.co.il/4I2o2" target="_blank" rel="noopener noreferrer">אני רוצה להצטרף ↗</a>
-      </div>
-      <div class="price-note">150 ₪ · גישה לקורס, לבונוס ולעדכונים עתידיים במסגרת הקורס</div>
+        <div class="eyebrow reveal">מיני קורס פרקטי להגנה על החשבון</div>
+        <h1 class="reveal delay-1">אל תחכו לחסימה או לפריצה כדי להבין איך האינסטגרם שלכם מוגן</h1>
+        <p class="hero-copy reveal delay-2">
+            קורס מסודר שמרכז את מה שחשוב לדעת כדי <strong>לצמצם סיכונים, לזהות בעיות בזמן ולהבין מה לעשות כשמשהו קורה</strong>,
+            בלי להתחיל לחפש תשובות רק ברגע של לחץ.
+        </p>
+        <div class="cta-row reveal delay-2">
+            <a class="button" href="https://paypage.takbull.co.il/4I2o2" target="_blank" rel="noopener noreferrer">אני רוצה להצטרף ↗</a>
+        </div>
+        <div class="price-note reveal delay-2">150 ₪ · גישה לקורס, לבונוס ולעדכונים עתידיים במסגרת הקורס</div>
+
+        <div class="hero-visual reveal delay-1" aria-hidden="true">
+            <div class="security-window">
+                <div class="window-bar"><i></i><i></i><i></i></div>
+                <div class="shield-wrap">
+                    <div class="orbit one"></div>
+                    <div class="orbit two"></div>
+                    <div class="shield"><div class="lock"></div></div>
+                </div>
+            </div>
+            <div class="float-dot a"></div>
+            <div class="float-dot b"></div>
+            <div class="float-dot c"></div>
+        </div>
+
     </header>
 
-    <section class="section">
-      <p class="section-label">למי זה מתאים</p>
-      <div class="card pain">
-        <h2>כשהחשבון חשוב לכם, עדיף לדעת מה לעשות לפני שקורה משהו</h2>
-        <div class="feature-list">
-          <div class="feature">
-            <div class="feature-icon">01</div>
-            <div>
-              <strong>מפחדים לאבד את החשבון, התוכן או הקהילה שבניתם?</strong>
-              <span>הקורס עושה סדר במה שכדאי להגדיר ולבדוק מראש כדי לצמצם סיכונים.</span>
-            </div>
-          </div>
+    <section class="section reveal">
+        <p class="section-label">למי זה מתאים</p>
+        <div class="card pain">
+            <h2>כשהחשבון חשוב לכם, עדיף לדעת מה לעשות לפני שקורה משהו</h2>
+            <div class="feature-list">
+                <div class="feature">
+                    <div class="feature-icon">01</div>
+                    <div>
+                        <strong>מפחדים לאבד את החשבון, התוכן או הקהילה שבניתם?</strong>
+                        <span>הקורס עושה סדר במה שכדאי להגדיר ולבדוק מראש כדי לצמצם סיכונים.</span>
+                    </div>
+                </div>
 
-          <div class="feature">
-            <div class="feature-icon">02</div>
-            <div>
-              <strong>לא בטוחים אם זו חסימה או פריצה?</strong>
-              <span>תלמדו להבין את ההבדלים ולדעת איך נכון לפעול בכל מצב.</span>
-            </div>
-          </div>
+                <div class="feature">
+                    <div class="feature-icon">02</div>
+                    <div>
+                        <strong>לא בטוחים אם זו חסימה או פריצה?</strong>
+                        <span>תלמדו להבין את ההבדלים ולדעת איך נכון לפעול בכל מצב.</span>
+                    </div>
+                </div>
 
-          <div class="feature">
-            <div class="feature-icon">03</div>
-            <div>
-              <strong>רוצים הוראות ברורות במקום לחפש מידע בזמן לחץ?</strong>
-              <span>תקבלו צ'קליסטים, קישורים וכלים שאפשר לחזור אליהם כשצריך.</span>
-            </div>
-          </div>
+                <div class="feature">
+                    <div class="feature-icon">03</div>
+                    <div>
+                        <strong>רוצים הוראות ברורות במקום לחפש מידע בזמן לחץ?</strong>
+                        <span>תקבלו צ'קליסטים, קישורים וכלים שאפשר לחזור אליהם כשצריך.</span>
+                    </div>
+                </div>
 
-          <div class="feature">
-            <div class="feature-icon">04</div>
-            <div>
-              <strong>קיבלתם מייל מאינסטגרם או פייסבוק ולא בטוחים אם הוא אמיתי?</strong>
-              <span>הבונוס המצורף מאפשר לבדוק כתובות מייל לפני שלוחצים.</span>
+                <div class="feature">
+                    <div class="feature-icon">04</div>
+                    <div>
+                        <strong>קיבלתם מייל מאינסטגרם או פייסבוק ולא בטוחים אם הוא אמיתי?</strong>
+                        <span>הבונוס המצורף מאפשר לבדוק כתובות מייל לפני שלוחצים.</span>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <section class="section">
-      <p class="section-label">מה מקבלים</p>
-      <div class="card">
-        <h2>קורס קצר שאפשר לחזור אליו גם בזמן אמת</h2>
-        <p>
-          הקורס כתוב, עם ניווט נוח וחלוקה ברורה לנושאים. הוא בנוי כך שאפשר להבין גם את התמונה הגדולה וגם מה לעשות בפועל בכל שלב.
-        </p>
+    <section class="section reveal">
+        <p class="section-label">מה מקבלים</p>
+        <div class="card">
+            <h2>קורס קצר שאפשר לחזור אליו גם בזמן אמת</h2>
+            <p>
+                הקורס כתוב, עם ניווט נוח וחלוקה ברורה לנושאים. הוא בנוי כך שאפשר להבין גם את התמונה הגדולה וגם מה לעשות בפועל בכל שלב.
+            </p>
 
-        <div class="course-meta">
-          <div class="meta">
-            <strong>כ-2 שעות</strong>
-            <span>זמן למידה משוער</span>
-          </div>
-          <div class="meta">
-            <strong>קורס כתוב</strong>
-            <span>קל לעבור ולחזור לחלק הרלוונטי</span>
-          </div>
-          <div class="meta">
-            <strong>גישה מהירה</strong>
-            <span>פרטי הגישה נשלחים למייל לאחר הרכישה</span>
-          </div>
-          <div class="meta">
-            <strong>עדכונים עתידיים</strong>
-            <span>כל עדכון שיתווסף במסגרת הקורס כלול</span>
-          </div>
+            <div class="course-meta">
+                <div class="meta">
+                    <strong>כ-2 שעות</strong>
+                    <span>זמן למידה משוער</span>
+                </div>
+                <div class="meta">
+                    <strong>קורס כתוב</strong>
+                    <span>קל לעבור ולחזור לחלק הרלוונטי</span>
+                </div>
+                <div class="meta">
+                    <strong>גישה מהירה</strong>
+                    <span>פרטי הגישה נשלחים למייל לאחר הרכישה</span>
+                </div>
+                <div class="meta">
+                    <strong>עדכונים עתידיים</strong>
+                    <span>כל עדכון שיתווסף במסגרת הקורס כלול</span>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="section">
-      <p class="section-label">מה תלמדו בקורס</p>
-      <div class="steps">
-        <section class="card">
-          <div class="step-head">
-            <div class="step-number">01</div>
-            <h3>מבוא והבנת המונחים</h3>
-          </div>
-          <p>מה ההבדל בין חסימה לפריצה, איך לנווט בתוך הקורס ואיך לגשת לנושא בלי לחץ ובלי בלבול.</p>
-        </section>
+    <section class="section reveal">
+        <p class="section-label">מה תלמדו בקורס</p>
+        <div class="steps">
+            <section class="card">
+                <div class="step-head">
+                    <div class="step-number">01</div>
+                    <h3>מבוא והבנת המונחים</h3>
+                </div>
+                <p>מה ההבדל בין חסימה לפריצה, איך לנווט בתוך הקורס ואיך לגשת לנושא בלי לחץ ובלי בלבול.</p>
+            </section>
 
-        <section class="card">
-          <div class="step-head">
-            <div class="step-number">02</div>
-            <h3>חסימות</h3>
-          </div>
-          <p>מניעה, סוגי חסימות נפוצות ואיך לפעול כשזה כבר קורה כדי לצמצם נזק ולשמור על החשבון.</p>
-        </section>
+            <section class="card">
+                <div class="step-head">
+                    <div class="step-number">02</div>
+                    <h3>חסימות</h3>
+                </div>
+                <p>מניעה, סוגי חסימות נפוצות ואיך לפעול כשזה כבר קורה כדי לצמצם נזק ולשמור על החשבון.</p>
+            </section>
 
-        <section class="card">
-          <div class="step-head">
-            <div class="step-number">03</div>
-            <h3>פריצות ואבטחה</h3>
-          </div>
-          <p>סוגי פריצות, מניעה, הגדרות אבטחה חשובות, זיהוי מיילים חשודים והבנה איך להגיב נכון.</p>
-        </section>
+            <section class="card">
+                <div class="step-head">
+                    <div class="step-number">03</div>
+                    <h3>פריצות ואבטחה</h3>
+                </div>
+                <p>סוגי פריצות, מניעה, הגדרות אבטחה חשובות, זיהוי מיילים חשודים והבנה איך להגיב נכון.</p>
+            </section>
 
-        <section class="card">
-          <div class="step-head">
-            <div class="step-number">04</div>
-            <h3>כלים, צ'קליסטים ונספחים</h3>
-          </div>
-          <p>צ'קליסט מהיר למצבי חירום, דוגמאות, קישורים חשובים וחומר שאפשר לחזור אליו כשצריך.</p>
-        </section>
-      </div>
+            <section class="card">
+                <div class="step-head">
+                    <div class="step-number">04</div>
+                    <h3>כלים, צ'קליסטים ונספחים</h3>
+                </div>
+                <p>צ'קליסט מהיר למצבי חירום, דוגמאות, קישורים חשובים וחומר שאפשר לחזור אליו כשצריך.</p>
+            </section>
+        </div>
     </section>
 
-    <section class="section">
-      <div class="card bonus">
-        <div class="bonus-badge">בונוס מיוחד</div>
-        <h2>כלי לבדיקת כתובות מייל של אינסטגרם או פייסבוק</h2>
-        <p>
-          אחד המקומות שהכי קל ליפול בהם הוא הודעות ומיילים שנראים אמינים.
-          כל מי שרוכש את הקורס מקבל גם כלי פשוט שמאפשר לבדוק אם כתובת מייל שקיבלתם אכן שייכת לאינסטגרם או לפייסבוק, או שיש סיבה להיזהר.
-        </p>
-      </div>
+    <section class="section reveal">
+        <div class="card bonus">
+            <div class="bonus-badge">בונוס מיוחד</div>
+            <h2>כלי לבדיקת כתובות מייל של אינסטגרם או פייסבוק</h2>
+            <p>
+                אחד המקומות שהכי קל ליפול בהם הוא הודעות ומיילים שנראים אמינים.
+                כל מי שרוכש את הקורס מקבל גם כלי פשוט שמאפשר לבדוק אם כתובת מייל שקיבלתם אכן שייכת לאינסטגרם או לפייסבוק, או שיש סיבה להיזהר.
+            </p>
+        </div>
     </section>
 
-    <section class="section">
-      <p class="section-label">איך זה עובד</p>
-      <div class="steps">
-        <section class="card">
-          <div class="step-head">
-            <div class="step-number">01</div>
-            <h3>עוברים לדף התשלום</h3>
-          </div>
-          <p>לוחצים על כפתור הרכישה ומשלימים את הרכישה בצורה מאובטחת בדף התשלום.</p>
-        </section>
+    <section class="section reveal">
+        <p class="section-label">איך זה עובד</p>
+        <div class="steps">
+            <section class="card">
+                <div class="step-head">
+                    <div class="step-number">01</div>
+                    <h3>עוברים לדף התשלום</h3>
+                </div>
+                <p>לוחצים על כפתור הרכישה ומשלימים את הרכישה בצורה מאובטחת בדף התשלום.</p>
+            </section>
 
-        <section class="card">
-          <div class="step-head">
-            <div class="step-number">02</div>
-            <h3>מקבלים את הקורס למייל</h3>
-          </div>
-          <p>פרטי הגישה לקורס, כולל הבונוס, נשלחים למייל שהוזן בדף התשלום בתוך מספר דקות.</p>
-        </section>
-      </div>
+            <section class="card">
+                <div class="step-head">
+                    <div class="step-number">02</div>
+                    <h3>מקבלים את הקורס למייל</h3>
+                </div>
+                <p>פרטי הגישה לקורס, כולל הבונוס, נשלחים למייל שהוזן בדף התשלום בתוך מספר דקות.</p>
+            </section>
+        </div>
     </section>
 
-    <section class="section">
-      <p class="section-label">שאלות נפוצות</p>
-      <div class="faq">
-        <details>
-          <summary>מתי אקבל את הקורס אחרי הרכישה?</summary>
-          <p>תוך מספר דקות, הקורס יישלח למייל שהוזן בדף התשלום.</p>
-        </details>
+    <section class="section reveal">
+        <p class="section-label">שאלות נפוצות</p>
+        <div class="faq">
+            <details>
+                <summary>מתי אקבל את הקורס אחרי הרכישה?</summary>
+                <p>תוך מספר דקות, הקורס יישלח למייל שהוזן בדף התשלום.</p>
+            </details>
 
-        <details>
-          <summary>הקורס כבר סופי?</summary>
-          <p>הקורס ממשיך להתעדכן ולתת מענה למצבים חדשים של חסימה ופריצה. הרכישה כוללת גישה מלאה לכל עדכון עתידי שיתווסף במסגרת הקורס.</p>
-        </details>
+            <details>
+                <summary>הקורס כבר סופי?</summary>
+                <p>הקורס ממשיך להתעדכן ולתת מענה למצבים חדשים של חסימה ופריצה. הרכישה כוללת גישה מלאה לכל עדכון עתידי שיתווסף במסגרת הקורס.</p>
+            </details>
 
-        <details>
-          <summary>הקורס מצולם או כתוב?</summary>
-          <p>הקורס כתוב, עם ניווט נוח, חלוקה ברורה לנושאים ומבנה שקל לעבור עליו ולחזור לחלק הרלוונטי בעת הצורך.</p>
-        </details>
+            <details>
+                <summary>הקורס מצולם או כתוב?</summary>
+                <p>הקורס כתוב, עם ניווט נוח, חלוקה ברורה לנושאים ומבנה שקל לעבור עליו ולחזור לחלק הרלוונטי בעת הצורך.</p>
+            </details>
 
-        <details>
-          <summary>יש מה לעשות לפני שהחשבון נחסם או נפרץ?</summary>
-          <p>כן. בקורס תלמדו איך לשפר את ההגנה על החשבון, לזהות סימני אזהרה ולהבין מאילו פעולות, הודעות וקישורים חשוב להימנע כדי לצמצם סיכונים.</p>
-        </details>
+            <details>
+                <summary>יש מה לעשות לפני שהחשבון נחסם או נפרץ?</summary>
+                <p>כן. בקורס תלמדו איך לשפר את ההגנה על החשבון, לזהות סימני אזהרה ולהבין מאילו פעולות, הודעות וקישורים חשוב להימנע כדי לצמצם סיכונים.</p>
+            </details>
 
-        <details>
-          <summary>ומה אם החשבון כבר נחסם או נפרץ?</summary>
-          <p>הקורס כולל דרכי התמודדות פשוטות, קישורים חשובים ומידע מסודר שיעזור להבין מה לעשות ובאיזה סדר. המטרה היא לחסוך זמן, לחץ ולעיתים גם הוצאות על פעולות שאפשר לבצע לבד.</p>
-        </details>
+            <details>
+                <summary>ומה אם החשבון כבר נחסם או נפרץ?</summary>
+                <p>הקורס כולל דרכי התמודדות פשוטות, קישורים חשובים ומידע מסודר שיעזור להבין מה לעשות ובאיזה סדר. המטרה היא לחסוך זמן, לחץ ולעיתים גם הוצאות על פעולות שאפשר לבצע לבד.</p>
+            </details>
 
-        <details>
-          <summary>הבונוס כלול במחיר?</summary>
-          <p>כן. כלי בדיקת המיילים כלול במחיר הקורס ונשלח יחד עם פרטי הגישה.</p>
-        </details>
-      </div>
+            <details>
+                <summary>הבונוס כלול במחיר?</summary>
+                <p>כן. כלי בדיקת המיילים כלול במחיר הקורס ונשלח יחד עם פרטי הגישה.</p>
+            </details>
+        </div>
     </section>
 
-    <section class="section">
-      <div class="card about">
-        <h2>קצת עליי</h2>
-        <p>
-          אני אורית, מתכנתת עם למעלה מ-8 שנות ניסיון, כולל ניסיון באבטחת מידע.
-          לאורך השנים יצא לי לעזור לחברות ולאנשים שפנו אליי אחרי שהחשבון שלהם כבר נפרץ, וגם להתייעץ איתי לפני לחיצה על קישור או תגובה למייל שנראה חשוד.
-          <br><br>
-          שוב ושוב ראיתי כמה לחץ, עוגמת נפש והוצאות אפשר לחסוך כשיש מידע ברור ויודעים מה לעשות, ולכן ריכזתי בקורס את הדברים שחשוב לסדר מראש ואת סדר הפעולות שיכול לעזור בזמן אמת.
-        </p>
-      </div>
+    <section class="section reveal">
+        <div class="card about">
+            <h2>קצת עליי</h2>
+            <p>
+                אני אורית, מתכנתת עם למעלה מ-8 שנות ניסיון, כולל ניסיון באבטחת מידע.
+                לאורך השנים יצא לי לעזור לחברות ולאנשים שפנו אליי אחרי שהחשבון שלהם כבר נפרץ, וגם להתייעץ איתי לפני לחיצה על קישור או תגובה למייל שנראה חשוד.
+                <br><br>
+                שוב ושוב ראיתי כמה לחץ, עוגמת נפש והוצאות אפשר לחסוך כשיש מידע ברור ויודעים מה לעשות, ולכן ריכזתי בקורס את הדברים שחשוב לסדר מראש ואת סדר הפעולות שיכול לעזור בזמן אמת.
+            </p>
+        </div>
     </section>
 
-    <section class="final-cta">
-      <h2>אם כבר השקעתם באינסטגרם שלכם, שווה גם להגן עליו</h2>
-      <p>במקום לחכות לרגע מלחיץ ואז להתחיל לחפש תשובות, אפשר להיערך מראש ולקבל את המידע, הכלים והבונוס במקום אחד.</p>
-      <div class="cta-row">
-        <a class="button" href="https://paypage.takbull.co.il/4I2o2" target="_blank" rel="noopener noreferrer">לרכישת הקורס ב-150 ₪ ↗</a>
-      </div>
+    <section class="final-cta reveal">
+        <h2>אם כבר השקעתם באינסטגרם שלכם, שווה גם להגן עליו</h2>
+        <p>במקום לחכות לרגע מלחיץ ואז להתחיל לחפש תשובות, אפשר להיערך מראש ולקבל את המידע, הכלים והבונוס במקום אחד.</p>
+        <div class="cta-row">
+            <a class="button" href="https://paypage.takbull.co.il/4I2o2" target="_blank" rel="noopener noreferrer">לרכישת הקורס ב-150 ₪ ↗</a>
+        </div>
     </section>
 
     <footer>BUILT WITH CODE · ORIT YISHAI</footer>
-  </main>
+</main>
+
+<script>
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealEls = document.querySelectorAll('.reveal');
+
+    if(reducedMotion || !('IntersectionObserver' in window)){
+        revealEls.forEach(el => el.classList.add('visible'));
+    } else {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {threshold:.12, rootMargin:'0px 0px -5% 0px'});
+
+        revealEls.forEach(el => observer.observe(el));
+    }
+</script>
 </body>
 </html>

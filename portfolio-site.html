@@ -1,213 +1,998 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="אתר אישי ותיק עבודות מותאם ליוצרי תוכן ומנהלי סושיאל, שמרכז עבודות, שירותים וקישורים במקום אחד מקצועי ונוח לשליחה.">
-<meta name="theme-color" content="#fff6fa">
-<title>אתר אישי ותיק עבודות לסושיאל | אורית ישי</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="אתר אישי ותיק עבודות מותאם ליוצרי תוכן ומנהלי סושיאל, שמרכז עבודות, שירותים וקישורים במקום אחד מקצועי ונוח לשליחה.">
+    <meta name="theme-color" content="#fff6fa">
+    <title>אתר אישי ותיק עבודות לסושיאל | אורית ישי</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
 
 
-  <link rel="canonical" href="https://orityishai.vercel.app/portfolio-site.html">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+    <!-- SEO: replace https://orityishai.vercel.app with the final domain before launch -->
+    <link rel="canonical" href="https://orityishai.vercel.app/portfolio-site.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
 
-  <meta property="og:locale" content="he_IL">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Orit Yishai">
-  <meta property="og:title" content="אתר אישי ותיק עבודות לסושיאל | אורית ישי">
-  <meta property="og:description" content="אתר אישי ותיק עבודות מותאם ליוצרי תוכן ומנהלי סושיאל, שמרכז עבודות, שירותים וקישורים במקום אחד מקצועי ונוח לשליחה.">
-  <meta property="og:url" content="https://orityishai.vercel.app/portfolio-site.html">
-  <meta property="og:image" content="https://orityishai.vercel.app/og/portfolio.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="אתר אישי ותיק עבודות ליוצרי תוכן ומנהלי סושיאל">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Orit Yishai">
+    <meta property="og:title" content="אתר אישי ותיק עבודות לסושיאל | אורית ישי">
+    <meta property="og:description" content="אתר אישי ותיק עבודות מותאם ליוצרי תוכן ומנהלי סושיאל, שמרכז עבודות, שירותים וקישורים במקום אחד מקצועי ונוח לשליחה.">
+    <meta property="og:url" content="https://orityishai.vercel.app/portfolio-site.html">
+    <meta property="og:image" content="https://orityishai.vercel.app/og/portfolio.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="אתר אישי ותיק עבודות ליוצרי תוכן ומנהלי סושיאל">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="אתר אישי ותיק עבודות לסושיאל | אורית ישי">
-  <meta name="twitter:description" content="אתר אישי ותיק עבודות מותאם ליוצרי תוכן ומנהלי סושיאל, שמרכז עבודות, שירותים וקישורים במקום אחד מקצועי ונוח לשליחה.">
-  <meta name="twitter:image" content="https://orityishai.vercel.app/og/portfolio.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="אתר אישי ותיק עבודות לסושיאל | אורית ישי">
+    <meta name="twitter:description" content="אתר אישי ותיק עבודות מותאם ליוצרי תוכן ומנהלי סושיאל, שמרכז עבודות, שירותים וקישורים במקום אחד מקצועי ונוח לשליחה.">
+    <meta name="twitter:image" content="https://orityishai.vercel.app/og/portfolio.png">
 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://orityishai.vercel.app/#person",
-      "name": "אורית ישי",
-      "alternateName": "Orit Yishai",
-      "url": "https://orityishai.vercel.app/",
-      "jobTitle": "מתכנתת ומפתחת אתרים",
-      "sameAs": [
-        "https://www.instagram.com/orit.decode/",
-        "https://github.com/orityishai-personal"
-      ],
-      "knowsAbout": [
-        "פיתוח אתרים",
-        "SEO",
-        "GEO",
-        "AI",
-        "אבטחת אינסטגרם"
-      ]
-    },
-    {
-      "@type": "Service",
-      "@id": "https://orityishai.vercel.app/portfolio-site.html#service",
-      "name": "אתר אישי ותיק עבודות לסושיאל",
-      "serviceType": "בניית אתר אישי ותיק עבודות",
-      "description": "אתר אישי ותיק עבודות מותאם ליוצרי תוכן ומנהלי סושיאל, שמרכז עבודות, שירותים וקישורים במקום אחד מקצועי ונוח לשליחה.",
-      "url": "https://orityishai.vercel.app/portfolio-site.html",
-      "provider": {
-        "@id": "https://orityishai.vercel.app/#person"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Israel"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://orityishai.vercel.app/portfolio-site.html#breadcrumb",
-      "itemListElement": [
+    <script type="application/ld+json">
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "ראשי",
-          "item": "https://orityishai.vercel.app/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "אתר אישי ותיק עבודות לסושיאל",
-          "item": "https://orityishai.vercel.app/portfolio-site.html"
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Person",
+                    "@id": "https://orityishai.vercel.app/#person",
+                    "name": "אורית ישי",
+                    "alternateName": "Orit Yishai",
+                    "url": "https://orityishai.vercel.app/",
+                    "jobTitle": "מתכנתת ומפתחת אתרים",
+                    "sameAs": [
+                        "https://www.instagram.com/orit.decode/",
+                        "https://github.com/orityishai-personal"
+                    ],
+                    "knowsAbout": [
+                        "פיתוח אתרים",
+                        "SEO",
+                        "GEO",
+                        "AI",
+                        "אבטחת אינסטגרם"
+                    ]
+                },
+                {
+                    "@type": "Service",
+                    "@id": "https://orityishai.vercel.app/portfolio-site.html#service",
+                    "name": "אתר אישי ותיק עבודות לסושיאל",
+                    "serviceType": "בניית אתר אישי ותיק עבודות",
+                    "description": "אתר אישי ותיק עבודות מותאם ליוצרי תוכן ומנהלי סושיאל, שמרכז עבודות, שירותים וקישורים במקום אחד מקצועי ונוח לשליחה.",
+                    "url": "https://orityishai.vercel.app/portfolio-site.html",
+                    "provider": {
+                        "@id": "https://orityishai.vercel.app/#person"
+                    },
+                    "areaServed": {
+                        "@type": "Country",
+                        "name": "Israel"
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://orityishai.vercel.app/portfolio-site.html#breadcrumb",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "ראשי",
+                            "item": "https://orityishai.vercel.app/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "אתר אישי ותיק עבודות לסושיאל",
+                            "item": "https://orityishai.vercel.app/portfolio-site.html"
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
-}
-  </script>
+    </script>
 
-  <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:#3d2431;font-family:Arial,sans-serif;line-height:1.7;background:radial-gradient(circle at 12% 4%,rgba(255,199,222,.72),transparent 31%),radial-gradient(circle at 88% 30%,rgba(255,226,237,.9),transparent 38%),radial-gradient(circle at 40% 88%,rgba(244,203,222,.58),transparent 40%),#fff6fa}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(145deg,rgba(255,255,255,.52),rgba(255,226,237,.24))}.page{position:relative;max-width:760px;margin:auto;padding:28px 22px 55px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:38px}.brand{font-size:11px;letter-spacing:3px;color:#a0788b;font-weight:700}.back{color:#8a5f74;text-decoration:none;font-size:13px}.hero{text-align:center;max-width:650px;margin:0 auto 44px}.eyebrow{display:inline-block;padding:7px 14px;border-radius:100px;background:rgba(255,220,234,.78);border:1px solid rgba(220,154,184,.3);color:#895a70;font-size:12px;margin-bottom:18px}.hero h1{font-size:46px;line-height:1.08;letter-spacing:-1.2px;margin:0 0 16px;color:#351f2a}.hero p{font-size:18px;color:#806475;margin:0 auto;max-width:590px}.hero .cta{margin-top:26px}.button{display:inline-block;padding:12px 22px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#c9789d,#df91b3);border-radius:100px;font-size:14px;font-weight:700;box-shadow:0 7px 20px rgba(177,88,128,.18);transition:transform .2s ease,box-shadow .2s ease}.button:hover{transform:translateY(-1px);box-shadow:0 9px 24px rgba(177,88,128,.24)}.section{margin-top:18px;padding:30px;border-radius:30px;background:linear-gradient(145deg,rgba(255,234,243,.92),rgba(250,214,229,.76));border:1px solid rgba(219,152,181,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 7px 25px rgba(158,85,118,.07)}.section h2{font-size:25px;line-height:1.25;margin:0 0 10px;color:#4a2a39}.section>p{margin:0;color:#816878}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}.card{padding:20px;border-radius:22px;background:rgba(255,255,255,.53);border:1px solid rgba(255,255,255,.75)}.card .num{width:35px;height:35px;display:grid;place-items:center;border-radius:50%;background:rgba(248,203,222,.76);color:#9a6079;font-size:12px;font-weight:700;margin-bottom:12px}.card h3{font-size:16px;margin:0 0 5px;color:#4a2d3b}.card p{font-size:13.5px;color:#876c7c;margin:0}.list{display:grid;gap:11px;margin-top:20px}.item{display:flex;gap:12px;align-items:flex-start;padding:15px 17px;border-radius:20px;background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.72)}.check{width:28px;height:28px;flex:0 0 28px;display:grid;place-items:center;border-radius:50%;background:#f7cfe0;color:#9a6079;font-size:14px}.item strong{display:block;color:#50313f;font-size:14px}.item span{display:block;color:#876c7c;font-size:13px;margin-top:1px}.process{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.step{padding:19px;border-radius:22px;background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.72)}.step b{display:block;color:#9a6079;font-size:12px;margin-bottom:7px}.step h3{margin:0 0 5px;font-size:15px;color:#4a2d3b}.step p{margin:0;color:#876c7c;font-size:13px}.note{margin-top:18px;padding:16px 18px;border-radius:20px;background:rgba(255,255,255,.44);color:#806676;font-size:13px}.final{text-align:center;margin-top:20px;padding:34px 28px;border-radius:32px;background:linear-gradient(145deg,rgba(250,211,228,.94),rgba(255,238,245,.94));border:1px solid rgba(219,152,181,.28);box-shadow:0 8px 28px rgba(82,115,174,.08)}.final h2{font-size:27px;margin:0 0 8px;color:#472936}.final p{margin:0 auto 20px;color:#816879;max-width:510px}.secondary{display:inline-block;margin-top:12px;color:#97647c;text-decoration:none;font-size:13px}footer{text-align:center;color:#aa8998;font-size:11px;margin-top:32px}a:focus-visible{outline:3px solid #d891b0;outline-offset:4px}@media(max-width:640px){.page{padding:22px 16px 38px}.topbar{margin-bottom:30px}.hero h1{font-size:37px}.hero p{font-size:16px}.section{padding:23px 18px}.cards,.process{grid-template-columns:1fr}.final{padding:29px 20px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
-</style>
+    <style>
 
-<style>
-:root{--gold:#c9a86a;--gold-dark:#a77f39;--gold-line:rgba(201,168,106,.30)}
-body{font-family:"Heebo",Arial,sans-serif;background:radial-gradient(circle at 10% 4%,rgba(249,214,230,.58),transparent 29rem),radial-gradient(circle at 92% 30%,rgba(255,236,244,.92),transparent 26rem),radial-gradient(circle at 34% 96%,rgba(247,225,235,.52),transparent 28rem),#fffafd}
-body:after{content:"";position:fixed;z-index:20;top:0;left:0;right:0;height:2px;pointer-events:none;background:linear-gradient(90deg,transparent 5%,rgba(201,168,106,.18) 28%,rgba(201,168,106,.72) 50%,rgba(201,168,106,.18) 72%,transparent 95%)}
-.page{max-width:620px;padding:28px 18px 42px}
-.topbar{position:relative;margin-bottom:30px;padding-bottom:14px;font-family:"Inter",sans-serif;font-size:10px;letter-spacing:.16em;direction:ltr}
-.topbar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-line),transparent)}
-.brand{font-weight:600}
-.back{font-family:"Heebo",Arial,sans-serif;font-size:12px;letter-spacing:0;direction:rtl}
-.back:hover{color:var(--gold-dark)}
-.hero{margin-bottom:32px;padding:6px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;background:rgba(255,255,255,.48);border-color:rgba(201,168,106,.24);font-size:11px}
-.eyebrow:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(201,168,106,.10)}
-.hero h1{font-size:clamp(31px,8.8vw,42px);font-weight:600;letter-spacing:-.035em}
-.hero h1:after{content:"";display:block;width:40px;height:1px;margin:15px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.hero p{font-size:15px;font-weight:300}
-.button{border-radius:12px;background:#604050;border:1px solid rgba(223,201,157,.34);font-weight:500;box-shadow:0 10px 24px rgba(82,51,66,.17)}
-.section{margin-top:14px;padding:22px 20px;border-radius:20px;background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(255,248,252,.68));border-color:rgba(185,118,150,.15);box-shadow:0 8px 26px rgba(134,79,104,.045),inset 0 1px 0 rgba(255,255,255,.9)}
-.section h2{font-size:21px;font-weight:600}
-.section h2:after{content:"";display:block;width:34px;height:1px;margin-top:10px;background:linear-gradient(90deg,var(--gold),transparent);opacity:.68}
-.section>p{font-size:14px;font-weight:300}
-.card,.item,.step{border-radius:15px;border:1px solid rgba(185,118,150,.11);background:rgba(255,255,255,.50)}
-.card .num,.check{border:1px solid rgba(201,168,106,.22);border-radius:11px}
-.step b{color:var(--gold-dark)}
-.note{border:1px solid rgba(201,168,106,.18)}
-.final{position:relative;border-radius:22px;border:1px solid rgba(201,168,106,.24);background:linear-gradient(145deg,rgba(249,224,235,.92),rgba(255,248,252,.90))}
-.final:before{content:"";position:absolute;top:14px;left:50%;width:42px;height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.secondary:hover{color:var(--gold-dark)}
-footer{position:relative;padding-top:28px;font-family:"Inter",sans-serif;font-size:9px;letter-spacing:.11em;direction:ltr}
-footer:before{content:"";position:absolute;top:10px;left:50%;width:54px;height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(201,168,106,.58),transparent)}
-a:focus-visible{outline-color:rgba(201,168,106,.65)}
-@media(max-width:640px){.page{padding:22px 14px 38px}.section{padding:19px 16px}}
-</style>
+        :root{
+            --ink:#3b2631;
+            --ink-soft:#563747;
+            --muted:#806878;
+            --muted-2:#a18b97;
+            --paper:#fffafd;
+            --pink:#f8e9f0;
+            --pink-2:#f5dce7;
+            --pink-3:#efc9da;
+            --line:rgba(167,101,132,.14);
+            --gold:#c9a86a;
+            --gold-dark:#a77f39;
+            --gold-line:rgba(201,168,106,.30);
+            --plum:#3f2935;
+            --shadow:0 24px 70px rgba(118,70,93,.11);
+        }
+
+        *{box-sizing:border-box}
+        html{scroll-behavior:smooth}
+
+        body{
+            margin:0;
+            min-height:100vh;
+            color:var(--ink);
+            font-family:"Heebo",Arial,sans-serif;
+            line-height:1.68;
+            -webkit-font-smoothing:antialiased;
+            overflow-x:hidden;
+            background:
+                    radial-gradient(circle at 8% 3%,rgba(249,214,230,.66),transparent 30rem),
+                    radial-gradient(circle at 94% 28%,rgba(255,237,245,.96),transparent 26rem),
+                    radial-gradient(circle at 38% 98%,rgba(247,225,235,.58),transparent 28rem),
+                    var(--paper);
+        }
+
+        body:before{
+            content:"";
+            position:fixed;
+            inset:0;
+            pointer-events:none;
+            z-index:-2;
+            background:linear-gradient(145deg,rgba(255,255,255,.50),rgba(255,230,240,.10));
+        }
+
+        body:after{
+            content:"";
+            position:fixed;
+            z-index:50;
+            top:0;
+            left:0;
+            right:0;
+            height:2px;
+            pointer-events:none;
+            background:linear-gradient(
+                    90deg,
+                    transparent 4%,
+                    rgba(201,168,106,.18) 28%,
+                    rgba(201,168,106,.78) 50%,
+                    rgba(201,168,106,.18) 72%,
+                    transparent 96%
+            );
+        }
+
+        a{color:inherit}
+
+        .page{
+            position:relative;
+            width:min(100%,1120px);
+            margin:0 auto;
+            padding:14px 20px 46px;
+        }
+
+        .topbar{
+            position:sticky;
+            top:14px;
+            z-index:40;
+            min-height:62px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:16px;
+            margin-bottom:22px;
+            padding:0 16px;
+            border:1px solid rgba(255,255,255,.82);
+            border-radius:18px;
+            background:rgba(255,250,253,.80);
+            box-shadow:0 12px 34px rgba(96,56,75,.08);
+            backdrop-filter:blur(20px) saturate(120%);
+            -webkit-backdrop-filter:blur(20px) saturate(120%);
+        }
+
+        .brand{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            color:#67485a;
+            font-family:"Inter",sans-serif;
+            font-size:10px;
+            font-weight:600;
+            letter-spacing:.16em;
+            direction:ltr;
+        }
+
+        .brand:before{
+            content:"";
+            width:24px;
+            height:24px;
+            border:1px solid rgba(201,168,106,.54);
+            border-radius:50%;
+            box-shadow:inset 0 0 0 7px rgba(255,255,255,.24);
+        }
+
+        .back{
+            color:#896b7b;
+            text-decoration:none;
+            font-size:12px;
+            transition:color .2s ease,transform .2s ease;
+        }
+
+        .back:hover{
+            color:var(--gold-dark);
+            transform:translateY(-1px);
+        }
+
+        .hero{
+            min-height:610px;
+            display:grid;
+            grid-template-columns:1.05fr .95fr;
+            align-items:center;
+            gap:66px;
+            padding:72px 34px 76px;
+            position:relative;
+        }
+
+        .hero:before{
+            content:"";
+            position:absolute;
+            width:320px;
+            height:320px;
+            top:40px;
+            right:-170px;
+            border-radius:50%;
+            border:1px solid rgba(201,168,106,.18);
+            box-shadow:0 0 0 36px rgba(255,255,255,.08);
+            pointer-events:none;
+        }
+
+        .hero-copy{
+            max-width:650px;
+        }
+
+        .eyebrow{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            margin-bottom:18px;
+            padding:7px 13px;
+            color:#8d5f76;
+            background:rgba(255,255,255,.52);
+            border:1px solid rgba(201,168,106,.24);
+            border-radius:999px;
+            font-size:11px;
+            backdrop-filter:blur(10px);
+        }
+
+        .eyebrow:before{
+            content:"";
+            width:5px;
+            height:5px;
+            border-radius:50%;
+            background:var(--gold);
+            box-shadow:0 0 0 3px rgba(201,168,106,.10);
+        }
+
+        .hero h1{
+            margin:0;
+            color:#3c2732;
+            font-size:clamp(42px,5.9vw,66px);
+            line-height:1.04;
+            letter-spacing:-.05em;
+            font-weight:600;
+        }
+
+        .hero h1:after{
+            content:"";
+            display:block;
+            width:48px;
+            height:1px;
+            margin:20px 0 0 auto;
+            background:linear-gradient(90deg,transparent,var(--gold));
+        }
+
+        .hero p{
+            max-width:610px;
+            margin:20px 0 0;
+            color:#816a78;
+            font-size:17px;
+            font-weight:300;
+            line-height:1.78;
+        }
+
+        .hero .cta{margin-top:28px}
+
+        .button{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            min-height:47px;
+            padding:0 19px;
+            color:#fff;
+            text-decoration:none;
+            background:#604050;
+            border:1px solid rgba(223,201,157,.36);
+            border-radius:12px;
+            font-size:13px;
+            font-weight:500;
+            box-shadow:0 11px 26px rgba(93,57,75,.18);
+            transition:transform .22s ease,box-shadow .22s ease,background .22s ease;
+        }
+
+        .button:hover{
+            transform:translateY(-2px);
+            background:#6d485b;
+            box-shadow:0 16px 34px rgba(93,57,75,.23);
+        }
+
+        /* Decorative portfolio mockup */
+        .hero-visual{
+            position:relative;
+            min-height:430px;
+            display:grid;
+            place-items:center;
+        }
+
+        .portfolio-window{
+            width:min(92%,390px);
+            aspect-ratio:4/5;
+            overflow:hidden;
+            position:relative;
+            border:1px solid rgba(255,255,255,.86);
+            border-radius:30px;
+            background:rgba(255,255,255,.74);
+            box-shadow:0 34px 80px rgba(110,65,87,.17),0 0 0 1px rgba(201,168,106,.22);
+            transform:rotate(1.2deg);
+            transition:transform .5s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .portfolio-window:hover{
+            transform:rotate(.2deg) translateY(-4px);
+        }
+
+        .window-top{
+            height:42px;
+            display:flex;
+            align-items:center;
+            gap:5px;
+            padding:0 14px;
+            direction:ltr;
+            border-bottom:1px solid rgba(169,112,139,.10);
+        }
+
+        .window-top i{
+            width:5px;
+            height:5px;
+            border-radius:50%;
+            background:#d6c1cc;
+        }
+
+        .window-body{
+            padding:28px 24px 24px;
+            background:
+                    radial-gradient(circle at 100% 0%,rgba(245,211,226,.75),transparent 42%),
+                    linear-gradient(#fff,#fffafd);
+            min-height:calc(100% - 42px);
+        }
+
+        .mock-avatar{
+            width:68px;
+            height:68px;
+            border-radius:50%;
+            margin:0 auto 16px;
+            background:linear-gradient(145deg,#ead3df,#f9edf3);
+            border:1px solid rgba(201,168,106,.22);
+            box-shadow:0 12px 24px rgba(111,68,88,.09);
+        }
+
+        .mock-title{
+            width:62%;
+            height:12px;
+            margin:0 auto;
+            border-radius:999px;
+            background:#5e4050;
+            opacity:.88;
+        }
+
+        .mock-copy{
+            display:grid;
+            gap:6px;
+            width:76%;
+            margin:12px auto 0;
+        }
+
+        .mock-copy i{
+            height:4px;
+            border-radius:999px;
+            background:#eadbe2;
+        }
+
+        .mock-copy i:last-child{
+            width:68%;
+            margin:auto;
+        }
+
+        .mock-tabs{
+            display:flex;
+            justify-content:center;
+            gap:7px;
+            margin-top:22px;
+        }
+
+        .mock-tabs i{
+            width:54px;
+            height:19px;
+            border-radius:999px;
+            background:#f5e4ec;
+            border:1px solid #eed8e2;
+        }
+
+        .mock-grid{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:9px;
+            margin-top:22px;
+        }
+
+        .mock-grid i{
+            aspect-ratio:1.1;
+            border-radius:13px;
+            background:linear-gradient(145deg,#f0d7e2,#f9edf3);
+            border:1px solid rgba(170,111,140,.09);
+        }
+
+        .mock-grid i:nth-child(2),
+        .mock-grid i:nth-child(3){
+            background:linear-gradient(145deg,#e8d9ea,#f7eff7);
+        }
+
+        .float-chip{
+            position:absolute;
+            z-index:3;
+            min-height:37px;
+            display:flex;
+            align-items:center;
+            padding:0 11px;
+            border:1px solid rgba(255,255,255,.82);
+            border-radius:12px;
+            background:rgba(255,255,255,.82);
+            color:#73586a;
+            box-shadow:0 14px 34px rgba(92,56,75,.12);
+            backdrop-filter:blur(14px);
+            font-family:"Inter",sans-serif;
+            font-size:8px;
+            letter-spacing:.02em;
+            direction:ltr;
+            animation:floaty 5.8s ease-in-out infinite;
+        }
+
+        .float-chip.one{top:70px;left:2px}
+        .float-chip.two{right:0;top:176px;animation-delay:-2.1s}
+        .float-chip.three{left:26px;bottom:60px;animation-delay:-3.5s}
+
+        @keyframes floaty{
+            0%,100%{transform:translateY(0)}
+            50%{transform:translateY(-8px)}
+        }
+
+        .section{
+            width:min(100%,980px);
+            margin:16px auto 0;
+            padding:30px;
+            border:1px solid rgba(170,104,135,.13);
+            border-radius:24px;
+            background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(255,248,252,.68));
+            box-shadow:0 14px 42px rgba(126,75,99,.055),inset 0 1px 0 rgba(255,255,255,.94);
+            backdrop-filter:blur(14px);
+        }
+
+        .section h2{
+            margin:0 0 10px;
+            color:#503341;
+            font-size:24px;
+            line-height:1.25;
+            font-weight:600;
+            letter-spacing:-.025em;
+        }
+
+        .section h2:after{
+            content:"";
+            display:block;
+            width:38px;
+            height:1px;
+            margin-top:10px;
+            background:linear-gradient(90deg,var(--gold),transparent);
+            opacity:.72;
+        }
+
+        .section>p{
+            margin:0;
+            color:#826b79;
+            font-size:14px;
+            font-weight:300;
+        }
+
+        .list{
+            display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr));
+            gap:12px;
+            margin-top:20px;
+        }
+
+        .item{
+            display:flex;
+            gap:12px;
+            align-items:flex-start;
+            padding:18px;
+            border:1px solid rgba(173,111,140,.10);
+            border-radius:17px;
+            background:rgba(255,255,255,.54);
+            transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+        }
+
+        .item:hover{
+            transform:translateY(-3px);
+            border-color:rgba(201,168,106,.28);
+            box-shadow:0 15px 34px rgba(118,70,93,.07);
+        }
+
+        .check{
+            width:31px;
+            height:31px;
+            flex:0 0 31px;
+            display:grid;
+            place-items:center;
+            border:1px solid rgba(201,168,106,.22);
+            border-radius:11px;
+            color:#926179;
+            background:#f7dfe9;
+            font-size:13px;
+        }
+
+        .item strong{
+            display:block;
+            color:#563847;
+            font-size:14px;
+        }
+
+        .item span{
+            display:block;
+            margin-top:1px;
+            color:#876f7d;
+            font-size:13px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(4,minmax(0,1fr));
+            gap:12px;
+            margin-top:20px;
+        }
+
+        .card{
+            position:relative;
+            min-height:190px;
+            padding:20px;
+            overflow:hidden;
+            border:1px solid rgba(173,111,140,.10);
+            border-radius:18px;
+            background:rgba(255,255,255,.54);
+            transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease;
+        }
+
+        .card:after{
+            content:"";
+            position:absolute;
+            width:100px;
+            height:100px;
+            left:-50px;
+            bottom:-60px;
+            border:1px solid rgba(201,168,106,.12);
+            border-radius:50%;
+        }
+
+        .card:hover{
+            transform:translateY(-4px);
+            border-color:rgba(201,168,106,.28);
+            box-shadow:0 16px 38px rgba(118,70,93,.08);
+        }
+
+        .card .num{
+            width:38px;
+            height:38px;
+            display:grid;
+            place-items:center;
+            margin-bottom:15px;
+            border:1px solid rgba(201,168,106,.22);
+            border-radius:12px;
+            color:#95647b;
+            background:#f8e2eb;
+            font-family:"Inter",sans-serif;
+            font-size:10px;
+            font-weight:600;
+        }
+
+        .card h3{
+            margin:0 0 6px;
+            color:#583a49;
+            font-size:15px;
+            font-weight:600;
+        }
+
+        .card p{
+            margin:0;
+            color:#87707d;
+            font-size:13px;
+            font-weight:300;
+        }
+
+        /* Process timeline */
+        .process{
+            position:relative;
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:16px;
+            margin-top:22px;
+        }
+
+        .process:before{
+            content:"";
+            position:absolute;
+            top:20px;
+            left:14%;
+            right:14%;
+            height:1px;
+            background:linear-gradient(90deg,transparent,rgba(201,168,106,.34),rgba(201,168,106,.34),transparent);
+        }
+
+        .step{
+            position:relative;
+            z-index:2;
+            padding:52px 19px 20px;
+            border:1px solid rgba(173,111,140,.10);
+            border-radius:18px;
+            background:rgba(255,255,255,.54);
+            transition:transform .24s ease,border-color .24s ease;
+        }
+
+        .step:before{
+            content:"";
+            position:absolute;
+            top:12px;
+            right:50%;
+            width:15px;
+            height:15px;
+            transform:translateX(50%);
+            border-radius:50%;
+            background:#fff;
+            border:1px solid var(--gold);
+            box-shadow:0 0 0 6px rgba(201,168,106,.08);
+        }
+
+        .step:hover{
+            transform:translateY(-3px);
+            border-color:rgba(201,168,106,.28);
+        }
+
+        .step b{
+            display:block;
+            margin-bottom:7px;
+            color:var(--gold-dark);
+            font-size:11px;
+        }
+
+        .step h3{
+            margin:0 0 5px;
+            color:#583a49;
+            font-size:15px;
+            font-weight:600;
+        }
+
+        .step p{
+            margin:0;
+            color:#87707d;
+            font-size:13px;
+            font-weight:300;
+        }
+
+        .note{
+            margin-top:18px;
+            padding:16px 18px;
+            color:#806978;
+            background:rgba(255,255,255,.46);
+            border:1px solid rgba(201,168,106,.18);
+            border-radius:16px;
+            font-size:13px;
+        }
+
+        .final{
+            width:min(100%,980px);
+            margin:18px auto 0;
+            padding:54px 28px;
+            text-align:center;
+            color:#fff;
+            position:relative;
+            overflow:hidden;
+            border:1px solid rgba(201,168,106,.22);
+            border-radius:26px;
+            background:
+                    radial-gradient(circle at 82% 16%,rgba(124,76,99,.34),transparent 34%),
+                    radial-gradient(circle at 12% 100%,rgba(201,168,106,.12),transparent 33%),
+                    var(--plum);
+            box-shadow:0 28px 74px rgba(64,42,53,.18);
+        }
+
+        .final:before{
+            content:"";
+            position:absolute;
+            width:300px;
+            height:300px;
+            top:-160px;
+            right:-150px;
+            border:1px solid rgba(201,168,106,.12);
+            border-radius:50%;
+            box-shadow:0 0 0 40px rgba(255,255,255,.014);
+        }
+
+        .final h2{
+            position:relative;
+            margin:0 0 8px;
+            color:#fff;
+            font-size:30px;
+            font-weight:600;
+            letter-spacing:-.03em;
+        }
+
+        .final p{
+            position:relative;
+            max-width:560px;
+            margin:0 auto 20px;
+            color:#dbcdd4;
+            font-size:14px;
+            font-weight:300;
+        }
+
+        .final .button{
+            position:relative;
+            color:#3f2935;
+            background:#f7f1e5;
+            border-color:rgba(201,168,106,.54);
+            box-shadow:0 12px 26px rgba(0,0,0,.12);
+        }
+
+        .final .button:hover{background:#fff8ec}
+
+        .secondary{
+            position:relative;
+            display:inline-block;
+            margin-top:13px;
+            color:#d9c8d0;
+            text-decoration:none;
+            font-size:12px;
+            transition:color .18s ease;
+        }
+
+        .secondary:hover{color:#f0d7a6}
+
+        footer{
+            position:relative;
+            width:min(100%,980px);
+            margin:28px auto 0;
+            padding-top:27px;
+            text-align:center;
+            color:#9f8a95;
+            font-family:"Inter",sans-serif;
+            font-size:9px;
+            letter-spacing:.10em;
+            direction:ltr;
+        }
+
+        footer:before{
+            content:"";
+            position:absolute;
+            top:9px;
+            left:50%;
+            width:54px;
+            height:1px;
+            transform:translateX(-50%);
+            background:linear-gradient(90deg,transparent,rgba(201,168,106,.58),transparent);
+        }
+
+        .reveal{
+            opacity:0;
+            transform:translateY(18px);
+            transition:opacity .72s ease,transform .72s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .reveal.visible{
+            opacity:1;
+            transform:none;
+        }
+
+        .delay-1{transition-delay:.07s}
+        .delay-2{transition-delay:.14s}
+
+        a:focus-visible{
+            outline:3px solid rgba(201,168,106,.65);
+            outline-offset:4px;
+        }
+
+        @media(max-width:900px){
+            .hero{
+                min-height:auto;
+                grid-template-columns:1fr;
+                gap:38px;
+                padding:62px 10px 68px;
+                text-align:center;
+            }
+
+            .hero-copy{margin:0 auto}
+            .hero h1:after{
+                margin-left:auto;
+                margin-right:auto;
+                background:linear-gradient(90deg,transparent,var(--gold),transparent);
+            }
+            .hero p{margin-left:auto;margin-right:auto}
+
+            .hero-visual{min-height:380px}
+            .portfolio-window{width:min(76%,350px)}
+
+            .cards{grid-template-columns:repeat(2,1fr)}
+        }
+
+        @media(max-width:640px){
+            .page{padding:8px 12px 36px}
+            .topbar{top:8px;min-height:56px;border-radius:16px;padding:0 12px}
+            .hero{padding:54px 4px 54px}
+            .hero h1{font-size:clamp(36px,11vw,48px)}
+            .hero p{font-size:15px}
+            .hero-visual{min-height:340px}
+            .portfolio-window{width:min(84%,300px);border-radius:24px}
+            .float-chip{min-height:32px;padding:0 9px;font-size:7.5px}
+            .float-chip.one{top:45px;left:0}
+            .float-chip.two{right:0;top:146px}
+            .float-chip.three{left:4px;bottom:44px}
+
+            .section{padding:22px 17px;border-radius:20px}
+            .list,.cards,.process{grid-template-columns:1fr}
+            .process:before{display:none}
+            .step{padding:19px}
+            .step:before{display:none}
+
+            .card{min-height:0}
+            .final{padding:44px 18px;border-radius:22px}
+            .final h2{font-size:29px}
+        }
+
+        @media(prefers-reduced-motion:reduce){
+            html{scroll-behavior:auto}
+            *,*:before,*:after{
+                animation-duration:.01ms!important;
+                animation-iteration-count:1!important;
+                transition-duration:.01ms!important;
+                scroll-behavior:auto!important;
+            }
+            .reveal{opacity:1;transform:none}
+        }
+
+    </style>
 
 </head>
+
 <body>
 <div class="page">
-  <div class="topbar">
-    <div class="brand" dir="ltr">ORIT YISHAI</div>
-    <a class="back" href="index.html">חזרה לכל השירותים</a>
-  </div>
-
-  <header class="hero">
-    <span class="eyebrow">אתר אישי ותיק עבודות לסושיאל</span>
-    <h1>במקום לשלוח עבודות בהודעות, שולחים לינק אחד.</h1>
-    <p>אני בונה לך אתר אישי ומותאם שמרכז במקום אחד מי את, מה את מציעה, עבודות נבחרות ואיך יוצרים איתך קשר.</p>
-    <div class="cta"><a class="button" href="#contact">מעניין אותי אתר כזה</a></div>
-  </header>
-
-  <section class="section">
-    <h2>העבודות שלך צריכות מקום משלהן</h2>
-    <p>תיק עבודות טוב לא אמור להיות אוסף קבצים, לינקים והודעות שצריך לחפש בכל פעם מחדש. האתר הופך את כל מה שאת רוצה להציג לעמוד אחד מסודר, מקצועי ונוח לשליחה.</p>
-  </section>
-
-  <section class="section">
-    <h2>מה אפשר לכלול באתר?</h2>
-    <div class="list">
-      <div class="item"><span class="check">✓</span><div><strong>הצגה קצרה שלך</strong><span>מי את, במה את מתמחה ומה הופך את העבודה שלך לייחודית.</span></div></div>
-      <div class="item"><span class="check">✓</span><div><strong>תיק עבודות נבחר</strong><span>פרויקטים, לקוחות, קמפיינים, סרטונים, עיצובים או כל עבודה שחשוב לך להראות.</span></div></div>
-      <div class="item"><span class="check">✓</span><div><strong>שירותים שאת מציעה</strong><span>הצגה ברורה של השירותים כדי שלקוח פוטנציאלי יבין מהר אם את מתאימה לו.</span></div></div>
-      <div class="item"><span class="check">✓</span><div><strong>קישורים ויצירת קשר</strong><span>אינסטגרם, טיקטוק, וואטסאפ, מייל וקישורים נוספים לפי הצורך.</span></div></div>
+    <div class="topbar">
+        <div class="brand" dir="ltr">ORIT YISHAI</div>
+        <a class="back" href="index.html">חזרה לכל השירותים</a>
     </div>
-  </section>
 
-  <section class="section">
-    <h2>לא תבנית מוכנה. אתר שמתאים אלייך.</h2>
-    <div class="cards">
-      <div class="card"><div class="num">01</div><h3>מותאם לעיצוב שלך</h3><p>צבעים, טיפוגרפיה, מבנה ואווירה שנבחרים לפי הסגנון והמותג שלך.</p></div>
-      <div class="card"><div class="num">02</div><h3>נראה טוב גם במובייל</h3><p>האתר נבנה מראש למסך שבו רוב הלקוחות שלך באמת יפתחו אותו.</p></div>
-      <div class="card"><div class="num">03</div><h3>פשוט לשתף</h3><p>במקום להסביר ולצרף שוב ושוב, אפשר לשלוח לינק אחד שמרכז הכול.</p></div>
-      <div class="card"><div class="num">04</div><h3>נבנה בקוד</h3><p>בלי להיות כבולה לעיצוב גנרי. המבנה נבנה לפי מה שהאתר שלך באמת צריך.</p></div>
-    </div>
-  </section>
+    <header class="hero">
+        <div class="hero-copy">
+            <span class="eyebrow reveal">אתר אישי ותיק עבודות לסושיאל</span>
+            <h1 class="reveal delay-1">במקום לשלוח עבודות בהודעות, שולחים לינק אחד.</h1>
+            <p class="reveal delay-2">אני בונה לך אתר אישי ומותאם שמרכז במקום אחד מי את, מה את מציעה, עבודות נבחרות ואיך יוצרים איתך קשר.</p>
+            <div class="cta reveal delay-2"><a class="button" href="#contact">מעניין אותי אתר כזה</a></div>
+        </div>
 
-  <section class="section">
-    <h2>איך זה עובד?</h2>
-    <div class="process">
-      <div class="step"><b>שלב 1</b><h3>מבינות מה צריך</h3><p>עוברות על המטרה, סוג העבודות, התוכן והסגנון שאת רוצה.</p></div>
-      <div class="step"><b>שלב 2</b><h3>אני בונה</h3><p>אני מתכננת את המבנה, מעצבת ומפתחת את האתר בהתאמה אלייך.</p></div>
-      <div class="step"><b>שלב 3</b><h3>עולים לאוויר</h3><p>עוברות על התוצאה, משלימות תיקונים ומכינות את האתר לשיתוף.</p></div>
-    </div>
-    <div class="note">היקף האתר נקבע לפי מה שאת באמת צריכה, לכן לפני שמתחילים אנחנו מגדירות יחד מה ייכלל בו.</div>
-  </section>
+        <div class="hero-visual reveal delay-1" aria-hidden="true">
+            <div class="portfolio-window">
+                <div class="window-top"><i></i><i></i><i></i></div>
+                <div class="window-body">
+                    <div class="mock-avatar"></div>
+                    <div class="mock-title"></div>
+                    <div class="mock-copy"><i></i><i></i><i></i></div>
+                    <div class="mock-tabs"><i></i><i></i><i></i></div>
+                    <div class="mock-grid"><i></i><i></i><i></i><i></i></div>
+                </div>
+            </div>
+            <span class="float-chip one">PORTFOLIO</span>
+            <span class="float-chip two">MOBILE FIRST</span>
+            <span class="float-chip three">ONE LINK</span>
+        </div>
+    </header>
 
-  <section class="final" id="contact">
-    <h2>רוצה תיק עבודות שאפשר פשוט לשלוח?</h2>
-    <p>ספרי לי מה את עושה ומה היית רוצה להציג באתר, ונבדוק יחד מה נכון לבנות.</p>
-    <div id="contact-links"><a class="button" href="index.html#contact">בואי נדבר על האתר שלך</a></div>
-    <a class="secondary" href="index.html">לכל השירותים שלי</a>
-  </section>
+    <section class="section reveal">
+        <h2>העבודות שלך צריכות מקום משלהן</h2>
+        <p>תיק עבודות טוב לא אמור להיות אוסף קבצים, לינקים והודעות שצריך לחפש בכל פעם מחדש. האתר הופך את כל מה שאת רוצה להציג לעמוד אחד מסודר, מקצועי ונוח לשליחה.</p>
+    </section>
 
-  <footer>נבנה עם קוד, מחשבה וקצת AI · Orit</footer>
+    <section class="section reveal">
+        <h2>מה אפשר לכלול באתר?</h2>
+        <div class="list">
+            <div class="item"><span class="check">✓</span><div><strong>הצגה קצרה שלך</strong><span>מי את, במה את מתמחה ומה הופך את העבודה שלך לייחודית.</span></div></div>
+            <div class="item"><span class="check">✓</span><div><strong>תיק עבודות נבחר</strong><span>פרויקטים, לקוחות, קמפיינים, סרטונים, עיצובים או כל עבודה שחשוב לך להראות.</span></div></div>
+            <div class="item"><span class="check">✓</span><div><strong>שירותים שאת מציעה</strong><span>הצגה ברורה של השירותים כדי שלקוח פוטנציאלי יבין מהר אם את מתאימה לו.</span></div></div>
+            <div class="item"><span class="check">✓</span><div><strong>קישורים ויצירת קשר</strong><span>אינסטגרם, טיקטוק, וואטסאפ, מייל וקישורים נוספים לפי הצורך.</span></div></div>
+        </div>
+    </section>
+
+    <section class="section reveal">
+        <h2>לא תבנית מוכנה. אתר שמתאים אלייך.</h2>
+        <div class="cards">
+            <div class="card"><div class="num">01</div><h3>מותאם לעיצוב שלך</h3><p>צבעים, טיפוגרפיה, מבנה ואווירה שנבחרים לפי הסגנון והמותג שלך.</p></div>
+            <div class="card"><div class="num">02</div><h3>נראה טוב גם במובייל</h3><p>האתר נבנה מראש למסך שבו רוב הלקוחות שלך באמת יפתחו אותו.</p></div>
+            <div class="card"><div class="num">03</div><h3>פשוט לשתף</h3><p>במקום להסביר ולצרף שוב ושוב, אפשר לשלוח לינק אחד שמרכז הכול.</p></div>
+            <div class="card"><div class="num">04</div><h3>נבנה בקוד</h3><p>בלי להיות כבולה לעיצוב גנרי. המבנה נבנה לפי מה שהאתר שלך באמת צריך.</p></div>
+        </div>
+    </section>
+
+    <section class="section reveal">
+        <h2>איך זה עובד?</h2>
+        <div class="process">
+            <div class="step"><b>שלב 1</b><h3>מבינות מה צריך</h3><p>עוברות על המטרה, סוג העבודות, התוכן והסגנון שאת רוצה.</p></div>
+            <div class="step"><b>שלב 2</b><h3>אני בונה</h3><p>אני מתכננת את המבנה, מעצבת ומפתחת את האתר בהתאמה אלייך.</p></div>
+            <div class="step"><b>שלב 3</b><h3>עולים לאוויר</h3><p>עוברות על התוצאה, משלימות תיקונים ומכינות את האתר לשיתוף.</p></div>
+        </div>
+        <div class="note">היקף האתר נקבע לפי מה שאת באמת צריכה, לכן לפני שמתחילים אנחנו מגדירות יחד מה ייכלל בו.</div>
+    </section>
+
+    <section class="final reveal" id="contact">
+        <h2>רוצה תיק עבודות שאפשר פשוט לשלוח?</h2>
+        <p>ספרי לי מה את עושה ומה היית רוצה להציג באתר, ונבדוק יחד מה נכון לבנות.</p>
+        <div id="contact-links"><a class="button" href="index.html#contact">בואי נדבר על האתר שלך</a></div>
+        <a class="secondary" href="index.html">לכל השירותים שלי</a>
+    </section>
+
+    <footer>נבנה עם קוד, מחשבה וקצת AI · Orit</footer>
 </div>
+
 <script src="config.js"></script>
 <script>
-const config = window.ORIT_CONFIG || {};
-const holder = document.getElementById('contact-links');
-if(config.whatsapp || config.email){
-  holder.innerHTML = '';
-  const a = document.createElement('a');
-  a.className = 'button';
-  if(config.whatsapp){
-    const digits = config.whatsapp.replace(/\D/g,'');
-    a.href = 'https://wa.me/' + digits;
-    a.textContent = 'נדבר בוואטסאפ ↗';
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-  } else {
-    a.href = 'mailto:' + config.email;
-    a.textContent = 'שלחי לי מייל ↗';
-  }
-  holder.append(a);
-}
+    const config = window.ORIT_CONFIG || {};
+    const holder = document.getElementById('contact-links');
+
+    if(config.whatsapp || config.email){
+        holder.innerHTML = '';
+        const a = document.createElement('a');
+        a.className = 'button';
+
+        if(config.whatsapp){
+            const digits = config.whatsapp.replace(/\D/g,'');
+            a.href = 'https://wa.me/' + digits;
+            a.textContent = 'נדבר בוואטסאפ ↗';
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+        } else {
+            a.href = 'mailto:' + config.email;
+            a.textContent = 'שלחי לי מייל ↗';
+        }
+
+        holder.append(a);
+    }
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealEls = document.querySelectorAll('.reveal');
+
+    if(reducedMotion || !('IntersectionObserver' in window)){
+        revealEls.forEach(el=>el.classList.add('visible'));
+    } else {
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach(entry=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+
+        revealEls.forEach(el=>observer.observe(el));
+    }
 </script>
 </body>
+
 </html>

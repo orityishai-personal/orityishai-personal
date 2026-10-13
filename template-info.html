@@ -1,702 +1,1076 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="הפיכת עיצוב או מודעה שנוצרו ב-AI לתבנית אישית וגמישה שאפשר לערוך שוב ושוב בלי שהעברית, המבנה או העיצוב יתפרקו.">
-  <meta name="theme-color" content="#f8f5fc">
-  <title>מעיצוב AI לתבנית שאפשר לערוך | אורית ישי</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="הפיכת עיצוב או מודעה שנוצרו ב-AI לתבנית אישית וגמישה שאפשר לערוך שוב ושוב בלי שהעברית, המבנה או העיצוב יתפרקו.">
+    <meta name="theme-color" content="#f8f5fc">
+    <title>מעיצוב AI לתבנית שאפשר לערוך | אורית ישי</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
 
-  
-  <link rel="canonical" href="https://orityishai.vercel.app/template-info.html">
-  <meta name="robots" content="index,follow,max-image-preview:large">
 
-  <meta property="og:locale" content="he_IL">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Orit Yishai">
-  <meta property="og:title" content="מעיצוב AI לתבנית שאפשר לערוך | אורית ישי">
-  <meta property="og:description" content="הפיכת עיצוב או מודעה שנוצרו ב-AI לתבנית אישית וגמישה שאפשר לערוך שוב ושוב בלי שהעברית, המבנה או העיצוב יתפרקו.">
-  <meta property="og:url" content="https://orityishai.vercel.app/template-info.html">
-  <meta property="og:image" content="https://orityishai.vercel.app/og/template.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="שירות הפיכת עיצוב AI לתבנית עריכה אישית">
+    <!-- SEO: replace https://orityishai.vercel.app with the final domain before launch -->
+    <link rel="canonical" href="https://orityishai.vercel.app/template-info.html">
+    <meta name="robots" content="index,follow,max-image-preview:large">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="מעיצוב AI לתבנית שאפשר לערוך | אורית ישי">
-  <meta name="twitter:description" content="הפיכת עיצוב או מודעה שנוצרו ב-AI לתבנית אישית וגמישה שאפשר לערוך שוב ושוב בלי שהעברית, המבנה או העיצוב יתפרקו.">
-  <meta name="twitter:image" content="https://orityishai.vercel.app/og/template.png">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Orit Yishai">
+    <meta property="og:title" content="מעיצוב AI לתבנית שאפשר לערוך | אורית ישי">
+    <meta property="og:description" content="הפיכת עיצוב או מודעה שנוצרו ב-AI לתבנית אישית וגמישה שאפשר לערוך שוב ושוב בלי שהעברית, המבנה או העיצוב יתפרקו.">
+    <meta property="og:url" content="https://orityishai.vercel.app/template-info.html">
+    <meta property="og:image" content="https://orityishai.vercel.app/og/template.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="שירות הפיכת עיצוב AI לתבנית עריכה אישית">
 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://orityishai.vercel.app/#person",
-      "name": "אורית ישי",
-      "alternateName": "Orit Yishai",
-      "url": "https://orityishai.vercel.app/",
-      "jobTitle": "מתכנתת ומפתחת אתרים",
-      "sameAs": [
-        "https://www.instagram.com/orit.decode/",
-        "https://github.com/orityishai-personal"
-      ],
-      "knowsAbout": [
-        "פיתוח אתרים",
-        "SEO",
-        "GEO",
-        "AI",
-        "אבטחת אינסטגרם"
-      ]
-    },
-    {
-      "@type": "Service",
-      "@id": "https://orityishai.vercel.app/template-info.html#service",
-      "name": "הפיכת עיצוב AI לתבנית שאפשר לערוך",
-      "serviceType": "יצירת תבנית דיגיטלית מותאמת אישית",
-      "description": "הפיכת עיצוב או מודעה שנוצרו ב-AI לתבנית אישית וגמישה שאפשר לערוך שוב ושוב בלי שהעברית, המבנה או העיצוב יתפרקו.",
-      "url": "https://orityishai.vercel.app/template-info.html",
-      "provider": {
-        "@id": "https://orityishai.vercel.app/#person"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Israel"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://orityishai.vercel.app/template-info.html#breadcrumb",
-      "itemListElement": [
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="מעיצוב AI לתבנית שאפשר לערוך | אורית ישי">
+    <meta name="twitter:description" content="הפיכת עיצוב או מודעה שנוצרו ב-AI לתבנית אישית וגמישה שאפשר לערוך שוב ושוב בלי שהעברית, המבנה או העיצוב יתפרקו.">
+    <meta name="twitter:image" content="https://orityishai.vercel.app/og/template.png">
+
+    <script type="application/ld+json">
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "ראשי",
-          "item": "https://orityishai.vercel.app/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "הפיכת עיצוב AI לתבנית שאפשר לערוך",
-          "item": "https://orityishai.vercel.app/template-info.html"
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Person",
+                    "@id": "https://orityishai.vercel.app/#person",
+                    "name": "אורית ישי",
+                    "alternateName": "Orit Yishai",
+                    "url": "https://orityishai.vercel.app/",
+                    "jobTitle": "מתכנתת ומפתחת אתרים",
+                    "sameAs": [
+                        "https://www.instagram.com/orit.decode/",
+                        "https://github.com/orityishai-personal"
+                    ],
+                    "knowsAbout": [
+                        "פיתוח אתרים",
+                        "SEO",
+                        "GEO",
+                        "AI",
+                        "אבטחת אינסטגרם"
+                    ]
+                },
+                {
+                    "@type": "Service",
+                    "@id": "https://orityishai.vercel.app/template-info.html#service",
+                    "name": "הפיכת עיצוב AI לתבנית שאפשר לערוך",
+                    "serviceType": "יצירת תבנית דיגיטלית מותאמת אישית",
+                    "description": "הפיכת עיצוב או מודעה שנוצרו ב-AI לתבנית אישית וגמישה שאפשר לערוך שוב ושוב בלי שהעברית, המבנה או העיצוב יתפרקו.",
+                    "url": "https://orityishai.vercel.app/template-info.html",
+                    "provider": {
+                        "@id": "https://orityishai.vercel.app/#person"
+                    },
+                    "areaServed": {
+                        "@type": "Country",
+                        "name": "Israel"
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://orityishai.vercel.app/template-info.html#breadcrumb",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "ראשי",
+                            "item": "https://orityishai.vercel.app/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "הפיכת עיצוב AI לתבנית שאפשר לערוך",
+                            "item": "https://orityishai.vercel.app/template-info.html"
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
-}
-  </script>
+    </script>
 
-  <style>
-    :root{
-      --ink:#2f2940;
-      --muted:#766f84;
-      --muted-2:#958da2;
+    <style>
 
-      --purple:#9b82b9;
-      --purple-dark:#6f568d;
-      --purple-soft:#eee7f6;
-      --purple-soft-2:#f5f0fa;
+        :root{
+            --ink:#2f2940;
+            --ink-soft:#4a3c5a;
+            --muted:#776d84;
+            --muted-2:#978da3;
 
-      --paper:#faf7fd;
-      --card:rgba(255,255,255,.72);
-      --line:rgba(128,101,157,.15);
+            --purple:#9b82b9;
+            --purple-dark:#6f568d;
+            --purple-soft:#eee7f6;
+            --purple-soft-2:#f7f2fb;
+            --lavender:#ded1ef;
 
-      --gold:#c9a86a;
-      --gold-dark:#a77f39;
-      --gold-line:rgba(201,168,106,.30);
+            --paper:#fcf9fe;
+            --line:rgba(128,101,157,.14);
 
-      --shadow:0 18px 55px rgba(91,70,116,.09);
-    }
+            --gold:#c9a86a;
+            --gold-dark:#a77f39;
+            --gold-line:rgba(201,168,106,.30);
 
-    *{box-sizing:border-box}
+            --deep:#30283d;
+            --shadow:0 24px 70px rgba(91,70,116,.11);
+        }
 
-    html{scroll-behavior:smooth}
+        *{box-sizing:border-box}
+        html{scroll-behavior:smooth}
 
-    body{
-      margin:0;
-      min-height:100vh;
-      color:var(--ink);
-      font-family:"Heebo",Arial,sans-serif;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      background:
-        radial-gradient(circle at 8% 3%,rgba(218,204,239,.70),transparent 27rem),
-        radial-gradient(circle at 94% 31%,rgba(236,226,247,.90),transparent 25rem),
-        radial-gradient(circle at 35% 98%,rgba(226,214,242,.58),transparent 27rem),
-        var(--paper);
-    }
+        body{
+            margin:0;
+            min-height:100vh;
+            color:var(--ink);
+            font-family:"Heebo",Arial,sans-serif;
+            line-height:1.68;
+            -webkit-font-smoothing:antialiased;
+            overflow-x:hidden;
+            background:
+                    radial-gradient(circle at 8% 3%,rgba(218,204,239,.74),transparent 30rem),
+                    radial-gradient(circle at 94% 29%,rgba(240,230,249,.96),transparent 26rem),
+                    radial-gradient(circle at 38% 98%,rgba(228,217,243,.60),transparent 28rem),
+                    var(--paper);
+        }
 
-    body:before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      background:linear-gradient(145deg,rgba(255,255,255,.40),rgba(239,231,248,.10));
-    }
+        body:before{
+            content:"";
+            position:fixed;
+            inset:0;
+            z-index:-2;
+            pointer-events:none;
+            background:linear-gradient(145deg,rgba(255,255,255,.50),rgba(239,231,248,.10));
+        }
 
-    body:after{
-      content:"";
-      position:fixed;
-      z-index:20;
-      top:0;
-      left:0;
-      right:0;
-      height:2px;
-      pointer-events:none;
-      background:linear-gradient(
-        90deg,
-        transparent 5%,
-        rgba(201,168,106,.20) 28%,
-        rgba(201,168,106,.74) 50%,
-        rgba(201,168,106,.20) 72%,
-        transparent 95%
-      );
-    }
+        body:after{
+            content:"";
+            position:fixed;
+            z-index:50;
+            top:0;
+            left:0;
+            right:0;
+            height:2px;
+            pointer-events:none;
+            background:linear-gradient(
+                    90deg,
+                    transparent 4%,
+                    rgba(201,168,106,.18) 28%,
+                    rgba(201,168,106,.78) 50%,
+                    rgba(201,168,106,.18) 72%,
+                    transparent 96%
+            );
+        }
 
-    a{color:inherit}
+        a{color:inherit}
 
-    .page{
-      position:relative;
-      width:min(100%,620px);
-      margin:0 auto;
-      padding:28px 18px 42px;
-    }
+        .page{
+            position:relative;
+            width:min(100%,1120px);
+            margin:0 auto;
+            padding:14px 20px 46px;
+        }
 
-    .topline{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      position:relative;
-      margin-bottom:30px;
-      padding-bottom:14px;
-      color:#8f849d;
-      font-family:"Inter",sans-serif;
-      font-size:10px;
-      letter-spacing:.16em;
-      direction:ltr;
-    }
+        .topline{
+            position:sticky;
+            top:14px;
+            z-index:40;
+            min-height:62px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:16px;
+            margin-bottom:22px;
+            padding:0 16px;
+            color:#7f718f;
+            font-family:"Inter",sans-serif;
+            font-size:10px;
+            letter-spacing:.16em;
+            direction:ltr;
+            border:1px solid rgba(255,255,255,.80);
+            border-radius:18px;
+            background:rgba(252,249,254,.80);
+            box-shadow:0 12px 34px rgba(77,57,99,.08);
+            backdrop-filter:blur(20px) saturate(120%);
+            -webkit-backdrop-filter:blur(20px) saturate(120%);
+        }
 
-    .topline:after{
-      content:"";
-      position:absolute;
-      left:0;
-      right:0;
-      bottom:0;
-      height:1px;
-      background:linear-gradient(90deg,transparent,var(--gold-line),transparent);
-    }
+        .topline:before{
+            content:"";
+            width:24px;
+            height:24px;
+            border:1px solid rgba(201,168,106,.54);
+            border-radius:50%;
+            box-shadow:inset 0 0 0 7px rgba(255,255,255,.24);
+        }
 
-    .topline a{
-      text-decoration:none;
-      color:#7e718d;
-      transition:color .18s ease;
-    }
+        .topline span{
+            margin-right:auto;
+            color:#554563;
+            font-weight:600;
+        }
 
-    .topline a:hover{color:var(--gold-dark)}
+        .topline a{
+            text-decoration:none;
+            color:#7e718d;
+            transition:color .2s ease,transform .2s ease;
+        }
 
-    .hero{
-      text-align:center;
-      padding:5px 6px 32px;
-    }
+        .topline a:hover{
+            color:var(--gold-dark);
+            transform:translateY(-1px);
+        }
 
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin:0 0 16px;
-      padding:7px 13px;
-      border:1px solid rgba(201,168,106,.24);
-      border-radius:999px;
-      color:#745b90;
-      background:rgba(255,255,255,.46);
-      font-size:11px;
-      font-weight:500;
-      backdrop-filter:blur(8px);
-    }
+        .hero{
+            min-height:610px;
+            display:grid;
+            grid-template-columns:1.04fr .96fr;
+            align-items:center;
+            gap:68px;
+            padding:72px 34px 78px;
+            position:relative;
+        }
 
-    .eyebrow:before{
-      content:"";
-      width:5px;
-      height:5px;
-      border-radius:50%;
-      background:var(--gold);
-      box-shadow:0 0 0 3px rgba(201,168,106,.10);
-    }
+        .hero:before{
+            content:"";
+            position:absolute;
+            width:320px;
+            height:320px;
+            right:-170px;
+            top:38px;
+            border-radius:50%;
+            border:1px solid rgba(201,168,106,.18);
+            box-shadow:0 0 0 36px rgba(255,255,255,.08);
+            pointer-events:none;
+        }
 
-    h1{
-      margin:0;
-      font-size:clamp(32px,9vw,42px);
-      line-height:1.12;
-      letter-spacing:-.035em;
-      font-weight:600;
-    }
+        .hero-copy{max-width:650px}
 
-    h1:after{
-      content:"";
-      display:block;
-      width:40px;
-      height:1px;
-      margin:15px auto 0;
-      background:linear-gradient(90deg,transparent,var(--gold),transparent);
-      opacity:.86;
-    }
+        .eyebrow{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            margin:0 0 18px;
+            padding:7px 13px;
+            border:1px solid rgba(201,168,106,.24);
+            border-radius:999px;
+            color:#745b90;
+            background:rgba(255,255,255,.50);
+            font-size:11px;
+            font-weight:500;
+            backdrop-filter:blur(8px);
+        }
 
-    .hero p{
-      max-width:500px;
-      margin:15px auto 0;
-      color:var(--muted);
-      font-size:15px;
-      font-weight:300;
-    }
+        .eyebrow:before{
+            content:"";
+            width:5px;
+            height:5px;
+            border-radius:50%;
+            background:var(--gold);
+            box-shadow:0 0 0 3px rgba(201,168,106,.10);
+        }
 
-    .steps{
-      display:grid;
-      gap:12px;
-    }
+        h1{
+            margin:0;
+            color:#30283d;
+            font-size:clamp(42px,5.9vw,66px);
+            line-height:1.04;
+            letter-spacing:-.05em;
+            font-weight:600;
+        }
 
-    .card{
-      position:relative;
-      padding:20px 19px;
-      overflow:hidden;
-      border:1px solid var(--line);
-      border-radius:20px;
-      background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(250,247,253,.68));
-      box-shadow:0 8px 26px rgba(91,70,116,.045),inset 0 1px 0 rgba(255,255,255,.90);
-      backdrop-filter:blur(14px);
-    }
+        h1:after{
+            content:"";
+            display:block;
+            width:48px;
+            height:1px;
+            margin:20px 0 0 auto;
+            background:linear-gradient(90deg,transparent,var(--gold));
+        }
 
-    .step-head{
-      display:flex;
-      align-items:center;
-      gap:13px;
-      margin-bottom:12px;
-    }
+        .hero p{
+            max-width:610px;
+            margin:20px 0 0;
+            color:#786f84;
+            font-size:17px;
+            font-weight:300;
+            line-height:1.78;
+        }
 
-    .step-number{
-      flex:0 0 auto;
-      width:42px;
-      height:42px;
-      display:grid;
-      place-items:center;
-      border-radius:13px;
-      background:linear-gradient(145deg,rgba(233,224,245,.96),rgba(246,241,251,.86));
-      border:1px solid rgba(201,168,106,.24);
-      color:var(--purple-dark);
-      font-family:"Inter",sans-serif;
-      font-size:11px;
-      font-weight:600;
-      letter-spacing:.04em;
-      direction:ltr;
-    }
+        /* Decorative editable-template mockup */
+        .hero-visual{
+            position:relative;
+            min-height:430px;
+            display:grid;
+            place-items:center;
+        }
 
-    .card h2{
-      margin:0;
-      color:#3a304a;
-      font-size:19px;
-      line-height:1.3;
-      font-weight:600;
-      letter-spacing:-.015em;
-    }
+        .template-board{
+            position:relative;
+            width:min(88%,370px);
+            aspect-ratio:4/5;
+            border-radius:30px;
+            background:linear-gradient(145deg,#f3ecf9,#fffafd);
+            border:1px solid rgba(255,255,255,.88);
+            box-shadow:0 34px 80px rgba(91,70,116,.18),0 0 0 1px rgba(201,168,106,.22);
+            transform:rotate(1.2deg);
+            overflow:hidden;
+            transition:transform .5s cubic-bezier(.2,.8,.2,1);
+        }
 
-    .card p,
-    .card .body{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-      font-weight:300;
-      line-height:1.75;
-    }
+        .template-board:hover{
+            transform:rotate(.2deg) translateY(-4px);
+        }
 
-    .card strong{
-      color:#4d3d61;
-      font-weight:600;
-    }
+        .board-bar{
+            height:43px;
+            display:flex;
+            align-items:center;
+            gap:5px;
+            padding:0 14px;
+            border-bottom:1px solid rgba(128,101,157,.09);
+            direction:ltr;
+        }
 
-    .included{
-      margin-top:12px;
-      padding-top:24px;
-      border-color:rgba(201,168,106,.22);
-    }
+        .board-bar i{
+            width:5px;
+            height:5px;
+            border-radius:50%;
+            background:#d7cae4;
+        }
 
-    .included:before{
-      content:"";
-      position:absolute;
-      top:0;
-      left:18px;
-      right:18px;
-      height:1px;
-      background:linear-gradient(90deg,transparent,rgba(201,168,106,.44),transparent);
-    }
+        .artboard{
+            position:absolute;
+            inset:66px 36px 36px;
+            overflow:hidden;
+            border-radius:20px;
+            background:
+                    radial-gradient(circle at 90% 7%,rgba(230,209,244,.92),transparent 38%),
+                    linear-gradient(145deg,#fff,#faf5fd);
+            border:1px solid rgba(125,96,151,.11);
+            box-shadow:0 18px 40px rgba(82,60,104,.10);
+        }
 
-    .mini-label{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      margin-bottom:8px;
-      color:var(--purple-dark);
-      font-size:11px;
-      font-weight:600;
-    }
+        .art-circle{
+            position:absolute;
+            width:160px;
+            height:160px;
+            left:-48px;
+            top:-42px;
+            border-radius:50%;
+            background:linear-gradient(145deg,#d8c5eb,#eee4f6);
+        }
 
-    .mini-label:before{
-      content:"";
-      width:5px;
-      height:5px;
-      border-radius:50%;
-      background:var(--gold);
-    }
+        .art-block{
+            position:absolute;
+            right:27px;
+            top:50px;
+            width:55%;
+        }
 
-    .included h2,
-    .idea h2{
-      margin:0 0 10px;
-      color:#3a304a;
-      font-size:21px;
-      line-height:1.3;
-      font-weight:600;
-    }
+        .art-line{
+            display:block;
+            height:7px;
+            margin-bottom:8px;
+            border-radius:999px;
+            background:#5f4a70;
+            opacity:.90;
+        }
 
-    .included ul{
-      margin:13px 0 0;
-      padding-right:19px;
-      color:#665d72;
-      font-size:14px;
-      font-weight:300;
-      line-height:1.85;
-    }
+        .art-line:nth-child(2){width:80%;opacity:.45}
+        .art-line:nth-child(3){width:58%;opacity:.25}
 
-    .included li::marker{color:var(--gold)}
+        .art-image{
+            position:absolute;
+            left:28px;
+            right:28px;
+            bottom:30px;
+            height:42%;
+            border-radius:16px;
+            background:
+                    linear-gradient(145deg,rgba(172,145,197,.28),rgba(231,214,242,.68)),
+                    #eee5f5;
+            border:1px solid rgba(128,101,157,.10);
+        }
 
-    .idea{
-      position:relative;
-      margin-top:12px;
-      padding:22px 20px;
-      border:1px solid rgba(201,168,106,.20);
-      border-radius:20px;
-      background:
-        radial-gradient(circle at 92% 8%,rgba(255,255,255,.66),transparent 11rem),
-        linear-gradient(145deg,rgba(234,224,246,.90),rgba(245,239,250,.82));
-      box-shadow:0 12px 34px rgba(91,70,116,.055);
-    }
+        .select-box{
+            position:absolute;
+            left:22px;
+            right:22px;
+            bottom:24px;
+            height:46%;
+            border:1px dashed rgba(111,86,141,.70);
+            border-radius:18px;
+            animation:pulseBorder 3.8s ease-in-out infinite;
+        }
 
-    .idea-icon{
-      width:38px;
-      height:38px;
-      display:grid;
-      place-items:center;
-      margin-bottom:12px;
-      border-radius:12px;
-      color:var(--gold-dark);
-      background:rgba(255,255,255,.52);
-      border:1px solid rgba(201,168,106,.25);
-      font-size:18px;
-    }
+        .handle-dot{
+            position:absolute;
+            width:8px;
+            height:8px;
+            border-radius:50%;
+            background:#fff;
+            border:1px solid #8466a2;
+        }
 
-    .idea p{
-      margin:0;
-      color:#5e536c;
-      font-size:14px;
-      font-weight:300;
-      line-height:1.75;
-    }
+        .handle-dot.a{left:-4px;top:-4px}
+        .handle-dot.b{right:-4px;top:-4px}
+        .handle-dot.c{left:-4px;bottom:-4px}
+        .handle-dot.d{right:-4px;bottom:-4px}
 
-    .idea strong{
-      color:#493958;
-      font-weight:600;
-    }
+        @keyframes pulseBorder{
+            0%,100%{opacity:.72}
+            50%{opacity:1}
+        }
 
-    .tip{
-      position:relative;
-      margin-top:26px;
-      padding:26px 12px 0;
-      text-align:center;
-      color:var(--muted);
-      font-size:14px;
-      font-weight:300;
-      line-height:1.75;
-    }
+        .tool-pill{
+            position:absolute;
+            z-index:3;
+            min-height:36px;
+            display:flex;
+            align-items:center;
+            gap:7px;
+            padding:0 11px;
+            border:1px solid rgba(255,255,255,.84);
+            border-radius:12px;
+            background:rgba(255,255,255,.84);
+            color:#665477;
+            box-shadow:0 14px 34px rgba(77,57,99,.13);
+            backdrop-filter:blur(14px);
+            animation:floaty 5.8s ease-in-out infinite;
+        }
 
-    .tip:before{
-      content:"";
-      position:absolute;
-      top:0;
-      left:50%;
-      width:76px;
-      height:1px;
-      transform:translateX(-50%);
-      background:linear-gradient(90deg,transparent,rgba(201,168,106,.65),transparent);
-    }
+        .tool-pill:before{
+            content:"";
+            width:7px;
+            height:7px;
+            border-radius:2px;
+            border:1px solid var(--gold);
+            transform:rotate(45deg);
+        }
 
-    .tip strong{
-      color:#443750;
-      font-weight:600;
-    }
+        .tool-pill.one{top:66px;left:0}
+        .tool-pill.two{right:0;top:170px;animation-delay:-2.2s}
+        .tool-pill.three{left:22px;bottom:62px;animation-delay:-3.6s}
 
-    .contact{
-      position:relative;
-      margin-top:30px;
-      padding:29px 22px 24px;
-      text-align:center;
-      border:1px solid rgba(201,168,106,.23);
-      border-radius:22px;
-      background:linear-gradient(145deg,rgba(233,224,246,.88),rgba(249,245,252,.88));
-      box-shadow:0 14px 40px rgba(91,70,116,.065);
-    }
+        @keyframes floaty{
+            0%,100%{transform:translateY(0)}
+            50%{transform:translateY(-8px)}
+        }
 
-    .contact:before{
-      content:"";
-      position:absolute;
-      top:14px;
-      left:50%;
-      width:42px;
-      height:1px;
-      transform:translateX(-50%);
-      background:linear-gradient(90deg,transparent,var(--gold),transparent);
-      opacity:.80;
-    }
+        /* Process */
+        .process-wrap{
+            width:min(100%,980px);
+            margin:0 auto;
+            padding:12px 0 4px;
+        }
 
-    .contact h2{
-      margin:0 0 7px;
-      font-size:20px;
-      font-weight:600;
-      letter-spacing:-.02em;
-    }
+        .steps{
+            display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr));
+            gap:14px;
+            position:relative;
+        }
 
-    .contact p{
-      max-width:460px;
-      margin:0 auto;
-      color:#6d627a;
-      font-size:13.5px;
-      font-weight:300;
-    }
+        .card{
+            position:relative;
+            min-height:100%;
+            padding:24px 22px;
+            overflow:hidden;
+            border:1px solid var(--line);
+            border-radius:22px;
+            background:linear-gradient(145deg,rgba(255,255,255,.84),rgba(250,247,253,.70));
+            box-shadow:0 10px 34px rgba(91,70,116,.055),inset 0 1px 0 rgba(255,255,255,.92);
+            backdrop-filter:blur(14px);
+            transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease;
+        }
 
-    #contact-links{margin-top:16px}
+        .card:hover{
+            transform:translateY(-4px);
+            border-color:rgba(201,168,106,.28);
+            box-shadow:0 20px 46px rgba(91,70,116,.09);
+        }
 
-    .button{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:44px;
-      padding:0 19px;
-      text-decoration:none;
-      color:#fff;
-      background:#564169;
-      border:1px solid rgba(223,201,157,.34);
-      border-radius:12px;
-      font-size:13px;
-      font-weight:500;
-      box-shadow:0 10px 23px rgba(67,48,82,.17);
-      transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
-    }
+        .card:after{
+            content:"";
+            position:absolute;
+            width:130px;
+            height:130px;
+            left:-72px;
+            bottom:-82px;
+            border-radius:50%;
+            border:1px solid rgba(201,168,106,.10);
+            pointer-events:none;
+        }
 
-    .button:hover{
-      transform:translateY(-1px);
-      background:#624b77;
-      box-shadow:0 14px 28px rgba(67,48,82,.21);
-    }
+        .step-head{
+            display:flex;
+            align-items:center;
+            gap:13px;
+            margin-bottom:14px;
+        }
 
-    footer{
-      position:relative;
-      margin-top:29px;
-      padding:28px 0 2px;
-      text-align:center;
-      color:#9d94a7;
-      font-family:"Inter",sans-serif;
-      font-size:9px;
-      letter-spacing:.11em;
-      direction:ltr;
-    }
+        .step-number{
+            flex:0 0 auto;
+            width:44px;
+            height:44px;
+            display:grid;
+            place-items:center;
+            border-radius:13px;
+            background:linear-gradient(145deg,rgba(233,224,245,.98),rgba(247,242,251,.90));
+            border:1px solid rgba(201,168,106,.25);
+            color:var(--purple-dark);
+            font-family:"Inter",sans-serif;
+            font-size:11px;
+            font-weight:600;
+            letter-spacing:.04em;
+            direction:ltr;
+        }
 
-    footer:before{
-      content:"";
-      position:absolute;
-      top:10px;
-      left:50%;
-      width:54px;
-      height:1px;
-      transform:translateX(-50%);
-      background:linear-gradient(90deg,transparent,rgba(201,168,106,.58),transparent);
-    }
+        .card h2{
+            margin:0;
+            color:#3a304a;
+            font-size:19px;
+            line-height:1.3;
+            font-weight:600;
+            letter-spacing:-.015em;
+        }
 
-    a:focus-visible{
-      outline:3px solid rgba(201,168,106,.65);
-      outline-offset:4px;
-    }
+        .card p,
+        .card .body{
+            margin:0;
+            color:var(--muted);
+            font-size:14px;
+            font-weight:300;
+            line-height:1.78;
+        }
 
-    @media(min-width:680px){
-      .page{padding-top:40px;padding-bottom:48px}
-      .hero{padding-top:12px;padding-bottom:38px}
-      .card{padding:23px 22px}
-      .idea{padding:24px 22px}
-    }
+        .card strong{
+            color:#4d3d61;
+            font-weight:600;
+        }
 
-    @media(max-width:380px){
-      .page{padding-left:14px;padding-right:14px}
-      h1{font-size:30px}
-      .hero p{font-size:14px}
-      .card{padding:18px 16px}
-      .card h2{font-size:18px}
-      .step-head{gap:11px}
-      .step-number{width:39px;height:39px}
-    }
+        .full{
+            width:min(100%,980px);
+            margin:14px auto 0;
+        }
 
-    @media(prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      .button{transition:none}
-    }
-  </style>
+        .included{
+            position:relative;
+            padding-top:28px;
+            border-color:rgba(201,168,106,.22);
+        }
+
+        .included:before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:20px;
+            right:20px;
+            height:1px;
+            background:linear-gradient(90deg,transparent,rgba(201,168,106,.46),transparent);
+        }
+
+        .mini-label{
+            display:inline-flex;
+            align-items:center;
+            gap:7px;
+            margin-bottom:8px;
+            color:var(--purple-dark);
+            font-size:11px;
+            font-weight:600;
+        }
+
+        .mini-label:before{
+            content:"";
+            width:5px;
+            height:5px;
+            border-radius:50%;
+            background:var(--gold);
+        }
+
+        .included h2,
+        .idea h2{
+            margin:0 0 10px;
+            color:#3a304a;
+            font-size:22px;
+            line-height:1.3;
+            font-weight:600;
+        }
+
+        .included ul{
+            display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr));
+            gap:8px 28px;
+            margin:16px 0 0;
+            padding-right:19px;
+            color:#665d72;
+            font-size:14px;
+            font-weight:300;
+            line-height:1.8;
+        }
+
+        .included li::marker{color:var(--gold)}
+
+        .idea{
+            width:min(100%,980px);
+            margin:14px auto 0;
+            padding:28px 24px;
+            position:relative;
+            overflow:hidden;
+            border:1px solid rgba(201,168,106,.20);
+            border-radius:22px;
+            background:
+                    radial-gradient(circle at 92% 8%,rgba(255,255,255,.70),transparent 12rem),
+                    linear-gradient(145deg,rgba(234,224,246,.94),rgba(247,241,251,.88));
+            box-shadow:0 15px 40px rgba(91,70,116,.065);
+        }
+
+        .idea:after{
+            content:"✦";
+            position:absolute;
+            left:28px;
+            bottom:8px;
+            color:rgba(201,168,106,.16);
+            font-size:86px;
+            line-height:1;
+        }
+
+        .idea-icon{
+            width:40px;
+            height:40px;
+            display:grid;
+            place-items:center;
+            margin-bottom:12px;
+            border-radius:12px;
+            color:var(--gold-dark);
+            background:rgba(255,255,255,.56);
+            border:1px solid rgba(201,168,106,.26);
+            font-size:18px;
+        }
+
+        .idea p{
+            position:relative;
+            z-index:1;
+            margin:0;
+            color:#5e536c;
+            font-size:14px;
+            font-weight:300;
+            line-height:1.78;
+        }
+
+        .idea strong{
+            color:#493958;
+            font-weight:600;
+        }
+
+        .step-five{
+            width:min(100%,980px);
+            margin:14px auto 0;
+        }
+
+        .tip{
+            width:min(100%,820px);
+            margin:32px auto 0;
+            padding:28px 18px 0;
+            position:relative;
+            text-align:center;
+            color:var(--muted);
+            font-size:14px;
+            font-weight:300;
+            line-height:1.78;
+        }
+
+        .tip:before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:50%;
+            width:82px;
+            height:1px;
+            transform:translateX(-50%);
+            background:linear-gradient(90deg,transparent,rgba(201,168,106,.66),transparent);
+        }
+
+        .tip strong{
+            color:#443750;
+            font-weight:600;
+        }
+
+        .contact{
+            width:min(100%,980px);
+            margin:32px auto 0;
+            padding:56px 28px 50px;
+            position:relative;
+            overflow:hidden;
+            text-align:center;
+            color:#fff;
+            border:1px solid rgba(201,168,106,.22);
+            border-radius:26px;
+            background:
+                    radial-gradient(circle at 82% 16%,rgba(115,87,143,.34),transparent 34%),
+                    radial-gradient(circle at 12% 100%,rgba(201,168,106,.12),transparent 33%),
+                    var(--deep);
+            box-shadow:0 28px 74px rgba(48,40,61,.20);
+        }
+
+        .contact:before{
+            content:"";
+            position:absolute;
+            width:300px;
+            height:300px;
+            top:-160px;
+            right:-150px;
+            border:1px solid rgba(201,168,106,.12);
+            border-radius:50%;
+            box-shadow:0 0 0 40px rgba(255,255,255,.014);
+        }
+
+        .contact h2{
+            position:relative;
+            margin:0 0 8px;
+            color:#fff;
+            font-size:30px;
+            font-weight:600;
+            letter-spacing:-.03em;
+        }
+
+        .contact p{
+            position:relative;
+            max-width:580px;
+            margin:0 auto;
+            color:#d3c9db;
+            font-size:14px;
+            font-weight:300;
+            line-height:1.76;
+        }
+
+        #contact-links{
+            position:relative;
+            margin-top:22px;
+        }
+
+        .button{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            min-height:47px;
+            padding:0 19px;
+            text-decoration:none;
+            color:#30283d;
+            background:#f7f1e5;
+            border:1px solid rgba(201,168,106,.55);
+            border-radius:12px;
+            font-size:13px;
+            font-weight:600;
+            box-shadow:0 12px 26px rgba(0,0,0,.12);
+            transition:transform .2s ease,background .2s ease,box-shadow .2s ease;
+        }
+
+        .button:hover{
+            transform:translateY(-2px);
+            background:#fff8ec;
+            box-shadow:0 16px 32px rgba(0,0,0,.17);
+        }
+
+        footer{
+            width:min(100%,980px);
+            position:relative;
+            margin:28px auto 0;
+            padding:28px 0 2px;
+            text-align:center;
+            color:#9d94a7;
+            font-family:"Inter",sans-serif;
+            font-size:9px;
+            letter-spacing:.11em;
+            direction:ltr;
+        }
+
+        footer:before{
+            content:"";
+            position:absolute;
+            top:10px;
+            left:50%;
+            width:54px;
+            height:1px;
+            transform:translateX(-50%);
+            background:linear-gradient(90deg,transparent,rgba(201,168,106,.58),transparent);
+        }
+
+        .reveal{
+            opacity:0;
+            transform:translateY(18px);
+            transition:opacity .72s ease,transform .72s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .reveal.visible{
+            opacity:1;
+            transform:none;
+        }
+
+        .delay-1{transition-delay:.07s}
+        .delay-2{transition-delay:.14s}
+
+        a:focus-visible{
+            outline:3px solid rgba(201,168,106,.65);
+            outline-offset:4px;
+        }
+
+        @media(max-width:900px){
+            .hero{
+                min-height:auto;
+                grid-template-columns:1fr;
+                gap:38px;
+                padding:62px 10px 68px;
+                text-align:center;
+            }
+
+            .hero-copy{margin:0 auto}
+            h1:after{
+                margin-left:auto;
+                margin-right:auto;
+                background:linear-gradient(90deg,transparent,var(--gold),transparent);
+            }
+            .hero p{margin-left:auto;margin-right:auto}
+
+            .hero-visual{min-height:380px}
+            .template-board{width:min(76%,340px)}
+        }
+
+        @media(max-width:700px){
+            .steps{grid-template-columns:1fr}
+            .included ul{grid-template-columns:1fr}
+        }
+
+        @media(max-width:560px){
+            .page{padding:8px 12px 36px}
+            .topline{top:8px;min-height:56px;border-radius:16px;padding:0 12px}
+            .topline:before{width:22px;height:22px}
+            .hero{padding:54px 4px 54px}
+            h1{font-size:clamp(36px,11vw,48px)}
+            .hero p{font-size:15px}
+            .hero-visual{min-height:340px}
+            .template-board{width:min(84%,300px);border-radius:24px}
+            .tool-pill{min-height:32px;padding:0 9px}
+            .tool-pill.one{top:45px;left:0}
+            .tool-pill.two{right:0;top:146px}
+            .tool-pill.three{left:4px;bottom:44px}
+
+            .card{padding:20px 17px;border-radius:19px}
+            .idea{padding:22px 17px;border-radius:20px}
+            .included h2,.idea h2{font-size:20px}
+            .contact{padding:44px 18px;border-radius:22px}
+            .contact h2{font-size:29px}
+        }
+
+        @media(prefers-reduced-motion:reduce){
+            html{scroll-behavior:auto}
+            *,*:before,*:after{
+                animation-duration:.01ms!important;
+                animation-iteration-count:1!important;
+                transition-duration:.01ms!important;
+                scroll-behavior:auto!important;
+            }
+            .reveal{opacity:1;transform:none}
+        }
+
+    </style>
 </head>
 
+
 <body>
-  <main class="page">
+<main class="page">
     <div class="topline">
-      <span>ORIT YISHAI</span>
-      <a href="index.html">חזרה לכל השירותים</a>
+        <span>ORIT YISHAI</span>
+        <a href="index.html">חזרה לכל השירותים</a>
     </div>
 
     <header class="hero">
-      <div class="eyebrow">תבנית מותאמת אישית לעסק</div>
-      <h1>איך זה עובד?</h1>
-      <p>כמה דברים שכדאי לדעת לפני שמתחילים, כדי שהתהליך יהיה ברור ונעים גם לי וגם לכם.</p>
+        <div class="hero-copy">
+            <div class="eyebrow reveal">תבנית מותאמת אישית לעסק</div>
+            <h1 class="reveal delay-1">איך זה עובד?</h1>
+            <p class="reveal delay-2">כמה דברים שכדאי לדעת לפני שמתחילים, כדי שהתהליך יהיה ברור ונעים גם לי וגם לכם.</p>
+        </div>
+
+        <div class="hero-visual reveal delay-1" aria-hidden="true">
+            <div class="template-board">
+                <div class="board-bar"><i></i><i></i><i></i></div>
+                <div class="artboard">
+                    <div class="art-circle"></div>
+                    <div class="art-block">
+                        <span class="art-line"></span>
+                        <span class="art-line"></span>
+                        <span class="art-line"></span>
+                    </div>
+                    <div class="art-image"></div>
+                    <div class="select-box">
+                        <i class="handle-dot a"></i>
+                        <i class="handle-dot b"></i>
+                        <i class="handle-dot c"></i>
+                        <i class="handle-dot d"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="tool-pill one"></div>
+            <div class="tool-pill two"></div>
+            <div class="tool-pill three"></div>
+        </div>
     </header>
 
-    <div class="steps">
-      <section class="card">
-        <div class="step-head">
-          <div class="step-number">01</div>
-          <h2>שולחים לי את הכיוון שאהבתם</h2>
-        </div>
-        <div class="body">
-          שולחים לי את העיצוב, המודעה או ההשראה שעליהם תרצו לבסס את התבנית.
-          <br><br>
-          במידה ויש לכם פונטים מיוחדים או קובץ לוגו, פלטת צבעים של העסק וכו' תשלחו לי גם אותם.
-          <br><br>
-          כבר בשלב הזה אתם שולחים לי בריף קצר שבו אתם מסבירים לי
-          <strong>מה תרצו לשמר ומה תרצו לשנות</strong>
-          מהעיצוב ששלחתם ובאיזה גודל ופורמט תרצו שאעצב אותו.
-        </div>
-      </section>
+    <div class="process-wrap">
+        <div class="steps">
+            <section class="card reveal">
+                <div class="step-head">
+                    <div class="step-number">01</div>
+                    <h2>שולחים לי את הכיוון שאהבתם</h2>
+                </div>
+                <div class="body">
+                    שולחים לי את העיצוב, המודעה או ההשראה שעליהם תרצו לבסס את התבנית.
+                    <br><br>
+                    במידה ויש לכם פונטים מיוחדים או קובץ לוגו, פלטת צבעים של העסק וכו' תשלחו לי גם אותם.
+                    <br><br>
+                    כבר בשלב הזה אתם שולחים לי בריף קצר שבו אתם מסבירים לי
+                    <strong>מה תרצו לשמר ומה תרצו לשנות</strong>
+                    מהעיצוב ששלחתם ובאיזה גודל ופורמט תרצו שאעצב אותו.
+                </div>
+            </section>
 
-      <section class="card">
-        <div class="step-head">
-          <div class="step-number">02</div>
-          <h2>תמחור והערכת העבודה</h2>
-        </div>
-        <div class="body">
-          אני עוברת איתכם על העיצוב ומסבירה מה יהיה בתבנית שתקבלו ואת התמחור.
-          <br><br>
-          המחיר נקבע לפי מורכבות העיצוב והעבודה הנדרשת, ובדרך כלל נע בין
-          <strong>300 ל-800 ₪</strong>.
-          <br><br>
-          לתחילת העבודה יש לשלם <strong>מקדמה של 150 ₪</strong>, שמתקזזת מהמחיר הכולל.
-        </div>
-      </section>
+            <section class="card reveal delay-1">
+                <div class="step-head">
+                    <div class="step-number">02</div>
+                    <h2>תמחור והערכת העבודה</h2>
+                </div>
+                <div class="body">
+                    אני עוברת איתכם על העיצוב ומסבירה מה יהיה בתבנית שתקבלו ואת התמחור.
+                    <br><br>
+                    המחיר נקבע לפי מורכבות העיצוב והעבודה הנדרשת, ובדרך כלל נע בין
+                    <strong>300 ל-800 ₪</strong>.
+                    <br><br>
+                    לתחילת העבודה יש לשלם <strong>מקדמה של 150 ₪</strong>, שמתקזזת מהמחיר הכולל.
+                </div>
+            </section>
 
-      <section class="card">
-        <div class="step-head">
-          <div class="step-number">03</div>
-          <h2>אני בונה את התבנית שלכם</h2>
-        </div>
-        <div class="body">
-          אני יוצרת עבורכם תבנית בסגנון העיצוב שביקשתם ומתאימה אותה לעסק שלכם עם גמישות מקסימלית להחלפת טקסטים ותמונות ואפשר גם להחליף בלוקים ומיקומים בהתאם לדרישה.
-          <br><br>
-          המטרה היא להגיע לתוצאה קרובה ככל האפשר לכיוון שאהבתם, אבל במקום עיצוב סגור אתם מקבלים תבנית גמישה שאפשר לערוך ולשנות מה שרוצים ולשמור בקלות.
-          בלי הגבלה על כמות השינויים והשמירות.
-        </div>
-      </section>
+            <section class="card reveal">
+                <div class="step-head">
+                    <div class="step-number">03</div>
+                    <h2>אני בונה את התבנית שלכם</h2>
+                </div>
+                <div class="body">
+                    אני יוצרת עבורכם תבנית בסגנון העיצוב שביקשתם ומתאימה אותה לעסק שלכם עם גמישות מקסימלית להחלפת טקסטים ותמונות ואפשר גם להחליף בלוקים ומיקומים בהתאם לדרישה.
+                    <br><br>
+                    המטרה היא להגיע לתוצאה קרובה ככל האפשר לכיוון שאהבתם, אבל במקום עיצוב סגור אתם מקבלים תבנית גמישה שאפשר לערוך ולשנות מה שרוצים ולשמור בקלות.
+                    בלי הגבלה על כמות השינויים והשמירות.
+                </div>
+            </section>
 
-      <section class="card">
-        <div class="step-head">
-          <div class="step-number">04</div>
-          <h2>מקבלים, בודקים ומדייקים</h2>
+            <section class="card reveal delay-1">
+                <div class="step-head">
+                    <div class="step-number">04</div>
+                    <h2>מקבלים, בודקים ומדייקים</h2>
+                </div>
+                <div class="body">
+                    כשהתבנית מוכנה אני שולחת אותה אליכם לבדיקה.
+                    <br><br>
+                    מומלץ לעבור עליה בתוך <strong>48 שעות</strong> ולרכז לי את כל התיקונים והדיוקים יחד, כדי שנוכל לסגור את הסבב בצורה מסודרת ונוחה.
+                </div>
+            </section>
         </div>
-        <div class="body">
-          כשהתבנית מוכנה אני שולחת אותה אליכם לבדיקה.
-          <br><br>
-          מומלץ לעבור עליה בתוך <strong>48 שעות</strong> ולרכז לי את כל התיקונים והדיוקים יחד, כדי שנוכל לסגור את הסבב בצורה מסודרת ונוחה.
-        </div>
-      </section>
     </div>
 
-    <section class="card included">
-      <div class="mini-label">כלול במחיר</div>
-      <h2>סבב דיוקים ותיקונים</h2>
-      <p>הסבב מיועד לבאגים ולדיוקים בהתאם למה שסוכם מראש, למשל:</p>
-      <ul>
-        <li>טקסט שנשבר או לא מוצג נכון</li>
-        <li>אלמנט שלא יושב במקום כפי שסוכם</li>
-        <li>בעיה בתצוגה, בעריכה או בשמירה</li>
-        <li>טקסט, צבע או פרט שלא בוצעו בהתאם לבריף</li>
-        <li>דיוקים קטנים כדי להגיע לתוצאה שסיכמנו עליה</li>
-      </ul>
+    <section class="card included full reveal">
+        <div class="mini-label">כלול במחיר</div>
+        <h2>סבב דיוקים ותיקונים</h2>
+        <p>הסבב מיועד לבאגים ולדיוקים בהתאם למה שסוכם מראש, למשל:</p>
+        <ul>
+            <li>טקסט שנשבר או לא מוצג נכון</li>
+            <li>אלמנט שלא יושב במקום כפי שסוכם</li>
+            <li>בעיה בתצוגה, בעריכה או בשמירה</li>
+            <li>טקסט, צבע או פרט שלא בוצעו בהתאם לבריף</li>
+            <li>דיוקים קטנים כדי להגיע לתוצאה שסיכמנו עליה</li>
+        </ul>
     </section>
 
-    <section class="idea">
-      <div class="idea-icon" aria-hidden="true">✦</div>
-      <h2>עלה לכם רעיון חדש תוך כדי?</h2>
-      <p>
-        בשמחה 🙂
+    <section class="idea reveal">
+        <div class="idea-icon" aria-hidden="true">✦</div>
+        <h2>עלה לכם רעיון חדש תוך כדי?</h2>
+        <p>
+            בשמחה 🙂
+            <br>
+            אם תרצו לנסות פונטים חדשים, לשנות מבנה או סגנון, לעצב מחדש חלק מהמודעה, להכין גרסה נוספת, להתאים לפורמט אחר או להוסיף משהו שלא הופיע בבקשה המקורית, זה כבר נחשב
+            <strong>שינוי או תוספת מעבר לבריף</strong>.
+            <br><br>
+            לפני ביצוע השינוי תקבלו תמחור נוסף ותוכלו להחליט אם להמשיך.
+        </p>
+    </section>
+
+    <section class="card step-five reveal">
+        <div class="step-head">
+            <div class="step-number">05</div>
+            <h2>התבנית שלכם מוכנה</h2>
+        </div>
+        <div class="body">
+            לאחר סבב הדיוקים ותשלום היתרה, התבנית מוכנה לשימוש.
+            <br><br>
+            מכאן תוכלו לערוך בעצמכם כותרות, טקסטים, מחירים, תאריכים, תמונות ופרטים נוספים, לשמור את הקובץ ולהשתמש בתבנית שוב ושוב.
+        </div>
+    </section>
+
+    <section class="tip reveal">
+        <strong>טיפ קטן לפני שמתחילים:</strong>
         <br>
-        אם תרצו לנסות פונטים חדשים, לשנות מבנה או סגנון, לעצב מחדש חלק מהמודעה, להכין גרסה נוספת, להתאים לפורמט אחר או להוסיף משהו שלא הופיע בבקשה המקורית, זה כבר נחשב
-        <strong>שינוי או תוספת מעבר לבריף</strong>.
-        <br><br>
-        לפני ביצוע השינוי תקבלו תמחור נוסף ותוכלו להחליט אם להמשיך.
-      </p>
+        ככל שתספרו לי מראש בצורה ברורה יותר מה חשוב לכם בעיצוב, בפונטים, במבנה ובשימושים של התבנית, כך אוכל לתמחר ולבנות אותה בצורה מדויקת יותר כבר מההתחלה.
     </section>
 
-    <section class="card" style="margin-top:12px">
-      <div class="step-head">
-        <div class="step-number">05</div>
-        <h2>התבנית שלכם מוכנה</h2>
-      </div>
-      <div class="body">
-        לאחר סבב הדיוקים ותשלום היתרה, התבנית מוכנה לשימוש.
-        <br><br>
-        מכאן תוכלו לערוך בעצמכם כותרות, טקסטים, מחירים, תאריכים, תמונות ופרטים נוספים, לשמור את הקובץ ולהשתמש בתבנית שוב ושוב.
-      </div>
-    </section>
-
-    <section class="tip">
-      <strong>טיפ קטן לפני שמתחילים:</strong>
-      <br>
-      ככל שתספרו לי מראש בצורה ברורה יותר מה חשוב לכם בעיצוב, בפונטים, במבנה ובשימושים של התבנית, כך אוכל לתמחר ולבנות אותה בצורה מדויקת יותר כבר מההתחלה.
-    </section>
-
-    <section class="contact">
-      <h2>יש לכם עיצוב שתרצו להפוך לתבנית?</h2>
-      <p>שלחו לי את העיצוב או צילום המסך, ואוכל לבדוק מה אפשר להפוך לעריכה ומה הדרך הנכונה לבנות אותו.</p>
-      <div id="contact-links"></div>
+    <section class="contact reveal">
+        <h2>יש לכם עיצוב שתרצו להפוך לתבנית?</h2>
+        <p>שלחו לי את העיצוב או צילום המסך, ואוכל לבדוק מה אפשר להפוך לעריכה ומה הדרך הנכונה לבנות אותו.</p>
+        <div id="contact-links"></div>
     </section>
 
     <footer>BUILT WITH CODE · ORIT YISHAI</footer>
-  </main>
+</main>
 
-  <script src="config.js"></script>
-  <script>
+<script src="config.js"></script>
+<script>
     const config = window.ORIT_CONFIG || {};
     const contact = document.getElementById("contact-links");
 
     if(config.whatsapp){
-      const digits = config.whatsapp.replace(/\D/g,"");
-      const a = document.createElement("a");
-      a.className = "button";
-      a.href = "https://wa.me/" + digits;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      a.textContent = "שלחו לי את העיצוב בוואטסאפ ↗";
-      contact.append(a);
+        const digits = config.whatsapp.replace(/\D/g,"");
+        const a = document.createElement("a");
+        a.className = "button";
+        a.href = "https://wa.me/" + digits;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = "שלחו לי את העיצוב בוואטסאפ ↗";
+        contact.append(a);
     } else if(config.email){
-      const a = document.createElement("a");
-      a.className = "button";
-      a.href = "mailto:" + config.email;
-      a.textContent = "שלחו לי מייל ↗";
-      contact.append(a);
+        const a = document.createElement("a");
+        a.className = "button";
+        a.href = "mailto:" + config.email;
+        a.textContent = "שלחו לי מייל ↗";
+        contact.append(a);
     }
-  </script>
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealEls = document.querySelectorAll('.reveal');
+
+    if(reducedMotion || !('IntersectionObserver' in window)){
+        revealEls.forEach(el=>el.classList.add('visible'));
+    } else {
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach(entry=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+
+        revealEls.forEach(el=>observer.observe(el));
+    }
+</script>
 </body>
+
 </html>
