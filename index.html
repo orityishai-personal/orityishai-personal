@@ -43,7 +43,7 @@
                     "jobTitle": "מתכנתת ומפתחת אתרים",
                     "sameAs": [
                         "https://www.instagram.com/orit.decode/",
-                        "https://github.com/orityishai-personal"
+                        "https://www.facebook.com/oritdecode/"
                     ],
                     "knowsAbout": [
                         "פיתוח אתרים",
@@ -608,6 +608,31 @@
             margin-top:22px;
         }
 
+        footer{
+            width:min(100%,980px);
+            margin:28px auto 0;
+            padding:22px 0 4px;
+            text-align:center;
+            color:#9f8a95;
+            font-size:11px;
+            font-weight:400;
+            letter-spacing:.02em;
+        }
+
+        footer:before{
+            content:"";
+            display:block;
+            width:54px;
+            height:1px;
+            margin:0 auto 14px;
+            background:linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(201,168,106,.58),
+                    transparent
+            );
+        }
+
         #contact-links .button{
             display:inline-flex;
             align-items:center;
@@ -648,30 +673,6 @@
         }
 
         .extra:hover{color:var(--gold-dark)}
-
-        footer{
-            width:min(100%,1040px);
-            margin:20px auto 0;
-            padding:24px 0 2px;
-            position:relative;
-            text-align:center;
-            color:#9aa5b5;
-            font-family:"Inter",sans-serif;
-            font-size:8.5px;
-            letter-spacing:.10em;
-            direction:ltr;
-        }
-
-        footer:before{
-            content:"";
-            position:absolute;
-            top:8px;
-            left:50%;
-            width:54px;
-            height:1px;
-            transform:translateX(-50%);
-            background:linear-gradient(90deg,transparent,rgba(201,168,106,.58),transparent);
-        }
 
         .reveal{
             opacity:0;
@@ -905,11 +906,11 @@
 
 
     <section class="seo-intro reveal" aria-labelledby="seo-home-title">
-        <h2 id="seo-home-title">בניית אתרים לעסקים קטנים עם חשיבה על SEO ו-GEO</h2>
+        <h2 id="seo-home-title">לבנות אתר עם AI כולם יכולים. החכמה היא שאנשים ימצאו אתכם.</h2>
         <p>
-            אם אתם צריכים אתר לעסק קטן, דף נחיתה או תיק עבודות דיגיטלי, אני בונה אתרים בקוד עם התאמה למובייל, מבנה ברור וחשיבה על קידום אורגני כבר מהבסיס.
-            אפשר לקרוא עוד על <a href="web-development-seo.html">בניית אתרים וקידום אורגני SEO ו-GEO</a>,
-            או על <a href="portfolio-site.html">מיני אתרים ותיקי עבודות</a> שמרכזים את השירותים והעבודות שלכם במקום אחד.
+            אני משתמשת ב-AI כחלק מתהליך העבודה, אבל הדגש שלי הוא על מה שקורה אחרי שהאתר עולה:
+            מבנה ותוכן שנבנים מראש כדי לשפר נראות ותנועה אורגנית בגוגל ובתשובות של כלי AI.
+            לכן <a href="web-development-seo.html">SEO ו-GEO</a> הם לא תוספת בסוף, אלא חלק מהחשיבה על האתר מההתחלה.
         </p>
     </section>
 
@@ -925,11 +926,13 @@
             כך שתוכלו להמשיך לערוך ולתחזק אותו בעצמכם.
         </p>
         <div id="contact-links"></div>
+
     </section>
+    <footer>ORIT DECODE · מפצחים מה שהעסק שלך צריך</footer>
+
 
     <nav class="extras" aria-label="קישורים נוספים" id="links"></nav>
 
-    <footer>BUILT WITH CODE · ORIT YISHAI</footer>
 </main>
 
 <script src="config.js"></script>
@@ -949,7 +952,17 @@
         parent.append(a);
     }
 
-    for(const item of (config.links || [])){
+    const socialLinks = (config.links || [])
+        .filter(item => !/github\.com/i.test(item.url || ""));
+
+    if(!socialLinks.some(item => /facebook\.com\/oritdecode/i.test(item.url || ""))){
+        socialLinks.push({
+            label: "הפייסבוק שלי ↗",
+            url: "https://www.facebook.com/oritdecode/"
+        });
+    }
+
+    for(const item of socialLinks){
         addLink(item.label,item.url,document.getElementById('links'),'extra');
     }
 
