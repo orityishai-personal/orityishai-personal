@@ -1,3 +1,4 @@
+```
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
@@ -84,26 +85,26 @@
                         {
                             "@type": "ListItem",
                             "position": 1,
-                            "name": "מיני קורס לאבטחת אינסטגרם",
-                            "url": "https://orityishai.vercel.app/instagram-security-course.html"
+                            "name": "פיתוח אתרים וקידום אורגני SEO ו-GEO",
+                            "url": "https://orityishai.vercel.app/web-development-seo.html"
                         },
                         {
                             "@type": "ListItem",
                             "position": 2,
-                            "name": "מעיצוב AI לתבנית שאפשר לערוך",
-                            "url": "https://orityishai.vercel.app/template-info.html"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 3,
                             "name": "אתר אישי ותיק עבודות לסושיאל",
                             "url": "https://orityishai.vercel.app/portfolio-site.html"
                         },
                         {
                             "@type": "ListItem",
+                            "position": 3,
+                            "name": "מיני קורס לאבטחת אינסטגרם",
+                            "url": "https://orityishai.vercel.app/instagram-security-course.html"
+                        },
+                        {
+                            "@type": "ListItem",
                             "position": 4,
-                            "name": "פיתוח אתרים וקידום אורגני SEO ו-GEO",
-                            "url": "https://orityishai.vercel.app/web-development-seo.html"
+                            "name": "מעיצוב AI לתבנית שאפשר לערוך",
+                            "url": "https://orityishai.vercel.app/template-info.html"
                         }
                     ]
                 }
@@ -470,10 +471,10 @@
             transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease,border-color .28s ease;
         }
 
-        .service:nth-child(1){--service-accent:var(--orange)}
-        .service:nth-child(2){--service-accent:var(--purple)}
-        .service:nth-child(3){--service-accent:var(--pink)}
-        .service:nth-child(4){--service-accent:var(--green)}
+        .service-course{--service-accent:var(--orange)}
+        .service-template{--service-accent:var(--purple)}
+        .service-portfolio{--service-accent:var(--pink)}
+        .service-web{--service-accent:var(--green)}
 
         .service:before{
             content:"";
@@ -858,29 +859,18 @@
         <h2 class="section-label reveal" id="services-title">מה אני מציעה</h2>
 
         <div class="links">
-            <a class="service reveal" href="instagram-security-course.html">
+            <a class="service service-web reveal" href="web-development-seo.html">
           <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 2.7 8.1 7 10 4.3-1.9 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m8 9-3 3 3 3"/><path d="m16 9 3 3-3 3"/><path d="m14 5-4 14"/></svg>
           </span>
                 <span class="service-copy">
-            <strong>מיני קורס לאבטחת אינסטגרם</strong>
-            <small>אל תחכו לחסימה או פריצה כדי להבין איך להגן על החשבון שלכם. תלמדו לזהות סיכונים ולמנוע בעיות לפני שהן מתחילות וגם מה לעשות אם כבר קרה משהו חשוד.</small>
+            <strong>פיתוח אתרים וקידום אורגני - SEO ו-GEO</strong>
+            <small>אתר יכול לעלות הרבה ועדיין לא להביא תנועה. אני בונה אותו נכון מהבסיס, כדי לשפר את ההופעות שלכם גם בגוגל וגם בחיפושים ובתשובות של כלי AI.</small>
           </span>
                 <span class="arrow">↗</span>
             </a>
 
-            <a class="service reveal delay-1" href="template-info.html">
-          <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect x="4" y="4" width="12" height="12" rx="2"/><path d="M8 20h10a2 2 0 0 0 2-2V8"/><path d="M7.5 8h5"/><path d="M7.5 11h3"/></svg>
-          </span>
-                <span class="service-copy">
-            <strong>מעיצוב AI לתבנית שאפשר לערוך</strong>
-            <small>אני הופכת מודעות שהכנתם עם AI לתבנית מסודרת שאפשר לערוך בלי שהעברית, <br> העיצוב או המבנה יזוזו בכל שינוי</small>
-          </span>
-                <span class="arrow">↗</span>
-            </a>
-
-            <a class="service reveal" href="portfolio-site.html">
+            <a class="service service-portfolio reveal delay-1" href="portfolio-site.html">
           <span class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 9h17"/><path d="M7 7h.01"/></svg>
           </span>
@@ -891,13 +881,24 @@
                 <span class="arrow">↗</span>
             </a>
 
-            <a class="service reveal delay-1" href="web-development-seo.html">
+            <a class="service service-course reveal" href="instagram-security-course.html">
           <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="m8 9-3 3 3 3"/><path d="m16 9 3 3-3 3"/><path d="m14 5-4 14"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 2.7 8.1 7 10 4.3-1.9 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
           </span>
                 <span class="service-copy">
-            <strong>פיתוח אתרים וקידום אורגני - SEO ו-GEO</strong>
-            <small>אתר יכול לעלות הרבה ועדיין לא להביא תנועה. אני בונה אותו נכון מהבסיס, כדי לשפר את ההופעות שלכם גם בגוגל וגם בחיפושים ובתשובות של כלי AI.</small>
+            <strong>מיני קורס לאבטחת אינסטגרם</strong>
+            <small>אל תחכו לחסימה או פריצה כדי להבין איך להגן על החשבון שלכם. תלמדו לזהות סיכונים ולמנוע בעיות לפני שהן מתחילות וגם מה לעשות אם כבר קרה משהו חשוד.</small>
+          </span>
+                <span class="arrow">↗</span>
+            </a>
+
+            <a class="service service-template reveal delay-1" href="template-info.html">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="4" y="4" width="12" height="12" rx="2"/><path d="M8 20h10a2 2 0 0 0 2-2V8"/><path d="M7.5 8h5"/><path d="M7.5 11h3"/></svg>
+          </span>
+                <span class="service-copy">
+            <strong>מעיצוב AI לתבנית שאפשר לערוך</strong>
+            <small>אני הופכת מודעות שהכנתם עם AI לתבנית מסודרת שאפשר לערוך בלי שהעברית, <br> העיצוב או המבנה יזוזו בכל שינוי</small>
           </span>
                 <span class="arrow">↗</span>
             </a>
@@ -995,3 +996,4 @@
 </body>
 
 </html>
+```
